@@ -12,6 +12,7 @@ class Hero extends Component {
           <img 
             className="hero-bg" 
             src={ background }
+            alt='background'
           />
         </div>
 
