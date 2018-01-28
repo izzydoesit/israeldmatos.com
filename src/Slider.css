@@ -8,15 +8,16 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 210px;
+  min-height: 25em;
   border: 2px solid black;
 }
 
 .slider {
   height: 100%;
   position: relative;
-  border: 2px solid purple;
   min-height: 200px;
+  margin: 5%;
+  padding: 10%;
 }
 
 /* .arrow:hover {
