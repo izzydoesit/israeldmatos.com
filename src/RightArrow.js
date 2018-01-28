@@ -6,13 +6,12 @@ export default class RightArrow extends Component {
 
   render() {
     return (
-      <a
-        href="#"
-        className="slider-arrow-right"
+      <button
+        className="slider-arrow right"
         onClick={this.props.onClick}
       >
-        <i className="fa fa-2x fa-angle-right"/>
-      </a>
+        <i className="fa fa-5x fa-angle-right"/>
+      </button>
     )
   }
 }

@@ -6,13 +6,12 @@ export default class LeftArrow extends Component {
 
   render() {
     return (
-      <a
-        href="#"
-        className="slider-arrow-left"
+      <button
+        className="slider-arrow left"
         onClick={this.props.onClick}
       >
-        <i className="fa fa-2x fa-angle-left" />
-      </a>
+        <i className="fa fa-5x fa-angle-left" />
+      </button>
     )
   }
 }
