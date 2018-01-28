@@ -1,11 +1,25 @@
 import React, { Component } from 'react';
+import background from './office-view.jpg';
+import './Hero.css'
 
 class Hero extends Component {
 
   render() {
-    return(
+    return (
       <div className="hero">
-        Israel D. Matos
+
+        <div className="hero-image">
+          <img 
+            className="hero-bg" 
+            src={ background }
+          />
+        </div>
+
+        <div className="hero-text">
+          <h1>Israel D. Matos</h1>
+          <button>Portfolio</button>
+        </div>
+
       </div>
     )
   }
