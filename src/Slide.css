@@ -1,0 +1,25 @@
+.slide {
+  margin-right: auto;
+  margin-left: auto;
+  height: 100%;  
+  max-width: 900px;
+  list-style-type: none;
+  text-align: center;
+
+  /* @media (max-width: 990px) {
+
+  } */
+}
+
+.slide-active {
+  display: block;
+}
+
+.slide-hide {
+  display: none;
+}
+
+.slide-pic {
+  height: 400px;
+  width: 550px;
+}
