@@ -5,13 +5,14 @@ import renderer from 'react-test-renderer';
 import Slider from './Slider';
 
 describe(Slider, () => {
+ const slides = [];
  const component = shallow(
-    <Slider />
+    <Slider slides={slides} />
   );
 
   it('renders and matches our snapshot', () => {
     const component = renderer.create(
-      <Slider />
+      <Slider slides={slides} />
     )
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
