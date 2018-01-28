@@ -4,6 +4,7 @@ import LeftArrow from './LeftArrow';
 import RightArrow from './RightArrow';
 import SliderIndicator from './SliderIndicator'
 import './Slider.css'
+import ScrollableAnchor from 'react-scrollable-anchor';
 
 import smarterBear from './smarterbear.png';
 import colorGame from './colorGame.png';
@@ -76,35 +77,37 @@ export default class Slider extends Component {
 
   render() {
     return (
-      <div className="slider">   
+      <ScrollableAnchor id={'slider'}>
+        <div className="slider">   
 
-        <LeftArrow onClick={e => this.goToPrevSlide(e)} />  
+          <LeftArrow onClick={e => this.goToPrevSlide(e)} />  
 
-        <ul className="slides">
-          {this.state.slides.map((slide, index) => 
-            <Slide 
-              key={index}
-              index={index}
-              activeIndex={this.state.activeIndex}
-              slide={slide}
-            />
-          )}
-        </ul>
+          <ul className="slides">
+            {this.state.slides.map((slide, index) => 
+              <Slide 
+                key={index}
+                index={index}
+                activeIndex={this.state.activeIndex}
+                slide={slide}
+              />
+            )}
+          </ul>
 
-        <RightArrow onClick={e => this.goToNextSlide(e)} />
+          <RightArrow onClick={e => this.goToNextSlide(e)} />
 
-        <ul className="slider-indicators">
-          {this.state.slides.map((slide, index) => 
-            <SliderIndicator
-              key={index}
-              index={index}
-              activeIndex={this.state.activeIndex}
-              isActive={this.state.activeIndex===index}
-              onClick={e => this.goToSlide(index)}
-            />
-          )}
-        </ul>
-      </div>
+          <ul className="slider-indicators">
+            {this.state.slides.map((slide, index) => 
+              <SliderIndicator
+                key={index}
+                index={index}
+                activeIndex={this.state.activeIndex}
+                isActive={this.state.activeIndex===index}
+                onClick={e => this.goToSlide(index)}
+              />
+            )}
+          </ul>
+        </div>
+      </ScrollableAnchor>
     );
   }
 }

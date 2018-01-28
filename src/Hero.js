@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { goToAnchor } from 'react-scrollable-anchor';
 import background from './office-view.jpg';
 import './Hero.css'
 
@@ -16,11 +17,22 @@ class Hero extends Component {
           />
         </div>
 
-        <div className="hero-text">
-          <h1>Israel D. Matos</h1>
-          <button>Portfolio</button>
-        </div>
+        <div className="hero-content">
 
+          <h1>Hello, I am Israel D. Matos</h1>
+          <p>also known as @izzydoesit</p>
+
+            <a
+              href="#slider"
+              className="page-link btn"
+              dest="about"
+            >
+              <div className="btn-text">
+                <h2>Show me the goods!</h2>
+                <i className="fa fa-3x fa-arrow-right"/>
+              </div>
+            </a>
+        </div>
       </div>
     )
   }
