@@ -21,12 +21,12 @@ export default class SliderArrow extends Component {
   render() {
     return (
       <div className="arrow-container">
-      <button
-        className={`slider-arrow ${this.state.direction} bounce-${this.state.direction}`}
-        onClick={this.props.onClick}
-      >
-        <i className={`fa fa-5x fa-angle-${this.state.direction}`}/>
-      </button>
+        <button
+          className={`slider-arrow ${this.state.direction} bounce-${this.state.direction}`}
+          onClick={this.props.onClick}
+        >
+          <i className={`fa fa-5x fa-angle-${this.state.direction}`}/>
+        </button>
       </div>
     )
   }
