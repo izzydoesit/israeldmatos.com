@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import 'font-awesome/css/font-awesome.css'
-import './RightArrow.css';
+import './SliderArrow.css';
 
-export default class RightArrow extends Component {
+export default class SliderArrow extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      hover: false
+      direction: this.props.direction
     }
   }
 
@@ -21,10 +21,10 @@ export default class RightArrow extends Component {
   render() {
     return (
       <button
-        className="slider-arrow right"
+        className={`slider-arrow ${this.state.direction} bounce-${this.state.direction}`}
         onClick={this.props.onClick}
       >
-        <i className="fa fa-5x fa-angle-right"/>
+        <i className={`fa fa-5x fa-angle-${this.state.direction}`}/>
       </button>
     )
   }

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Slide from './Slide';
-import LeftArrow from './LeftArrow';
-import RightArrow from './RightArrow';
+import SliderArrow from './SliderArrow';
 import SliderIndicator from './SliderIndicator'
 import './Slider.css'
 import ScrollableAnchor from 'react-scrollable-anchor';
@@ -84,7 +83,10 @@ export default class Slider extends Component {
             <h1>Projects</h1>
           </div>
 
-          <LeftArrow onClick={e => this.goToPrevSlide(e)} />  
+          <SliderArrow 
+            direction="left"
+            onClick={e => this.goToPrevSlide(e)} 
+          />  
 
           <ul className="slides">
             {this.state.slides.map((slide, index) => 
@@ -97,7 +99,10 @@ export default class Slider extends Component {
             )}
           </ul>
 
-          <RightArrow onClick={e => this.goToNextSlide(e)} />
+          <SliderArrow 
+            direction="right"
+            onClick={e => this.goToNextSlide(e)} 
+          />
 
           <ul className="slider-indicators">
             {this.state.slides.map((slide, index) => 
