@@ -14,7 +14,7 @@ ul {
 
 .slider {
   height: 100%;
-  position: relative;
+  display: inline-block;
   min-height: 200px;
   margin: 2%;
   padding: 2%;
@@ -24,6 +24,18 @@ ul {
   margin: 2%;
   margin-bottom: 5%;
   text-decoration: underline;
+  display: block;
+}
+
+.slider-content {
+  height: 100%;
+
+}
+
+.slides {
+  display: inline-block;
+  width: 79%;
+  height: 100%;
 }
 
 /* .arrow:hover {
@@ -38,5 +50,6 @@ ul {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 2%;
+
 }
