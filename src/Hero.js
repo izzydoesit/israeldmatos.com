@@ -35,7 +35,7 @@ class Hero extends Component {
         <div className="hero-content">
 
           <h1>Hello, I'm <span className="name">Israel D. Matos.</span></h1>
-          <p>I'm a full-stack developer.</p>
+          <p>I'm a full-stack web developer.</p>
 
           <a
             href="#slider"
