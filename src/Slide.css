@@ -1,7 +1,8 @@
 .slide {
   margin-right: auto;
   margin-left: auto;
-  height: 100%;  
+  height: 100%;
+  width: 100%; 
   max-width: 900px;
   list-style-type: none;
   text-align: center;
@@ -20,6 +21,6 @@
 }
 
 .slide-pic {
-  height: 25em;
-  width:50em;
+  height: 100%;
+  width: 100%;
 }
