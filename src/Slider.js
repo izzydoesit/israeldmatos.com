@@ -88,7 +88,6 @@ export default class Slider extends Component {
               direction="left"
               onClick={e => this.goToPrevSlide(e)} 
             />  
-
             <ul className="slides">
               {this.state.slides.map((slide, index) => 
                 <Slide 
@@ -99,7 +98,6 @@ export default class Slider extends Component {
                 />
               )}
             </ul>
-
             <SliderArrow 
               direction="right"
               onClick={e => this.goToNextSlide(e)} 
