@@ -83,26 +83,28 @@ export default class Slider extends Component {
             <h1>Projects</h1>
           </div>
 
-          <SliderArrow 
-            direction="left"
-            onClick={e => this.goToPrevSlide(e)} 
-          />  
+          <div className="slider-content">
+            <SliderArrow 
+              direction="left"
+              onClick={e => this.goToPrevSlide(e)} 
+            />  
 
-          <ul className="slides">
-            {this.state.slides.map((slide, index) => 
-              <Slide 
-                key={index}
-                index={index}
-                activeIndex={this.state.activeIndex}
-                slide={slide}
-              />
-            )}
-          </ul>
+            <ul className="slides">
+              {this.state.slides.map((slide, index) => 
+                <Slide 
+                  key={index}
+                  index={index}
+                  activeIndex={this.state.activeIndex}
+                  slide={slide}
+                />
+              )}
+            </ul>
 
-          <SliderArrow 
-            direction="right"
-            onClick={e => this.goToNextSlide(e)} 
-          />
+            <SliderArrow 
+              direction="right"
+              onClick={e => this.goToNextSlide(e)} 
+            />
+          </div>
 
           <ul className="slider-indicators">
             {this.state.slides.map((slide, index) => 
