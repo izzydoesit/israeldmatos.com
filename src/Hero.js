@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { goToAnchor } from 'react-scrollable-anchor';
 import background from './office-view.jpg';
-import AnimatedArrow from './AnimatedArrow';
+import RotatingArrow from './RotatingArrow';
 import './Hero.css'
 
 class Hero extends Component {
@@ -50,7 +50,7 @@ class Hero extends Component {
                 Show me yer GOODS!
               </span>
 
-              <AnimatedArrow rotate={this.state.rotate}/>
+              <RotatingArrow rotate={this.state.rotate}/>
             </div>
           </a>
         </div>

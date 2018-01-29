@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Motion, spring } from 'react-motion';
 
 
-export default class AnimatedArrow extends Component {
+export default class RotatingArrow extends Component {
 
   render () {
     return (
