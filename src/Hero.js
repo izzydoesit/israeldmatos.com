@@ -1,9 +1,24 @@
 import React, { Component } from 'react';
 import { goToAnchor } from 'react-scrollable-anchor';
 import background from './office-view.jpg';
+import AnimatedArrow from './AnimatedArrow';
 import './Hero.css'
 
 class Hero extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      rotate: 0
+    }
+  }
+
+  enter() {
+    this.setState({rotate: 90});
+  }
+
+  leave() {
+    this.setState({rotate: 0});
+  }
 
   render() {
     return (
@@ -19,19 +34,25 @@ class Hero extends Component {
 
         <div className="hero-content">
 
-          <h1>Hello, I am Israel D. Matos</h1>
-          <p>also known as @izzydoesit</p>
+          <h1>Hello, I'm <span className="name">Israel D. Matos.</span></h1>
+          <p>I'm a full-stack developer.</p>
 
-            <a
-              href="#slider"
-              className="page-link btn"
-              dest="about"
-            >
-              <div className="btn-text">
-                <h2>Show me the goods!</h2>
-                <i className="fa fa-3x fa-arrow-right"/>
-              </div>
-            </a>
+          <a
+            href="#slider"
+            className="page-link-btn"
+            role="button"
+            onMouseOver={this.enter.bind(this)}
+            onMouseLeave={this.leave.bind(this)}           
+          > 
+            <div className="btn-content">
+
+              <span className="btn-text">
+                Show me yer GOODS!
+              </span>
+
+              <AnimatedArrow rotate={this.state.rotate}/>
+            </div>
+          </a>
         </div>
       </div>
     )
