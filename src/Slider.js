@@ -79,6 +79,10 @@ export default class Slider extends Component {
     return (
       <ScrollableAnchor id={'slider'}>
         <div className="slider">   
+        
+          <div className="title">
+            <h1>Projects</h1>
+          </div>
 
           <LeftArrow onClick={e => this.goToPrevSlide(e)} />  
 

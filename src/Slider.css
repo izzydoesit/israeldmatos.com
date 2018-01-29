@@ -16,8 +16,14 @@ ul {
   height: 100%;
   position: relative;
   min-height: 200px;
-  margin: 5%;
-  padding: 10%;
+  margin: 2%;
+  padding: 2%;
+}
+
+.title {
+  margin: 2%;
+  margin-bottom: 5%;
+  text-decoration: underline;
 }
 
 /* .arrow:hover {
