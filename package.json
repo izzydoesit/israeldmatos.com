@@ -13,7 +13,8 @@
     "react-page-layout": "^0.9.8",
     "react-scripts": "1.1.0",
     "react-scrollable-anchor": "^0.5.0",
-    "react-test-renderer": "^16.2.0"
+    "react-test-renderer": "^16.2.0",
+    "react-transition-group": "^2.2.1"
   },
   "scripts": {
     "start": "react-scripts start",
