@@ -12,7 +12,7 @@ export default class Projects extends Component {
     return (
       <section>
         <ScrollableAnchor id={'projects'}>
-          <div className="container flex">
+          <div className="flex">
             <div className="header animated slide-in-right">Projects</div>
             <div className="header-bar animated slide-in-right"></div>
             <Slider />
