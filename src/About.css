@@ -1,0 +1,107 @@
+.label-wrap > div {
+  width: 100%;
+  padding: 0 15px;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.bullet-wrap {
+  height: 230px;
+  width: 50%;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.row-gt-sm > div.flex.bullet-wrap {
+  justify-content: flex-start;
+}
+
+.bullet-text > .label {
+  font-weight: 500;
+  font-size: 1.7em;
+  margin: 15px 0 5px 0;
+}
+
+div.bullet-text > div.description {
+  color: #616161;
+  line-height: 1.3em;
+}
+
+.hex-wrap {
+
+}
+
+.hexagon {
+
+}
+
+.waypoint {
+  opacity: 0;
+}
+
+.skills-wrapper {
+  width: 100%;
+  margin: 50px 0 0 0;
+  align-items: flex-start;
+}
+
+.skills-wrapper > .flex:first-child {
+  padding: 0 50px 0 50px;
+}
+
+.me {
+  height: 300px;
+}
+
+.fade-in {
+  animation: fadeIn .75s ease both;
+}
+
+@keyframes fadeIn {
+  100% {
+    opacity: 1;
+  }
+}
+
+.bars-wrap {
+  margin: 0 0 0 0;
+  width: calc(100% - 15px);
+  max-width: 90%;
+}
+
+.bar {
+  max-width: 90%;
+  height: 33px;
+  margin: 0 0 15px 0;
+  font-size: 11pt;
+  position: relative;
+  align-items: flex-end;
+  
+}
+
+.bar.flex { 
+  align-items: flex-end;
+}
+
+.bar.fill {
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-color: #F9CFBA;
+  padding: 0;
+  opacity: 1;
+}
+
+.bar .tag {
+  width: 110px;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #F9d9b1;
+}
+
+.bar.flex > span {
+  display: flex;
+  z-index: 1;
+  padding: 0 15px 0 0;
+}
