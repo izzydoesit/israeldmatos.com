@@ -10,13 +10,15 @@ export default class Projects extends Component {
 
   render() {
     return (
-      <ScrollableAnchor id={'projects'}>
-        <div className="container flex">
-          <div className="header animated slide-in-right">Projects</div>
-          <div className="header-bar animated slide-in-right"></div>
-          <Slider />
-        </div>
-      </ScrollableAnchor>
+      <section>
+        <ScrollableAnchor id={'projects'}>
+          <div className="container flex">
+            <div className="header animated slide-in-right">Projects</div>
+            <div className="header-bar animated slide-in-right"></div>
+            <Slider />
+          </div>
+        </ScrollableAnchor>
+      </section>
     )
   }
 }
