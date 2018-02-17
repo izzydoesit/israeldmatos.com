@@ -8,34 +8,25 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 25em;
   border: 2px solid black;
 }
 
 .slider {
   height: 100%;
   display: inline-block;
-  min-height: 200px;
   margin: 2%;
   padding: 2%;
 }
 
-.title {
-  margin: 2%;
-  margin-bottom: 5%;
-  text-decoration: underline;
-  display: block;
-}
 
-.slider-content {
+.slider-wrapper {
   height: 100%;
-
 }
 
 .slides {
   display: inline-block;
-  width: 79%;
-  height: 100%;
+  width: 50%;
+  height: 50%;
 }
 
 /* .arrow:hover {

@@ -6,7 +6,8 @@
   max-width: 900px;
   list-style-type: none;
   text-align: center;
-
+  position: relative;
+  box-shadow: 0 0 1rem rgba(0,0,0,.6);
   /* @media (max-width: 990px) {
 
   } */
@@ -23,4 +24,22 @@
 .slide-pic {
   height: 100%;
   width: 100%;
+}
+
+#gallery .text {
+  z-index: 2;
+  text-align: center;
+  opacity: 1;
+  transition: opacity 500ms;
+  color: #fff;
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+
+}
+
+#gallery .card:hover .text {
+  opacity: 1;
+  top: 24%;
 }
