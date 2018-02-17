@@ -38,7 +38,7 @@ class Hero extends Component {
           <p>I'm a full-stack web developer.</p>
 
           <a
-            href="#slider"
+            href="#about"
             className="page-link-btn"
             role="button"
             onMouseOver={this.enter.bind(this)}
