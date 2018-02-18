@@ -12,37 +12,12 @@ import hackerHaus from './hackerhaus.png';
 import frais from './frais.png';
 
 const slideArray = [
-  { title: 'Smarter Bear', src: smarterBear },
-  { title: 'The Color Game', src: colorGame },
-  { title: 'Curva Fitness', src: curvaFit },
-  { title: 'Hackerhaus', src: hackerHaus },
-  { title: 'Frais Recipes', src: frais }
+  { title: 'Smarter Bear', url: 'https://smarterbear.herokuapp.com/', blurb: 'Find out what the insiders are trading...', src: smarterBear },
+  { title: 'The Color Game', url: 'http://izzydoesit.github.io/colorGame', blurb: 'Test your hex-naming skills here', src: colorGame },
+  { title: 'Curva Fitness', url: 'https://curva.herokuapp.com/', blurb: 'Get CURVA fit!', src: curvaFit },
+  { title: 'Hackerhaus', url: 'https://hackerhaus.herokuapp.com/', blurb: 'The NEXT best thing in SF housing...', src: hackerHaus },
+  { title: 'Frais Recipes', url: 'https://recipesbyfrais.herokuapp.com/', blurb: 'Discover a new crowd-sourced dish or share your fav', src: frais }
 ]
-
-const duration = 300;
-
-const defaultStyle = {
-  transition: `opacity ${duration}ms ease-in-out`,
-  opacity: 0,
-}
-
-const transitionStyles = {
-  entering: { opacity: 0 },
-  entered: { opacity: 1 },
-}
-
-const Fade = ({ in: inProp }) => (
-  <Transition in={inProp} timeout={duration}>
-    {(state) => (
-      <div style={{
-        ...defaultStyle,
-        ...transitionStyles[state]
-      }}>
-        I'm a fade transition!
-      </div>
-    )}
-  </Transition>
-  )
 
 export default class Slider extends Component {
   constructor(props) {
@@ -114,7 +89,7 @@ export default class Slider extends Component {
             direction="left"
             onClick={e => this.goToPrevSlide(e)} 
           />  
-          <ul className="slides">
+          <ul className="slide-list">
               {this.state.slides.map((slide, index) => 
                 <Slide 
                   key={index}
