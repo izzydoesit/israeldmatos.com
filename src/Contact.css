@@ -1,0 +1,11 @@
+.subtitle {
+  padding: 2% 2% 6% 2%;
+  margin: 7%;
+  width: 100%;
+  color: #857698;
+  text-shadow: 1px 1px 1px #493f55, 3px 3px 4px #E1C1A9, 5px 5px 5px #493f55;
+}
+
+section:nth-child(5) > div > div.header-bar {
+  margin: 1em 0 3em 0;
+}
