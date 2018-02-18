@@ -9,6 +9,7 @@
     "hover.css": "^2.2.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-headroom": "^2.2.2",
     "react-icons": "^2.2.7",
     "react-motion": "^0.5.2",
     "react-page-layout": "^0.9.8",
