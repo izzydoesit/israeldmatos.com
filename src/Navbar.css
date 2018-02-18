@@ -9,11 +9,31 @@ nav{
   background-color: #F5F9E1;
   width: 100%;
   height: 4em;
+  border-bottom: 3px solid #6D5775;
+  text-align: left;
+  z-index: 99;
+}
+
+nav.fixed.desk {
+  animation: popDown 0.5s;
+}
+
+@keyframes popDown {
+  0% {
+    transform: translateY(-100px);
+  }
+}
+
+nav.fixed {
+  top: 0;
+  left: 0;
+  bottom: inherit;
+  position: fixed;
 }
 
 .link-wrap {
   position: initial;
-  text-align: left;
+
 }
 
 nav .link-wrap {
@@ -21,7 +41,6 @@ nav .link-wrap {
   top: 53px;
   cursor: pointer;
   text-transform: uppercase;
-
 }
 
 nav .active {
@@ -42,5 +61,5 @@ nav .active {
 
 .page-link:hover {
   color: #6D5775;
-  text-shadow: #FFE064 1px 0 10px;
+  text-shadow: #FFE064 5px 0 10px;
 } 
