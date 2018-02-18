@@ -81,6 +81,7 @@ div.bullet-text > div.description {
 
 .bar.flex { 
   align-items: flex-end;
+  background-color: #eee;
 }
 
 .bar.fill {
@@ -104,4 +105,5 @@ div.bullet-text > div.description {
   display: flex;
   z-index: 1;
   padding: 0 15px 0 0;
+  color: #666;
 }
