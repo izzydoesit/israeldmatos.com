@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { goToAnchor } from 'react-scrollable-anchor';
 import background from './office-view.jpg';
 import RotatingArrow from './RotatingArrow';
 import './Hero.css'
@@ -28,6 +27,7 @@ class Hero extends Component {
           <img 
             className="hero-bg" 
             src={ background }
+            resizemode="cover"
             alt='background'
           />
         </div>
@@ -47,7 +47,7 @@ class Hero extends Component {
             <div className="btn-content">
 
               <span className="btn-text">
-                Show me yer GOODS!
+                Prove it!
               </span>
 
               <RotatingArrow rotate={this.state.rotate}/>
