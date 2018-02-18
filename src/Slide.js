@@ -84,7 +84,7 @@ export default class Slide extends Component {
         <a 
           href={this.props.slide.url} 
           target="_blank"
-          className="flex button"
+          className="flex card-button"
           style={buttonStyles}
           onMouseEnter={this.handleMouseButtonHover}
           onMouseLeave={this.handleMouseButtonHover}
