@@ -1,0 +1,81 @@
+footer {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #6D5775;
+  padding: 6% 0 5% 0;
+}
+
+.chevron-link-wrapper > svg:hover {
+  box-shadow: 0 0 1rem rgba(0,0,0,.6);
+}
+
+.chevron {
+  position: absolute;
+  top: -25px;
+  left: 0;
+  right: 0;
+  font-size: 30pt;
+  color: #FFF;
+  background: #E1C1A9;
+  padding: 0.7%;
+  margin: 0 auto;
+}
+
+footer .icon-wrap .icon {
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s
+}
+
+.icon-wrap {
+  text-align: center;
+}
+
+a.social-link {
+  margin: 0 15px;
+  height: 55px;
+  width: 55px;
+  background: #50396C;
+  cursor: pointer;
+  position: relative;
+}
+
+a.social-link:hover {
+  background: #F2F7D8;
+  color: #50396C;
+  box-shadow: 0 0 1rem rgba(0,0,0,.6);
+}
+
+a.social-link:hover .icon {
+  color: #50396C;
+  transform: scale(0.9);
+  animation: toBottomFromTop 0.3s forwards;
+}
+
+@keyframes toBottomFromTop {
+  49% {
+    transform: translateY(100%);
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  51% {
+    opacity: 1;
+  }
+}
+
+.icon {
+  color: #FFF;
+  transform: translate(0, 0);
+}
+
+.foot-note {
+  color: #ddd;
+  margin-top: 5%;
+}
+
+.highlight {
+  color: #E1C1A9;
+  padding-left: 0.5%;
+}
