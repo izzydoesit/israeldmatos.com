@@ -68,6 +68,7 @@ export default class Slide extends Component {
       > 
         <div className="card" style={cardStyles}>
           <img 
+            resizemode="stretch"
             className="slide-pic" 
             src={this.props.slide.src}
             alt='web project'
@@ -78,7 +79,7 @@ export default class Slide extends Component {
           <div className="bold">
             {this.props.slide.title}
           </div>
-          <span class="highlight">{this.props.slide.blurb}</span>
+          <span class="blurb">{this.props.slide.blurb}</span>
         </div>
         
         <a 
