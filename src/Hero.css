@@ -1,6 +1,7 @@
 .hero {
   display: block;
   position: relative;
+  border-bottom: 3px solid #6D5775;
 }
 
 img.hero-bg {

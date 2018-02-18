@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Headroom from 'react-headroom';
 import ScrollableAnchor from 'react-scrollable-anchor/lib/ScrollableAnchor';
 import Home from './Home';
 import Navbar from './Navbar';
@@ -12,13 +13,22 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <Home />
-        <About />
-        <Projects />
-        {/* <Blog /> */}
-        {/* <Contact /> */}
-      </div>
+          <div className="App">
+
+            <Headroom
+              onPin={() => console.log('pinned')}
+              onUnpin={() => console.log('unpinned')}
+            >
+              <Navbar/>
+            </Headroom>
+
+            <Home />
+            <About />
+            <Projects />
+            {/* <Blog /> */}
+            {/* <Contact /> */}
+
+          </div>
     )
   }
 }

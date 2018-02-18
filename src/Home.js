@@ -14,8 +14,7 @@ export default class Home extends Component {
       <section>
         <ScrollableAnchor id={'home'}>
           <div className="home">
-            <Hero />
-            <Navbar />
+            <Hero />   
           </div>
         </ScrollableAnchor>
       </section>
