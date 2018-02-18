@@ -1,0 +1,79 @@
+form.contact-form {
+  height: 50%;
+  padding: 3%;
+  background-color: #F4F8DD;
+  border: 2px solid #6D5775;
+}
+
+.input-wrap {
+  width: 70%;
+  margin: 2% 0 0 0;
+  overflow: hidden;
+}
+
+.name-input, .email-input {
+  width: 100%;
+  height: 2em;
+  box-sizing: border-box;
+  line-height: 2;
+  font-size: 14pt;
+  padding: 3.5%;
+  margin: 1% 0;
+}
+
+.message-input {
+  width: 100%;
+  height: 7em;
+  box-sizing: border-box;
+  line-height: 2;
+  font-size: 14pt;
+  padding: 1% 3.5% 3.5% 3.5%;
+  margin: 1% 0;
+}
+
+#success {
+  opacity: 0;
+  width: 100%;
+  transition: all .25s;
+}
+
+#success div {
+  position: relative;
+  background-color: #04c986;
+  padding: 1% 0;
+}
+
+.expand {
+  height: 36px;
+}
+
+#close {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#close:hover {
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, .3);
+}
+
+button.contact-btn {
+  width: 25%;
+  height: 13%;
+  padding: 2%;
+  margin: 3% auto;
+  border-radius: 10px;
+  background-color: transparent;
+  border: 2px solid #9F96A3;
+  justify-content: center;
+  color: #666;
+  font-size: 1.5em;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+
+button.contact-btn:hover {
+  color: #FFF;
+  background-color: #9F96A3;
+}
