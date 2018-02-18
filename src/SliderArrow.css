@@ -1,7 +1,8 @@
 .arrow-container {
   height: 100%;
   width: 4%;
-} 
+  margin: 0 1%;
+}
 
 .slider-arrow {
   height: 100%;
@@ -11,6 +12,8 @@
 
 .slider-arrow:hover {
   opacity: 1;
+  transition: opacity .15s cubic-bezier(.4, 0, 1, 1);
+  border: 0.5px solid grey;
   box-shadow:	0px 1px 3px 0px rgba(0, 0, 0, .3);
 }
 
