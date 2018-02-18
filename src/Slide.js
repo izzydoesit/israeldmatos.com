@@ -1,65 +1,58 @@
 import React, { Component } from 'react';
 import './Slide.css';
 
-const normalText = {
-  position: 'absolute',
-  top: 0,
-  left: 0,
-  backgroundColor: 'red',
-  opacity: 0
-}
-
-const hoverText = {
-  position: 'absolute',
-  top: '24%',
-  left: 0,
-  backgroundColor: 'red',
+const cardHover = {
   opacity: 1
-}
+};
 
-const normalButton = {
-  position: 'absolute',
-  bottom: 0,
-  left: 0,
-  backgroundColor: 'red',
-  opacity: 0,
-}
-
-const hoverButton = {
-  position: 'absolute',
-  bottom: '20%',
-  left: 0,
-  backgroundColor: 'red',
-  opacity: 1
-}
+const buttonLightUp = {
+  backgroundColor: '#E5B495',
+  color: '#FFF',
+};
 
 export default class Slide extends Component {
   constructor(props) {
     super(props);
-    this.handleMouseHover = this.handleMouseHover.bind(this)
+    this.handleMouseCardHover = this.handleMouseCardHover.bind(this)
+    this.handleMouseButtonHover = this.handleMouseButtonHover.bind(this)
     this.state = { 
-      isHovering: false
+      cardHover: false,
+      buttonHover: false,
     }
   }
 
-  handleMouseHover() {
-    this.setState(this.toggleHoverState)
+  handleMouseCardHover() {
+    this.setState(this.toggleCardHoverState)
   }
 
-  toggleHoverState() {
+  handleMouseButtonHover() {
+    this.setState(this.toggleButtonHoverState)
+  }
+
+  toggleCardHoverState() {
     return {
-      isHovering: !this.state.isHovering 
+      cardHover: !this.state.cardHover
+    };
+  }
+
+  toggleButtonHoverState() {
+    return {
+      buttonHover: !this.state.buttonHover 
     };
   }
 
   render() {
-    var textStyles = normalText;
-    var buttonStyles = normalButton;
-    var cardStyles = { opacity: 1 }
-    if (this.state.isHovering) {
-      textStyles = hoverText;
-      buttonStyles = hoverButton;
+    let textStyles = {}
+    let buttonStyles = {}
+    let cardStyles = { opacity: 1 }
+    if (this.state.cardHover) {
+      textStyles = {...cardHover, top: '24%' };
+      buttonStyles = {...cardHover, bottom: '24%' };
       cardStyles = { opacity: 0 }
+    }
+
+    if (this.state.buttonHover) {
+      buttonStyles = { ...buttonStyles, buttonLightUp };
     }
 
     return (
@@ -70,8 +63,8 @@ export default class Slide extends Component {
           : "slide slide-hide"
         }
         key={this.props.index}
-        onMouseEnter={this.handleMouseHover}
-        onMouseLeave={this.handleMouseHover}
+        onMouseEnter={this.handleMouseCardHover}
+        onMouseLeave={this.handleMouseCardHover}
       > 
         <div className="card" style={cardStyles}>
           <img 
@@ -80,14 +73,24 @@ export default class Slide extends Component {
             alt='web project'
           />
         </div>
-        
-        <div className="text" style={textStyles}>
+
+        <div className="flex card-text" style={textStyles}>
           <div className="bold">
             {this.props.slide.title}
           </div>
-          <span class="highlight"></span>
+          <span class="highlight">{this.props.slide.blurb}</span>
         </div>
-        <div className="button" style={buttonStyles}>BUTTON</div>
+        
+        <a 
+          href={this.props.slide.url} 
+          target="_blank"
+          className="flex button"
+          style={buttonStyles}
+          onMouseEnter={this.handleMouseButtonHover}
+          onMouseLeave={this.handleMouseButtonHover}
+        >
+          LEARN MORE
+        </a>
       </li>
     )
   }
