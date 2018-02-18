@@ -37,8 +37,8 @@ export default class About extends Component {
 
                   <div className="waypoint bullet-text fade-in" data-animation="fade-in">
                     <div className="label bold">Fast</div>
-                    <div className="description">Load times and lag free 
-                      interaction are my highest priority
+                    <div className="description">Optimal load times
+                      are my highest priority
                     </div>
                   </div>
 
@@ -54,7 +54,7 @@ export default class About extends Component {
 
                   <div className="bullet-text">
                     <div className="label bold">Responsive</div>
-                    <div className="description">My layouts will work on any device
+                    <div className="description">My layouts will work on any device,
                       big or small
                     </div>
                   </div>
@@ -74,8 +74,8 @@ export default class About extends Component {
 
                   <div className="bullet-text">
                     <div className="label bold">Intuitive</div>
-                    <div className="description">Make things so easy, 
-                      its natural to use it just like you think...
+                    <div className="description">I design it to be used in 
+                      the simplest and easiest way possible...
                     </div>
                   </div>
 
@@ -92,7 +92,7 @@ export default class About extends Component {
                   <div className="bullet-text">
                     <div className="label bold">Dynamic</div>
                     <div className="description">I love adding a little magic 
-                      to that static page to make it come to life!</div>
+                      to make that page come to life!</div>
                   </div>
 
                 </div>  
