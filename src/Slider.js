@@ -82,41 +82,43 @@ export default class Slider extends Component {
           <Transition in={this.state.in} timeout={500} />
           <button onClick={this.toggleEnterState}>Click to Enter</button>
         </div> */}
+        <div className="slider-container">
 
-        <div id="gallery" className="slider-wrapper">
+          <div id="gallery" className="slider-wrapper">
 
-          <SliderArrow 
-            direction="left"
-            onClick={e => this.goToPrevSlide(e)} 
-          />  
-          <ul className="slide-list">
+            <SliderArrow 
+              direction="left"
+              onClick={e => this.goToPrevSlide(e)} 
+            />  
+            <ul className="slide-list">
+                {this.state.slides.map((slide, index) => 
+                  <Slide 
+                    key={index}
+                    index={index}
+                    activeIndex={this.state.activeIndex}
+                    slide={slide}
+                  />
+                )}
+            </ul>
+            <SliderArrow 
+              direction="right"
+              onClick={e => this.goToNextSlide(e)} 
+            />
+          </div>
+
+          <div className="indicator-wrap">
+            <ul className="slider-indicators">
               {this.state.slides.map((slide, index) => 
-                <Slide 
+                <SliderIndicator
                   key={index}
                   index={index}
                   activeIndex={this.state.activeIndex}
-                  slide={slide}
+                  isActive={this.state.activeIndex===index}
+                  onClick={e => this.goToSlide(index)}
                 />
               )}
-          </ul>
-          <SliderArrow 
-            direction="right"
-            onClick={e => this.goToNextSlide(e)} 
-          />
-        </div>
-
-        <div className="indicator-wrap">
-          <ul className="slider-indicators">
-            {this.state.slides.map((slide, index) => 
-              <SliderIndicator
-                key={index}
-                index={index}
-                activeIndex={this.state.activeIndex}
-                isActive={this.state.activeIndex===index}
-                onClick={e => this.goToSlide(index)}
-              />
-            )}
-          </ul>
+            </ul>
+          </div>
         </div>
         
       </div>

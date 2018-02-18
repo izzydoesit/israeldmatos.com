@@ -5,42 +5,45 @@ ul {
 }
 
 .slider-container {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border: 2px solid black;
+  align-items: center;
+}
+
+.slider-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 60%;
+  margin: 0 auto;
 }
 
 .slider {
   height: 100%;
-  display: inline-block;
+  display: flex;
+  flex-direction: row;
   margin: 2%;
   padding: 2%;
 }
 
-
-.slider-wrapper {
-  height: 100%;
-}
-
 .slide-list {
   display: inline-block;
-  width: 50%;
-  height: 50%;
+  width: 100%;
+  height: 100%;
 }
-
-/* .arrow:hover {
-  opacity: 0.5;
-}
-
-.arrow:focus {
-  outline: 0;
-} */
 
 .slider-indicators {
   display: flex;
   flex-direction: row;
   justify-content: center;
   margin-top: 2%;
+}
 
+.indicator-wrap {
+  width: 100%;
+  display: block;
 }
