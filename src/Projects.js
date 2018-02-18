@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Slider from './Slider';
 import './Projects.css';
+import ScrollAnimation from 'react-animate-on-scroll';
 import ScrollableAnchor from 'react-scrollable-anchor/lib/ScrollableAnchor';
 
 export default class Projects extends Component {
@@ -9,9 +10,14 @@ export default class Projects extends Component {
     return (
       <section>
         <ScrollableAnchor id={'projects'}>
+
           <div className="flex">
-            <div className="header animated slide-in-right">Projects</div>
-            <div className="header-bar animated slide-in-right"></div>
+            <ScrollAnimation animateIn="bounceInRight">
+              <div className="header">Projects</div>
+            </ScrollAnimation>
+            <ScrollAnimation animateIn="bounceInRight" delay={500}>
+              <div className="header-bar"></div>
+            </ScrollAnimation>
             <Slider />
           </div>
         </ScrollableAnchor>
