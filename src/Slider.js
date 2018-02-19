@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Slide from './Slide';
 import SliderArrow from './SliderArrow';
 import SliderIndicator from './SliderIndicator';
-import Transition from 'react-transition-group/Transition';
+import ScrollAnimation from 'react-animate-on-scroll'
 import './Slider.css'
 
 import smarterBear from './smarterbear.png';
@@ -84,28 +84,29 @@ export default class Slider extends Component {
         </div> */}
         <div className="slider-container">
 
-          <div id="gallery" className="slider-wrapper">
+          <ScrollAnimation animateIn="flip" delay={900}>
+            <div id="gallery" className="slider-wrapper">
 
-            <SliderArrow 
-              direction="left"
-              onClick={e => this.goToPrevSlide(e)} 
-            />  
-            <ul className="slide-list">
-                {this.state.slides.map((slide, index) => 
-                  <Slide 
-                    key={index}
-                    index={index}
-                    activeIndex={this.state.activeIndex}
-                    slide={slide}
-                  />
-                )}
-            </ul>
-            <SliderArrow 
-              direction="right"
-              onClick={e => this.goToNextSlide(e)} 
-            />
-          </div>
-
+              <SliderArrow 
+                direction="left"
+                onClick={e => this.goToPrevSlide(e)} 
+              />  
+              <ul className="slide-list">
+                  {this.state.slides.map((slide, index) => 
+                    <Slide 
+                      key={index}
+                      index={index}
+                      activeIndex={this.state.activeIndex}
+                      slide={slide}
+                    />
+                  )}
+              </ul>
+              <SliderArrow 
+                direction="right"
+                onClick={e => this.goToNextSlide(e)} 
+              />
+            </div>
+          </ScrollAnimation>
           <div className="indicator-wrap">
             <ul className="slider-indicators">
               {this.state.slides.map((slide, index) => 
