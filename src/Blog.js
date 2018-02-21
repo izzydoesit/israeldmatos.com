@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Blog.css';
+import ScrollAnimation from 'react-animate-on-scroll';
 import ScrollableAnchor from 'react-scrollable-anchor/lib/ScrollableAnchor';
 
 export default class Blog extends Component {
@@ -8,6 +9,7 @@ export default class Blog extends Component {
     return (
       <section>
         <ScrollableAnchor id={'blog'}>
+          <div className="container flex">
             <div className="header animated slide-in-left">Blog</div>
             <div className="header-bar animated slide-in-left"></div>
 
@@ -43,6 +45,7 @@ export default class Blog extends Component {
                 <div className="text"></div>
               </div>          
             </a>
+          </div>
         </ScrollableAnchor>
       </section>
     )
