@@ -27,7 +27,7 @@ export default class About extends Component {
             <ScrollAnimation animateIn="bounceInLeft">
               <div className="header">About</div>
             </ScrollAnimation>
-            <ScrollAnimation animateIn="bounceInLeft" delay={500}>
+            <ScrollAnimation animateIn="bounceInLeft" delay={300}>
               <div className="header-bar"></div>
             </ScrollAnimation>
 
@@ -37,16 +37,16 @@ export default class About extends Component {
               
                 <div className="flex bullet-wrap">
 
-                  <ScrollAnimation animateIn="flipInY">
-                    <div className="hex-wrap animated flip-in-x">
+                  <ScrollAnimation animateIn="flipInY" delay={300}>
+                    <div className="hex-wrap">
                       <div className="hexagon">
                         <Alarm size={55} className="speedometer"/>
                       </div>
                     </div>
                   </ScrollAnimation>
 
-                  <ScrollAnimation animateIn="fadeInUp">
-                    <div className="waypoint bullet-text fade-in" data-animation="fade-in">
+                  <ScrollAnimation animateIn="fadeInUp" delay={400}>
+                    <div className="bullet-text">
                       <div className="label bold">Fast</div>
                       <div className="description">Optimal load times
                         are my highest priority
@@ -58,7 +58,7 @@ export default class About extends Component {
 
                 <div className="flex bullet-wrap">
 
-                  <ScrollAnimation animateIn="flipInY">
+                  <ScrollAnimation animateIn="flipInY" delay={600}>
                     <div className="hex-wrap">
                       <div className="hexagon">
                         <Tablet size={55} className="tablet"/>
@@ -66,7 +66,7 @@ export default class About extends Component {
                     </div>
                   </ScrollAnimation>
 
-                  <ScrollAnimation animateIn="fadeInUp">
+                  <ScrollAnimation animateIn="fadeInUp" delay={700}>
                     <div className="bullet-text">
                       <div className="label bold">Responsive</div>
                       <div className="description">My layouts will work on any device,
@@ -81,7 +81,8 @@ export default class About extends Component {
               <div className="flex row-gt-sm">
 
                 <div className="flex bullet-wrap">
-                  <ScrollAnimation animateIn="flipInY">
+
+                  <ScrollAnimation animateIn="flipInY" delay={900}>
                     <div className="hex-wrap animated flip-in-x">
                       <div className="hexagon">
                         <ThumbsUp size={55} className="thumbsup"/>
@@ -89,7 +90,7 @@ export default class About extends Component {
                     </div>
                   </ScrollAnimation>
 
-                  <ScrollAnimation animateIn="fadeInUp">
+                  <ScrollAnimation animateIn="fadeInUp" delay={1000}>
                     <div className="bullet-text">
                       <div className="label bold">Intuitive</div>
                       <div className="description">Design is simplicity
@@ -100,7 +101,8 @@ export default class About extends Component {
                 </div>
 
                 <div className="flex bullet-wrap">
-                  <ScrollAnimation animateIn="flipInY">
+
+                  <ScrollAnimation animateIn="flipInY" delay={1200}>
                     <div className="hex-wrap animated flip-in-x">
                       <div className="hexagon">
                         <Magic size={55} className="magic"/>
@@ -108,7 +110,7 @@ export default class About extends Component {
                     </div>
                   </ScrollAnimation>
 
-                  <ScrollAnimation animateIn="fadeInUp">
+                  <ScrollAnimation animateIn="fadeInUp" delay={1300}>
                     <div className="bullet-text">
                       <div className="label bold">Dynamic</div>
                       <div className="description">I love adding a little magic 
@@ -124,7 +126,7 @@ export default class About extends Component {
 
               <div className="flex flex-50-gt-sm">
                 <ScrollAnimation animateIn="bounceInLeft">
-                  <div className="bio animated slide-in-left">
+                  <div className="bio">
                     <img 
                       src={ ProfilePic }
                       className="me" 
