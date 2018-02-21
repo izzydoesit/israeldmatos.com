@@ -1,7 +1,14 @@
 .hero {
-  display: block;
-  position: relative;
+
+  
   border-bottom: 3px solid #6D5775;
+}
+
+@media screen and (min-width: 600px) {
+
+   section .container {   
+    display: block;
+  }
 }
 
 .hero-image {
