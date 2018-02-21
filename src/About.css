@@ -3,12 +3,11 @@
   padding: 0 15px;
   margin-bottom: 7.5%;
   justify-content: flex-start;
-  align-items: flex-start;
 }
 
 .bullet-wrap {
   height: 230px;
-  width: 50%;
+  width: 100%;
   padding: 0 20px;
   text-align: center;
 }
@@ -17,9 +16,26 @@
   justify-content: flex-start;
 }
 
+@media screen and (min-width: 960px) {
+
+  .row-gt-sm {   
+    flex-direction: row;
+  }
+
+  .bullet-text {
+    font-size: 11pt;
+  }
+
+  section {
+    padding: 100px 0 130px 0;
+  }
+}
+
 .bullet-text {
   margin-top: 4%;
+  font-size: 8pt;
 }
+
 
 .bullet-text > .label {
   font-weight: 500;
@@ -106,8 +122,18 @@ div.bullet-text > div.description {
   padding: 0 50px 0 50px;
 }
 
+.bio {
+  min-width: 250px;
+}
+
 .me {
-  height: 300px;
+  height: 250px;
+}
+
+@media screen and (min-width: 960px) {
+  .me {
+    height: 300px;
+  }
 }
 
 .fade-in {
@@ -142,9 +168,10 @@ div.bullet-text > div.description {
 }
 
 .bar.fill {
+  position: absolute;
   top: 0;
   left: 0;
-  position: absolute;
+  width: 0;
   background-color: #F9CFBA;
   padding: 0;
   opacity: 1;
