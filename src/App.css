@@ -39,12 +39,21 @@ section {
   }
 }
 
+section:nth-of-type(1) {
+  padding: 0;
+  margin: 0;
+}
+
 section .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 10px;
   width: 100%;
   box-sizing: border-box;
+}
+
+section:nth-of-type(1) .container {
+  padding: 0;
 }
 
 .flex {
@@ -64,7 +73,7 @@ section .container {
   max-width: 50%;
   max-height: 100%;
   box-sizing: border-box;
-  display: flex;
+  display: block; 
 }
 
 .header {
