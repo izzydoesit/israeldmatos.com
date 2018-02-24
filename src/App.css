@@ -20,27 +20,31 @@
   to { transform: rotate(360deg); }
 }
 
+.overflow-wrap {
+  overflow-x: hidden;
+}
+
+section {
+  padding: 70px 0 70px 0;
+  color: #616161;
+  line-height: 11pt;
+  position: relative;
+}
+
+@media screen and (min-width: 600px) {
+
+  section {
+    padding: 100px 0 130px 0;
+
+  }
+}
+
 section .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 10px;
   width: 100%;
   box-sizing: border-box;
-}
-
-@media screen and (min-width: 600px) {
-
-  .container {   
-    
-  }
-
-  section {
-    padding: 100px 0 130px 0;
-  }
-}
-
-section:nth-of-type(1) {
-  padding: 0 10px;
 }
 
 .flex {
@@ -68,7 +72,7 @@ section:nth-of-type(1) {
   text-transform: uppercase;
   color: #6D5775;
   top: 0;
-  background-color: #Fffef4; 
+  background-color: #Fffef4;
 }
 
 .header-bar {
