@@ -12,22 +12,24 @@ import './App.css';
 class App extends Component {
 
   render() {
+    
     return (
       <div className="App">
+        <div className="overflow-wrap">
+          <Headroom
+            onPin={() => console.log('pinned')}
+            onUnpin={() => console.log('unpinned')}
+          >
+            <Navbar/>
+          </Headroom>
 
-        <Headroom
-          onPin={() => console.log('pinned')}
-          onUnpin={() => console.log('unpinned')}
-        >
-          <Navbar/>
-        </Headroom>
-
-        <Home />
-        <About />
-        <Projects />
-        {/* <Blog /> */}
-        <Contact />
-        <Footer />
+          <Home />
+          <About />
+          <Projects />
+          {/* <Blog /> */}
+          <Contact />
+          <Footer />
+        </div>
       </div>
     )
   }
