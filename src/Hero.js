@@ -20,12 +20,13 @@ class Hero extends Component {
   }
 
   render() {
+
     return (
       <div className="hero">
 
         <div className="hero-image">
-          <img 
-            className="hero-bg" 
+          <img
+            className="hero-bg"
             src={ background }
             resizemode="cover"
             alt='background'
@@ -34,7 +35,7 @@ class Hero extends Component {
 
         <div className="hero-content">
 
-          <h1>Hello, I'm <span className="name">Israel D. Matos.</span></h1>
+          <h1>Hello, I'm<span className="name">Israel D. Matos.</span></h1>
           <p>I'm a full-stack web developer.</p>
 
           <a
@@ -42,8 +43,8 @@ class Hero extends Component {
             className="page-link-btn"
             role="button"
             onMouseOver={this.enter.bind(this)}
-            onMouseLeave={this.leave.bind(this)}           
-          > 
+            onMouseLeave={this.leave.bind(this)}
+          >
             <div className="btn-content">
 
               <span className="btn-text">
