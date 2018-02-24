@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
 import Hero from './Hero';
-import './Projects.css';
+import './Home.css';
 import ScrollableAnchor from 'react-scrollable-anchor/lib/ScrollableAnchor';
 
 export default class Home extends Component {
 
   render() {
+
     return (
-      <section>
+      <section id="home" className="height-fix">
         <ScrollableAnchor id={'home'}>
           <div className="container home">
-            <Hero />   
+            <Hero />
           </div>
         </ScrollableAnchor>
       </section>
