@@ -20,14 +20,14 @@ export default class About extends Component {
 
   render() {
     return (
-      <section className="flex heightfix">
+      <section className="flex">
         <ScrollableAnchor id={'about'}>
           <div className="container flex">
 
             <ScrollAnimation animateIn="bounceInLeft">
               <div className="header">About</div>
             </ScrollAnimation>
-            <ScrollAnimation animateIn="bounceInLeft" delay={300}>
+            <ScrollAnimation animateIn="bounceInLeft" delay={200}>
               <div className="header-bar"></div>
             </ScrollAnimation>
 
@@ -37,7 +37,7 @@ export default class About extends Component {
 
                 <div className="flex bullet-wrap">
 
-                  <ScrollAnimation animateIn="flipInY" delay={300}>
+                  <ScrollAnimation animateIn="flipInY" delay={250}>
                     <div className="hex-wrap">
                       <div className="hexagon">
                         <Alarm size={55} className="speedometer"/>
@@ -45,7 +45,7 @@ export default class About extends Component {
                     </div>
                   </ScrollAnimation>
 
-                  <ScrollAnimation animateIn="fadeInUp" delay={400}>
+                  <ScrollAnimation animateIn="fadeInUp" delay={350}>
                     <div className="bullet-text">
                       <div className="label bold">Fast</div>
                       <div className="description">Optimal load times
@@ -58,7 +58,7 @@ export default class About extends Component {
 
                 <div className="flex bullet-wrap">
 
-                  <ScrollAnimation animateIn="flipInY" delay={600}>
+                  <ScrollAnimation animateIn="flipInY" delay={350}>
                     <div className="hex-wrap">
                       <div className="hexagon">
                         <Tablet size={55} className="tablet"/>
@@ -66,7 +66,7 @@ export default class About extends Component {
                     </div>
                   </ScrollAnimation>
 
-                  <ScrollAnimation animateIn="fadeInUp" delay={700}>
+                  <ScrollAnimation animateIn="fadeInUp" delay={450}>
                     <div className="bullet-text">
                       <div className="label bold">Responsive</div>
                       <div className="description">My layouts will work on any device,
@@ -82,7 +82,7 @@ export default class About extends Component {
 
                 <div className="flex bullet-wrap">
 
-                  <ScrollAnimation animateIn="flipInY" delay={900}>
+                  <ScrollAnimation animateIn="flipInY" delay={300}>
                     <div className="hex-wrap animated flip-in-x">
                       <div className="hexagon">
                         <ThumbsUp size={55} className="thumbsup"/>
@@ -90,7 +90,7 @@ export default class About extends Component {
                     </div>
                   </ScrollAnimation>
 
-                  <ScrollAnimation animateIn="fadeInUp" delay={1000}>
+                  <ScrollAnimation animateIn="fadeInUp" delay={400}>
                     <div className="bullet-text">
                       <div className="label bold">Intuitive</div>
                       <div className="description">Design is simplicity
@@ -102,7 +102,7 @@ export default class About extends Component {
 
                 <div className="flex bullet-wrap">
 
-                  <ScrollAnimation animateIn="flipInY" delay={1200}>
+                  <ScrollAnimation animateIn="flipInY" delay={400}>
                     <div className="hex-wrap animated flip-in-x">
                       <div className="hexagon">
                         <Magic size={55} className="magic"/>
@@ -110,7 +110,7 @@ export default class About extends Component {
                     </div>
                   </ScrollAnimation>
 
-                  <ScrollAnimation animateIn="fadeInUp" delay={1300}>
+                  <ScrollAnimation animateIn="fadeInUp" delay={500}>
                     <div className="bullet-text">
                       <div className="label bold">Dynamic</div>
                       <div className="description">I love adding a little magic
@@ -136,7 +136,7 @@ export default class About extends Component {
                     <div className="description">
                       Flannel brooklyn four dollar toast bicycle rights enamel pin
                       <br/>
-                      actually mlkshk ramps la croix. Drinking vinegar paleo la
+                      actually mlkshk ramps la croix Drinking vinegar paleo la
                       croix
                       <br/>
                       <a href="#contact">Let's make something special</a>
