@@ -35,7 +35,6 @@ section {
 
   section {
     padding: 100px 0 130px 0;
-
   }
 }
 
@@ -68,14 +67,6 @@ section:nth-of-type(1) .container {
   width: 100%;
 }
 
-.flex-50-gt-sm {
-  flex: 1 1 50%;
-  max-width: 50%;
-  max-height: 100%;
-  box-sizing: border-box;
-  display: block; 
-}
-
 .header {
   font-size: 2.5em;
   text-transform: uppercase;
@@ -88,7 +79,7 @@ section:nth-of-type(1) .container {
   background-color: #6D5775;
   width: 70px;
   height: 4px;
-  margin: 1em 0 7em 0;
+  margin: 1em auto 7em auto;
 }
 
 .label {
@@ -103,25 +94,3 @@ section:nth-of-type(1) .container {
 /* .animated.slide-in-left {
   animation: fadeIn 3s ease;
 } */
-
-@keyframes slideInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-300) ;
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    visibility: hidden;
-  }
-  100% {
-    opacity: 1;
-    visibility: visible;
-  }
-}

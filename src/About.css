@@ -125,6 +125,20 @@ div.bullet-text > div.description {
   align-items: flex-start;
 }
 
+.flex-50-gt-sm {
+  flex: 1 1 50%;
+  max-height: 100%;
+  box-sizing: border-box;
+  display: block;
+}
+
+@media screen and (min-width: 600) {
+
+  .flex-50-gt-sm {
+    max-width: 50%;
+  }
+}
+
 .skills-wrapper > .flex:first-child {
   padding: 0 50px 0 50px;
 }
@@ -159,8 +173,13 @@ div.bullet-text > div.description {
   max-width: 90%;
 }
 
+.bars-wrap > .animated {
+  width: 100%;
+}
+
 .bar {
   height: 33px;
+  width: 100%;
   margin: 0 0 15px 0;
   font-size: 11pt;
   position: relative;
