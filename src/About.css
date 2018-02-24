@@ -1,3 +1,10 @@
+section:nth-of-type(2) .bars-wrap {
+
+    margin: 50px auto 0 auto;
+    width: calc(100% - 15px);
+    max-width: 90%;
+  }
+
 .label-wrap > div {
   width: 100%;
   padding: 0 15px;
@@ -18,7 +25,7 @@
 
 @media screen and (min-width: 960px) {
 
-  .row-gt-sm {   
+  .row-gt-sm {
     flex-direction: row;
   }
 
@@ -61,7 +68,7 @@ div.bullet-text > div.description {
   margin: 28.87px auto;
 }
 
-.hexagon::before, 
+.hexagon::before,
 .hexagon::after {
   content: "";
   position: absolute;
@@ -153,16 +160,15 @@ div.bullet-text > div.description {
 }
 
 .bar {
-  max-width: 90%;
   height: 33px;
   margin: 0 0 15px 0;
   font-size: 11pt;
   position: relative;
   align-items: flex-end;
-  
+
 }
 
-.bar.flex { 
+.bar.flex {
   align-items: flex-end;
   background-color: #eee;
 }
