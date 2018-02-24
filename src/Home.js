@@ -9,7 +9,7 @@ export default class Home extends Component {
     return (
       <section>
         <ScrollableAnchor id={'home'}>
-          <div className="home">
+          <div className="container home">
             <Hero />   
           </div>
         </ScrollableAnchor>
