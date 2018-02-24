@@ -10,17 +10,17 @@ import './About.css';
 import ScrollableAnchor from 'react-scrollable-anchor/lib/ScrollableAnchor';
 
 const icons = [
-  { icon: Alarm, label: "Fast", tagLine: "Optimal load times are my highest priority" }, 
-  { icon: Tablet, label: "Responsive", tagLine: "My layouts will work on any device, big or small" }, 
-  { icon: ThumbsUp, label: "Intuitive", tagLine: "I design it to be used in the simplest and easiest way posible" }, 
-  { icon: Magic, label: "Dynamic", tagLine: "I love adding a little magic to make that page come to life!" }, 
+  { icon: Alarm, label: "Fast", tagLine: "Optimal load times are my highest priority" },
+  { icon: Tablet, label: "Responsive", tagLine: "My layouts will work on any device, big or small" },
+  { icon: ThumbsUp, label: "Intuitive", tagLine: "I design it to be used in the simplest and easiest way posible" },
+  { icon: Magic, label: "Dynamic", tagLine: "I love adding a little magic to make that page come to life!" },
 ]
 
 export default class About extends Component {
 
   render() {
     return (
-      <section>
+      <section className="flex heightfix">
         <ScrollableAnchor id={'about'}>
           <div className="container flex">
 
@@ -34,7 +34,7 @@ export default class About extends Component {
             <div className="flex row label-wrap">
 
               <div className="flex row-gt-sm">
-              
+
                 <div className="flex bullet-wrap">
 
                   <ScrollAnimation animateIn="flipInY" delay={300}>
@@ -113,12 +113,12 @@ export default class About extends Component {
                   <ScrollAnimation animateIn="fadeInUp" delay={1300}>
                     <div className="bullet-text">
                       <div className="label bold">Dynamic</div>
-                      <div className="description">I love adding a little magic 
+                      <div className="description">I love adding a little magic
                         to make that page come to life!</div>
                     </div>
                   </ScrollAnimation>
 
-                </div>  
+                </div>
               </div>
             </div>
 
@@ -127,16 +127,16 @@ export default class About extends Component {
               <div className="flex flex-50-gt-sm">
                 <ScrollAnimation animateIn="bounceInLeft">
                   <div className="bio">
-                    <img 
+                    <img
                       src={ ProfilePic }
-                      className="me" 
+                      className="me"
                       alt="me"
                     />
                     <div className="label bold">Who is this guy?</div>
                     <div className="description">
                       Flannel brooklyn four dollar toast bicycle rights enamel pin
-                      <br/> 
-                      actually mlkshk ramps la croix. Drinking vinegar paleo la 
+                      <br/>
+                      actually mlkshk ramps la croix. Drinking vinegar paleo la
                       croix
                       <br/>
                       <a href="#contact">Let's make something special</a>
@@ -147,7 +147,7 @@ export default class About extends Component {
 
               <div className="flex flex-50-gt-sm bars-wrap">
                 <ScrollAnimation animateIn="bounceInRight">
-                
+
                   <div className="bar flex">
                     <div className="bar fill" style={{ width: '85%'}}>
                       <div className="tag bold flex">CSS</div>
