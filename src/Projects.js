@@ -15,7 +15,7 @@ export default class Projects extends Component {
             <ScrollAnimation animateIn="bounceInRight">
               <div className="header">Projects</div>
             </ScrollAnimation>
-            <ScrollAnimation animateIn="bounceInRight" delay={500}>
+            <ScrollAnimation animateIn="bounceInRight" delay={200}>
               <div className="header-bar"></div>
             </ScrollAnimation>
             <Slider />
