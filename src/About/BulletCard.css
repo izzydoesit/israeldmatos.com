@@ -1,0 +1,68 @@
+.bullet-wrap {
+  height: 230px;
+  width: 100%;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.bullet-text {
+  margin-top: 4%;
+  font-size: 8pt;
+}
+
+@media screen and (min-width: 900px) {
+
+  .bullet-text {
+    font-size: 11pt;
+  }
+}
+
+.bullet-text > .label {
+  font-weight: 500;
+  font-size: 1.7em;
+  margin: 15px 0 5px 0;
+}
+
+div.bullet-text > div.description {
+  color: #616161;
+  line-height: 1.3em;
+}
+
+.hex-wrap {
+  width: 100px;
+  height: 100px;
+}
+
+.hexagon {
+  position: relative;
+  width: 100px;
+  height: 57.80px;
+  background-color: #695481;
+  margin: 28.87px auto;
+}
+
+.hexagon::before,
+.hexagon::after {
+  content: "";
+  position: absolute;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  z-index: -1;
+}
+
+.hexagon::before {
+  bottom: 100%;
+  left: 0;
+  border-bottom: 28.87px solid #695481;
+}
+
+.hexagon::after {
+  top: 100%;
+  right: 0;
+  border-top: 28.87px solid #695481;
+}
+
+.hex-icon {
+  font-size: 0.5em;
+  color: white;
+}
