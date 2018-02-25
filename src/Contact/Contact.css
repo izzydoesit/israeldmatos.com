@@ -1,0 +1,17 @@
+#contact-section > div {
+  width: 100%;
+}
+
+#contact-section div.header-bar {
+  margin-bottom: 2.5em;
+}
+
+#contact-section .container.flex {
+  display: block;
+}
+
+.subtitle {
+  margin: 2% 2% 6% 2%;
+  color: #857698;
+  text-shadow: 1px 1px 1px #493f55, 3px 3px 4px #E1C1A9, 5px 5px 5px #493f55;
+}

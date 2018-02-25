@@ -56,46 +56,48 @@ export default class ContactForm extends Component {
     const { name, email, message } = this.state;
 
     return (
-      <div>
-        <ScrollAnimation animateIn="tada" delay={800}>
-            
+      <div className="form-wrap">
+
+        <ScrollAnimation animateIn="tada" animateOnce={true} delay={1200}>
+
           <form className="flex contact-form">
+
             <div className="flex input-wrap">
-              <input 
+              <input
                 className="flex name-input"
-                type="text" 
-                placeholder="Name" 
-                name="name" 
-                value={name} 
-                onChange={this.onChange} 
+                type="text"
+                placeholder="Name"
+                name="name"
+                value={name}
+                onChange={this.onChange}
               />
-              <input 
+              <input
                 className="flex email-input"
-                type="text" 
+                type="text"
                 placeholder="Your email"
-                name="email" 
-                value={email} 
-                onChange={this.onChange} 
+                name="email"
+                value={email}
+                onChange={this.onChange}
               />
-              <textarea 
+              <textarea
                 className="flex message-input"
-                type="text" 
+                type="text"
                 placeholder="Your message..."
                 name="message"
-                value={message} 
-                onChange={this.onChange} 
+                value={message}
+                onChange={this.onChange}
               />
               <div id="success" className="expand" styles={{opacity: this.state.opacity}}>
-                <div> 
+                <div>
                   "Your message was sent successfully.  Thanks!"
                   <span id="close" class="" onClick={this.onClose}>
                     <Close size={20} className="close-icon"/>
                   </span>
                 </div>
               </div>
-            </div>
 
-            <button className="contact-btn" type="submit" value="Submit">Submit</button>
+              <button className="contact-btn" type="submit" value="Submit">Submit</button>
+            </div>
           </form>
 
         </ScrollAnimation>
