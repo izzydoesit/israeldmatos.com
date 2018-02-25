@@ -15,7 +15,7 @@ export default class Slide extends Component {
     super(props);
     this.handleMouseCardHover = this.handleMouseCardHover.bind(this)
     this.handleMouseButtonHover = this.handleMouseButtonHover.bind(this)
-    this.state = { 
+    this.state = {
       cardHover: false,
       buttonHover: false,
     }
@@ -37,7 +37,7 @@ export default class Slide extends Component {
 
   toggleButtonHoverState() {
     return {
-      buttonHover: !this.state.buttonHover 
+      buttonHover: !this.state.buttonHover
     };
   }
 
@@ -56,7 +56,7 @@ export default class Slide extends Component {
     }
 
     return (
-      <li 
+      <li
         className={
           this.props.index === this.props.activeIndex
           ? "slide slide-active"
@@ -65,25 +65,25 @@ export default class Slide extends Component {
         key={this.props.index}
         onMouseEnter={this.handleMouseCardHover}
         onMouseLeave={this.handleMouseCardHover}
-      > 
+      >
         <div className="card" style={cardStyles}>
-          <img 
+          <img
             resizemode="stretch"
-            className="slide-pic" 
+            className="slide-pic"
             src={this.props.slide.src}
             alt='web project'
           />
         </div>
 
         <div className="flex card-text" style={textStyles}>
-          <div className="bold">
+          <div className="bold title">
             {this.props.slide.title}
           </div>
-          <span class="blurb">{this.props.slide.blurb}</span>
+          <div class="blurb">{this.props.slide.blurb}</div>
         </div>
-        
-        <a 
-          href={this.props.slide.url} 
+
+        <a
+          href={this.props.slide.url}
           target="_blank"
           className="flex card-button"
           style={buttonStyles}

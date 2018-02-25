@@ -29,21 +29,32 @@
 #gallery .card-text {
   opacity: 0;
   width: 100%;
-  height: 20%;
+  height: 30%;
   top: 0;
   left: 0;
   z-index: 2;
-  background-color: #E1DDA9;
+  background-color: #f2f7d8;
   border-top: 2px solid #857698;
   border-bottom: 2px solid #857698;
   color: #fff;
+  text-shadow: 1px 1px 1px #000, 3px 3px 3px #666;
   text-align: center;
   position: absolute;
   transition: all 0.5s;
 }
 
+@media screen and (min-width: 600px) {
+  #gallery .card-text .title {
+    font-size: 2.8em;
+  }
+}
+
+.card-text div {
+  margin: 1% 0;
+}
+
 .card-text .bold {
-  font-size: 2em;
+  font-size: 1.8em;
 }
 
 .blurb {
@@ -52,7 +63,7 @@
   font-style: italic;
 }
 
- a.card-button {
+a.card-button {
   opacity: 0;
   position: absolute;
   left: 50%;
@@ -63,16 +74,32 @@
   height: 13%;
   margin: 0 auto;
   border-radius: 10px;
-  background-color: transparent;
+  background-color: #857698;
+  color: #FFF;
   border: 2px solid #857698;
+  font-size: 0.5em;
   justify-content: center;
-  color: #666;
   text-decoration: none;
   transition: all 0.5s;
 }
 
-a.card-button:hover {
-  background-color: #857698;
-  color: #FFF;
-  bottom: 24%;
+@media screen and (min-width: 600px) {
+
+  a.card-button {
+    font-size: 1em;
+  }
+}
+
+@media screen and (min-width: 900px) {
+
+  a.card-button {
+    background-color: transparent;
+    color: #666;
+  }
+
+  a.card-button:hover {
+    bottom: 24%;
+    background-color: #857698;
+    color: #FFF;
+  }
 }

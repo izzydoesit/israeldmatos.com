@@ -13,10 +13,10 @@ import frais from './frais.png';
 
 const slideArray = [
   { title: 'Smarter Bear', url: 'https://smarterbear.herokuapp.com/', blurb: 'Find out what the insiders are trading...', src: smarterBear },
-  { title: 'The Color Game', url: 'http://izzydoesit.github.io/colorGame', blurb: 'Test your hex-naming skills here', src: colorGame },
+  { title: 'The Color Game', url: 'http://izzydoesit.github.io/colorGame', blurb: 'Test your hex-guessing skills here', src: colorGame },
   { title: 'Curva Fitness', url: 'https://curva.herokuapp.com/', blurb: 'Get CURVA fit!', src: curvaFit },
   { title: 'Hackerhaus', url: 'https://hackerhaus.herokuapp.com/', blurb: 'The NEXT best thing in SF housing...', src: hackerHaus },
-  { title: 'Frais Recipes', url: 'https://recipesbyfrais.herokuapp.com/', blurb: 'Discover a new crowd-sourced dish or share your fav', src: frais }
+  { title: 'Frais Recipes', url: 'https://recipesbyfrais.herokuapp.com/', blurb: 'Discover a new dish or share your fav', src: frais }
 ]
 
 export default class Slider extends Component {
