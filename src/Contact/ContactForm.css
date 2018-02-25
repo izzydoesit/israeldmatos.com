@@ -1,6 +1,6 @@
 .form-wrap {
   width: 90%;
-  margin: 10% auto;
+  margin: 5% auto 15% auto;
 }
 
 @media screen and (min-width: 600px) {
@@ -50,19 +50,15 @@ form.contact-form {
 }
 
 #success {
-  opacity: 0;
   width: 100%;
-  transition: all .25s;
+  margin: 1%;
+  transition: all .5s;
 }
 
 #success div {
   position: relative;
   background-color: #04c986;
   padding: 1% 0;
-}
-
-.expand {
-  height: 36px;
 }
 
 #close {

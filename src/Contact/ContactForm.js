@@ -1,12 +1,13 @@
-import React, { Component } from 'react';
-import Close from 'react-icons/lib/fa/close';
+ import React, { Component } from 'react';
 import ScrollAnimation from 'react-animate-on-scroll';
 import emailjs from 'emailjs-com';
+import Message from './Message';
 import './ContactForm.css';
 
 const userId = process.env.REACT_APP_EMAIL_JS_USER_ID;
-const serviceId = process.env.REACT_APP_EMAIL_JS_ACCESS_TOKEN;
+const serviceId = process.env.REACT_APP_EMAIL_JS_SERVICE_ID;
 const templateId = process.env.REACT_APP_EMAIL_JS_TEMPLATE_ID;
+const sitekey = process.env.REACT_APP_RECAPTCHA_SITEKEY
 
 export default class ContactForm extends Component {
   constructor(props) {
@@ -18,7 +19,7 @@ export default class ContactForm extends Component {
       name: '',
       email: '',
       message: '',
-      opacity: 0
+      showMessage: false
     };
   }
 
@@ -30,26 +31,36 @@ export default class ContactForm extends Component {
 
   onSubmit(event) {
     event.preventDefault();
-    this.setState({opacity: 1})
-    console.log('SUBMITTED!!!', event.target.value);
-    alert('A name was submitted: ' + this.state.value);
 
     emailjs.init(userId);
-    /* emailjs.send(serviceId, templateId, {
-      reply_to: "",
-      from_name: "",
-      message_html: ""
+    emailjs.send(serviceId, templateId, {
+      reply_to: this.state.email,
+      from_name: this.state.name,
+      message_html: this.state.message
     })
-    .then ( (res) => {
+    .then((response) => {
       console.log('SUCCESS. status=%d, text=%s', response.status, response.text);
     }, (err) => {
       console.log('FAILED. err=', err)
-    }); */
+    });
+
+    console.log('SUBMITTED!!!', event);
+
+    this.setState({
+      showMessage: true,
+      name: '',
+      email: '',
+      message: ''
+    });
   }
 
   onClose(event) {
-    alert('Success message closed!', event.target.value);
-    this.setState({opacity: 0})
+    this.setState({
+      showMessage: false,
+      name: '',
+      email: '',
+      message: ''
+    });
   }
 
   render() {
@@ -58,7 +69,7 @@ export default class ContactForm extends Component {
     return (
       <div className="form-wrap">
 
-        <ScrollAnimation animateIn="tada" animateOnce={true} delay={1200}>
+        <ScrollAnimation animateOnce={true} animateIn="tada" delay={1200}>
 
           <form className="flex contact-form">
 
@@ -87,16 +98,24 @@ export default class ContactForm extends Component {
                 value={message}
                 onChange={this.onChange}
               />
-              <div id="success" className="expand" styles={{opacity: this.state.opacity}}>
-                <div>
-                  "Your message was sent successfully.  Thanks!"
-                  <span id="close" class="" onClick={this.onClose}>
-                    <Close size={20} className="close-icon"/>
-                  </span>
-                </div>
+
+              <Message onClose={this.onClose} show={this.state.showMessage}/>
+
+              <div className="g-recaptcha"
+                data-sitekey={sitekey}
+                data-callback="onSubmit"
+                data-size="invisible">
               </div>
 
-              <button className="contact-btn" type="submit" value="Submit">Submit</button>
+              <button
+                className="contact-btn g-recaptcha"
+                type="submit"
+                value="Submit"
+                onClick={this.onSubmit}
+                data-sitekey={sitekey}
+              >
+                Submit
+              </button>
             </div>
           </form>
 
