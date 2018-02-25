@@ -11,6 +11,13 @@
   height: 200px;
 }
 
+@media screen and (min-width: 600px) {
+
+  .slider-wrapper {
+    height: 400px;
+  }
+}
+
 .slider-wrapper > div:first-child {
   margin-right: 2px;
 }
