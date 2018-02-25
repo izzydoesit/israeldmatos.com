@@ -6,18 +6,28 @@ import Laptop from 'react-icons/lib/fa/laptop';
 import ThumbsUp from 'react-icons/lib/fa/thumbs-o-up';
 import Magic from 'react-icons/lib/fa/magic';
 import ProfilePic from './profile-pic-hex.png';
+import BulletCard from './BulletCard';
 import SkillBar from './SkillBar';
 import './About.css';
 import ScrollableAnchor from 'react-scrollable-anchor/lib/ScrollableAnchor';
 
-const icons = [
-  { icon: Alarm, label: "Fast", tagLine: "Optimal load times are my highest priority" },
-  { icon: Tablet, label: "Responsive", tagLine: "My layouts will work on any device, big or small" },
-  { icon: ThumbsUp, label: "Intuitive", tagLine: "I design it to be used in the simplest and easiest way posible" },
-  { icon: Magic, label: "Dynamic", tagLine: "I love adding a little magic to make that page come to life!" },
+const firstRowIcons = [
+  { image: Alarm, label: "Fast", tagLine: "Optimal load times are my highest priority", delay: 250 },
+  { image: Tablet, label: "Responsive", tagLine: "My layouts will work on any device, big or small", delay: 350 },
+]
+const secondRowIcons = [
+  { image: ThumbsUp, label: "Intuitive", tagLine: "I design it to be used in the simplest and easiest way posible", delay: 450 },
+  { image: Magic, label: "Dynamic", tagLine: "I love adding a little magic to make that page come to life!", delay: 550 },
 ]
 
 export default class About extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      firstRowIcons: firstRowIcons,
+      secondRowIcons: secondRowIcons
+    }
+  }
 
   render() {
     return (
@@ -35,91 +45,23 @@ export default class About extends Component {
             <div className="flex row label-wrap">
 
               <div className="flex row-gt-sm">
-
-                <div className="flex bullet-wrap">
-
-                  <ScrollAnimation animateIn="flipInY" delay={250}>
-                    <div className="hex-wrap">
-                      <div className="hexagon">
-                        <Alarm size={55} className="speedometer"/>
-                      </div>
-                    </div>
-                  </ScrollAnimation>
-
-                  <ScrollAnimation animateIn="fadeInUp" delay={350}>
-                    <div className="bullet-text">
-                      <div className="label bold">Fast</div>
-                      <div className="description">Optimal load times
-                        are my highest priority
-                      </div>
-                    </div>
-                  </ScrollAnimation>
-
-                </div>
-
-                <div className="flex bullet-wrap">
-
-                  <ScrollAnimation animateIn="flipInY" delay={350}>
-                    <div className="hex-wrap">
-                      <div className="hexagon">
-                        <Tablet size={55} className="tablet"/>
-                      </div>
-                    </div>
-                  </ScrollAnimation>
-
-                  <ScrollAnimation animateIn="fadeInUp" delay={450}>
-                    <div className="bullet-text">
-                      <div className="label bold">Responsive</div>
-                      <div className="description">My layouts will work on any device,
-                        big or small
-                      </div>
-                    </div>
-                  </ScrollAnimation>
-
-                </div>
+                {this.state.firstRowIcons.map((icon, index) =>
+                  <BulletCard
+                    key={index}
+                    index={index}
+                    icon={icon}
+                  />
+                )}
               </div>
 
               <div className="flex row-gt-sm">
-
-                <div className="flex bullet-wrap">
-
-                  <ScrollAnimation animateIn="flipInY" delay={300}>
-                    <div className="hex-wrap animated flip-in-x">
-                      <div className="hexagon">
-                        <ThumbsUp size={55} className="thumbsup"/>
-                      </div>
-                    </div>
-                  </ScrollAnimation>
-
-                  <ScrollAnimation animateIn="fadeInUp" delay={400}>
-                    <div className="bullet-text">
-                      <div className="label bold">Intuitive</div>
-                      <div className="description">Design is simplicity
-                      </div>
-                    </div>
-                  </ScrollAnimation>
-
-                </div>
-
-                <div className="flex bullet-wrap">
-
-                  <ScrollAnimation animateIn="flipInY" delay={400}>
-                    <div className="hex-wrap animated flip-in-x">
-                      <div className="hexagon">
-                        <Magic size={55} className="magic"/>
-                      </div>
-                    </div>
-                  </ScrollAnimation>
-
-                  <ScrollAnimation animateIn="fadeInUp" delay={500}>
-                    <div className="bullet-text">
-                      <div className="label bold">Dynamic</div>
-                      <div className="description">I love adding a little magic
-                        to make that page come to life!</div>
-                    </div>
-                  </ScrollAnimation>
-
-                </div>
+                {this.state.secondRowIcons.map((icon, index) =>
+                  <BulletCard
+                    key={index}
+                    index={index}
+                    icon={icon}
+                  />
+                )}
               </div>
             </div>
 
@@ -139,7 +81,6 @@ export default class About extends Component {
                       <div className="label bold">Who is this guy?</div>
                       <div className="description">
                         I currently work at <a href="https://marqeta.com" target="_blank">Marqeta</a> playing with applications and APIs all day.
-                        <br/>
                         <br/>
                         I have a passion for building awe-inspiring UI effects together with buttery smooth user experiences.
                         <br/>
