@@ -22,6 +22,7 @@
 
 .overflow-wrap {
   overflow-x: hidden;
+  overflow: scroll;
 }
 
 section {
@@ -79,7 +80,7 @@ section:nth-of-type(1) .container {
   background-color: #6D5775;
   width: 70px;
   height: 4px;
-  margin: 1em auto 7em auto;
+  margin: 1em auto 6em auto;
 }
 
 .label {
