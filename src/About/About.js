@@ -140,7 +140,8 @@ export default class About extends Component {
                       <div className="description">
                         I currently work at <a href="https://marqeta.com" target="_blank">Marqeta</a> playing with applications and APIs all day.
                         <br/>
-                        I have a passion for building awe-inspiring UI effects together with beautifully slick and smooth user experiences.
+                        <br/>
+                        I have a passion for building awe-inspiring UI effects together with buttery smooth user experiences.
                         <br/>
                         <a href="#contact">Let's make something special</a>
                       </div>
@@ -161,6 +162,7 @@ export default class About extends Component {
                   <SkillBar skill={'Ruby/Rails'} width={'87%'} rating={'92%'}/>
                   <SkillBar skill={'UI Design'} width={'75%'} rating={'73%'}/>
                   <SkillBar skill={'Sketch'} width={'55%'} rating={'45%'}/>
+                  <SkillBar skill={'TDD'} width={'85%'} rating={'90%'}/>
                 </ScrollAnimation>
               </div>
 
