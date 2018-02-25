@@ -74,3 +74,6 @@ typings/
 
 # dotenv environment variables file
 .env
+
+# test snapshots
+src/__snapshots__/
