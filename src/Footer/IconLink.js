@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 
 
 export default class IconLink extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     const Icon = this.props.icon;

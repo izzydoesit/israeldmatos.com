@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import './SkillBar.css';
 
 export default class SkillBar extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   render() {
 

@@ -3,9 +3,6 @@ import ScrollAnimation from 'react-animate-on-scroll';
 import './BulletCard.css';
 
 export default class BulletCard extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     const Icon = this.props.icon.image
