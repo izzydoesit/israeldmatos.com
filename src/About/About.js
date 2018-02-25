@@ -81,7 +81,7 @@ export default class About extends Component {
                       <div className="description">
                         I currently work at <a href="https://marqeta.com" target="_blank">Marqeta</a> playing with applications and APIs all day.
                         <br/>
-                        I have a passion for building awe-inspiring UI effects together with buttery smooth user experiences.
+                        I have a passion for building awe-inspiring UI effects and buttery smooth user experiences.
                         <br/>
                         <a href="#contact">Let's make something special</a>
                       </div>

@@ -74,7 +74,12 @@
 }
 
 .description > a {
-  font-weight: 400;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.description > a:hover {
+  cursor: pointer
 }
 
 .me {
@@ -88,7 +93,7 @@
   }
 
   .description {
-    max-width: 80%;
+    max-width: 85%;
   }
 }
 
