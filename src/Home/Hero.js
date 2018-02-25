@@ -51,7 +51,7 @@ class Hero extends Component {
             <div className="btn-content">
 
               <span className="btn-text">
-                See my work!
+                See my work
               </span>
 
               <RotatingArrow rotate={this.state.rotate}/>
