@@ -4,6 +4,30 @@ import './Navbar.css';
 export default class Navbar extends Component {
   constructor(props) {
     super(props);
+    this.handleScroll = this.handleScroll.bind(this);
+    this.state = {
+      transform: 0
+    };
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+
+handleScroll(event) {
+    // do something like call `this.setState`
+    // access window.scrollY etc
+    let scrollTop = event.srcElement.body.scrollTop,
+        itemTranslate = Math.min(0, scrollTop/3 - 60);
+
+    this.setState({
+      transform: itemTranslate
+    });
+    console.log('TRAHNSLAATE:', itemTranslate)
   }
 
   render() {
