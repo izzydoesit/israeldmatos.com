@@ -83,7 +83,7 @@ img.hero-bg {
   box-sizing: border-box;
   padding: 4% 2%;
   color: #E5C8B2;
-  text-shadow: 1px 1px 1px #000, 5px 5px 6px #f4f8dd;
+  text-shadow: 1px 1px 1px #000, 5px 5px 6px #f4f8dd, 6px 6px 12px #000;
 }
 
 @media screen and (min-width: 600px) {
@@ -100,7 +100,7 @@ img.hero-bg {
 }
 
 a.page-link-btn {
-  width: 75%;
+  width: 60%;
   height: 30%;
   box-sizing: border-box;
   vertical-align: middle;
@@ -110,21 +110,21 @@ a.page-link-btn {
   justify-content: center;
   border-radius: 10px;
   color: #FFF;
-  font-size: 1.2em;
+  font-size: 1.1em;
   text-shadow: 1px 1px 1px #000, 3px 3px 3px #666;
   text-decoration: none;
   background-color: #f2f7d8;
-  box-shadow: 1px 1px 1px #333, 2px 2px 7px #EEE;
+  box-shadow: 1px 1px 1px #000, 5px 5px 6px #f4f8dd, 6px 6px 12px #000;
 }
 
 @media screen and (min-width: 600px) {
 
   a.page-link-btn {
-    width: 50%;
+    width: 40%;
     height: 35%;
     margin: 2em auto;
     position: relative;
-    border: 2px solid #f4f8dd;
+    border: 2px solid #624D8A;
     transition: background-color 0.5s ease;
     transition: color 0.5 ease, border-color 0.2s;
     transition: text-shadow 0.7s ease, box-shadow 0.2s linear;
@@ -146,7 +146,9 @@ a.page-link-btn {
   a.page-link-btn {
     margin-top: 2.3em;
     background-color: transparent;
-    font-size: 1.9em;
+    font-size: 1.4em;
+    color: #624D8A;
+    text-shadow: 2px 2px 1px #FFF, 1px 1px 5px #000;
   }
 
   a.page-link-btn:hover {
@@ -164,7 +166,7 @@ a.page-link-btn {
   height: 90%;
   box-sizing: border-box;
   margin: 0 auto;
-  padding: 5%;
+  padding: 5% 5% 5% 0;
   line-height: 2em;
   display: flex;
   align-items: center;
