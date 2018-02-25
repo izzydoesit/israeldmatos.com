@@ -1,0 +1,66 @@
+.bar.flex {
+  align-items: flex-end;
+  background-color: #eee;
+}
+
+.bar {
+  height: 33px;
+  width: 100%;
+  margin: 0 0 15px 0;
+  font-size: 11pt;
+  position: relative;
+  align-items: flex-end;
+}
+
+.progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+
+}
+
+/* .bar.fill:after {
+  content:'\A';
+  background:#F9CFBA;
+  top:0; bottom:0;
+  left:0;
+  width:100%;
+} */
+
+.bar.fill {
+  background-color: #F9CFBA;
+  padding: 0;
+  opacity: 1;
+  transition: 1.1s 0.2s width ease-in-out;
+}
+
+.fill {
+  animation: fill 3s ease-out;
+  -moz-animation: fill 3s ease-out;
+  -webkit-animation: fill 3s ease-out;
+}
+
+@keyframes fill {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.bar .tag {
+  width: 110px;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #F9d9b1;
+}
+
+.bar.flex > span {
+  display: flex;
+  z-index: 1;
+  padding: 0 15px 0 0;
+  color: #666;
+}

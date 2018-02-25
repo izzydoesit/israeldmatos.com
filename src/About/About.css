@@ -1,10 +1,3 @@
-section:nth-of-type(2) .bars-wrap {
-
-    margin: 50px auto 0 auto;
-    width: calc(100% - 15px);
-    max-width: 90%;
-  }
-
 .label-wrap > div {
   width: 100%;
   padding: 0 15px;
@@ -23,18 +16,14 @@ section:nth-of-type(2) .bars-wrap {
   justify-content: flex-start;
 }
 
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 900px) {
 
-  .row-gt-sm {
+  .flex.row-gt-sm {
     flex-direction: row;
   }
 
   .bullet-text {
     font-size: 11pt;
-  }
-
-  section {
-    padding: 100px 0 130px 0;
   }
 }
 
@@ -94,27 +83,6 @@ div.bullet-text > div.description {
   color: white;
 }
 
-@keyframes flipInX {
-  0% {
-    transform: perspective(400px) rotateY(90deg);
-    opacity: 0;
-  }
-  40% {
-    transform: perspective(400px) rotateY(-20deg);
-  }
-  60% {
-    transform: perspective(400px) rotateY(10deg);
-    opacity: 1;
-  }
-  80% {
-    transform: perspective(400px) rotateY(5deg);
-  }
-  100% {
-    transform: perspective(400px);
-    opacity: 1;
-  }
-}
-
 .waypoint {
   opacity: 0;
 }
@@ -126,7 +94,12 @@ div.bullet-text > div.description {
 }
 
 .flex-50-gt-sm {
+  width: 100%;
+}
+
+.flex-50-gt-sm > div {
   flex: 1 1 50%;
+  width: 100%;
   max-height: 100%;
   box-sizing: border-box;
   display: block;
@@ -139,80 +112,41 @@ div.bullet-text > div.description {
   }
 }
 
-.skills-wrapper > .flex:first-child {
-  padding: 0 50px 0 50px;
+.bio {
+  width: 100%;
 }
 
-.bio {
-  min-width: 250px;
+.bio > .bio-text > .label.bold {
+  font-size: 15pt;
+}
+
+.description {
+  font-size: 8pt;
 }
 
 .me {
   height: 250px;
 }
 
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 900px) {
   .me {
     height: 300px;
   }
 }
 
-.fade-in {
-  animation: fadeIn .75s ease both;
-}
-
-@keyframes fadeIn {
-  100% {
-    opacity: 1;
-  }
-}
-
-.bars-wrap {
-  margin: 0 0 0 0;
-  width: calc(100% - 15px);
-  max-width: 90%;
+ .skills-wrapper > .bars-wrap {
+    margin: 50px auto 0 auto;
+    width: calc(100% - 15px);
+    max-width: 90%;
 }
 
 .bars-wrap > .animated {
   width: 100%;
 }
 
-.bar {
-  height: 33px;
-  width: 100%;
-  margin: 0 0 15px 0;
-  font-size: 11pt;
-  position: relative;
-  align-items: flex-end;
+@media screen and (min-width: 900px) {
 
-}
-
-.bar.flex {
-  align-items: flex-end;
-  background-color: #eee;
-}
-
-.bar.fill {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  background-color: #F9CFBA;
-  padding: 0;
-  opacity: 1;
-}
-
-.bar .tag {
-  width: 110px;
-  top: 0;
-  left: 0;
-  height: 100%;
-  background-color: #F9d9b1;
-}
-
-.bar.flex > span {
-  display: flex;
-  z-index: 1;
-  padding: 0 15px 0 0;
-  color: #666;
+  section:nth-of-type(1).bars-wrap {
+    margin: 0 0 0 0;
+  }
 }

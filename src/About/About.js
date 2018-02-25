@@ -6,6 +6,7 @@ import Laptop from 'react-icons/lib/fa/laptop';
 import ThumbsUp from 'react-icons/lib/fa/thumbs-o-up';
 import Magic from 'react-icons/lib/fa/magic';
 import ProfilePic from './profile-pic-hex.png';
+import SkillBar from './SkillBar';
 import './About.css';
 import ScrollableAnchor from 'react-scrollable-anchor/lib/ScrollableAnchor';
 
@@ -24,10 +25,10 @@ export default class About extends Component {
         <ScrollableAnchor id={'about'}>
           <div className="container flex">
 
-            <ScrollAnimation animateIn="bounceInLeft">
+            <ScrollAnimation animateIn="bounceInLeft" animateOnce={true}>
               <div className="header">About</div>
             </ScrollAnimation>
-            <ScrollAnimation animateIn="bounceInLeft" delay={200}>
+            <ScrollAnimation animateIn="bounceInLeft" animateOnce={true} delay={200}>
               <div className="header-bar"></div>
             </ScrollAnimation>
 
@@ -125,6 +126,7 @@ export default class About extends Component {
             <div className="skills-wrapper flex row-gt-sm">
 
               <div className="flex flex-50-gt-sm">
+
                 <ScrollAnimation animateIn="bounceInLeft">
                   <div className="bio">
                     <img
@@ -132,76 +134,34 @@ export default class About extends Component {
                       className="me"
                       alt="me"
                     />
-                    <div className="label bold">Who is this guy?</div>
-                    <div className="description">
-                      Flannel brooklyn four dollar toast bicycle rights enamel pin
-                      <br/>
-                      actually mlkshk ramps la croix Drinking vinegar paleo la
-                      croix
-                      <br/>
-                      <a href="#contact">Let's make something special</a>
+
+                    <div className="bio-text">
+                      <div className="label bold">Who is this guy?</div>
+                      <div className="description">
+                        Flannel brooklyn four dollar toast bicycle rights enamel pin
+                        <br/>
+                        actually mlkshk ramps la croix Drinking vinegar paleo la
+                        croix
+                        <br/>
+                        <a href="#contact">Let's make something special</a>
+                      </div>
                     </div>
                   </div>
                 </ScrollAnimation>
               </div>
 
               <div className="flex flex-50-gt-sm bars-wrap">
-                <ScrollAnimation animateIn="bounceInRight">
 
-                  <div className="bar flex">
-                    <div className="bar fill" style={{ width: '85%'}}>
-                      <div className="tag bold flex">CSS</div>
-                    </div>
-                    <span>90%</span>
-                  </div>
-                  <div className="bar flex">
-                    <div className="bar fill" style={{ width: '76%'}}>
-                      <div className="tag bold flex">HTML</div>
-                    </div>
-                    <span>81%</span>
-                  </div>
-                  <div className="bar flex">
-                    <div className="bar fill" style={{ width: '72%'}}>
-                      <div className="tag bold flex">React</div>
-                    </div>
-                    <span>77%</span>
-                  </div>
-                  <div className="bar flex">
-                    <div className="bar fill" style={{ width: '75%'}}>
-                      <div className="tag bold flex">JavaScript</div>
-                    </div>
-                    <span>80%</span>
-                  </div>
-                  <div className="bar flex">
-                    <div className="bar fill" style={{ width: '50%'}}>
-                      <div className="tag bold flex">Angular</div>
-                    </div>
-                    <span>55%</span>
-                  </div>
-                  <div className="bar flex">
-                    <div className="bar fill" style={{ width: '60%'}}>
-                      <div className="tag bold flex">Node.js</div>
-                    </div>
-                    <span>62%</span>
-                  </div>
-                  <div className="bar flex">
-                    <div className="bar fill" style={{ width: '87%'}}>
-                      <div className="tag bold flex">Ruby/Rails</div>
-                    </div>
-                    <span>92%</span>
-                  </div>
-                  <div className="bar flex">
-                    <div className="bar fill" style={{ width: '75%'}}>
-                      <div className="tag bold flex">UI Design</div>
-                    </div>
-                    <span>73%</span>
-                  </div>
-                  <div className="bar flex">
-                    <div className="bar fill" style={{ width: '55%'}}>
-                      <div className="tag bold flex">Sketch</div>
-                    </div>
-                    <span>45%</span>
-                  </div>
+                <ScrollAnimation animateIn="bounceInRight">
+                  <SkillBar skill={'CSS'} width={'85%'} rating={'90%'}/>
+                  <SkillBar skill={'HTML'} width={'76%'} rating={'81%'}/>
+                  <SkillBar skill={'React'} width={'72%'} rating={'77%'}/>
+                  <SkillBar skill={'Javascript'} width={'75%'} rating={'80%'}/>
+                  <SkillBar skill={'Angular'} width={'60%'} rating={'65%'}/>
+                  <SkillBar skill={'Node.js'} width={'50%'} rating={'55%'}/>
+                  <SkillBar skill={'Ruby/Rails'} width={'87%'} rating={'92%'}/>
+                  <SkillBar skill={'UI Design'} width={'75%'} rating={'73%'}/>
+                  <SkillBar skill={'Sketch'} width={'55%'} rating={'45%'}/>
                 </ScrollAnimation>
               </div>
 
