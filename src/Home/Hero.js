@@ -35,12 +35,14 @@ class Hero extends Component {
 
         <div className="hero-content">
 
-          <h1>Hello, I'm<span className="name">Israel D. Matos.</span></h1>
-          <p>I'm a full-stack web developer.</p>
+          <div className="hero-text-wrap">
+            <div className="greeting">Hello, I'm<span className="name">Israel D. Matos.</span></div>
+            <div className="title">I'm a full-stack web developer.</div>
+          </div>
 
           <a
-            href="#about"
             className="page-link-btn"
+            href="#about"
             role="button"
             onMouseOver={this.enter.bind(this)}
             onMouseLeave={this.leave.bind(this)}
@@ -48,7 +50,7 @@ class Hero extends Component {
             <div className="btn-content">
 
               <span className="btn-text">
-                Prove it!
+                See my work!
               </span>
 
               <RotatingArrow rotate={this.state.rotate}/>
