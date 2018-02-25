@@ -13,6 +13,7 @@ export default class IconLink extends Component {
       <a
         className="flex social-link"
         href={this.props.url}
+        target="_blank"
       >
         <Icon size={40} className="icon" />
       </a>

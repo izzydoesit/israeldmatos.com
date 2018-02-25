@@ -28,9 +28,9 @@ export default class Footer extends Component {
   }
 
   render() {
-    
+
     return (
-      <footer>
+      <footer id="footer">
         <a href="#home" className="chevron-link-wrapper">
           <Chevron className="chevron" />
         </a>

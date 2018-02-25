@@ -4,7 +4,14 @@ footer {
   left: 0;
   width: 100%;
   background: #6D5775;
-  padding: 25% 0 20% 0;
+  padding: 20% 0 15% 0;
+}
+
+@media screen and (min-width: 900%) {
+
+  footer#footer {
+    padding: 15% 0 18% 0;
+  }
 }
 
 .chevron-link-wrapper > svg:hover {
