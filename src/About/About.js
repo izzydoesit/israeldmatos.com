@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import ScrollAnimation from 'react-animate-on-scroll';
 import Alarm from 'react-icons/lib/md/alarm-on';
 import Tablet from 'react-icons/lib/fa/tablet';
-import Laptop from 'react-icons/lib/fa/laptop';
 import ThumbsUp from 'react-icons/lib/fa/thumbs-o-up';
 import Magic from 'react-icons/lib/fa/magic';
 import ProfilePic from './profile-pic-hex.png';
