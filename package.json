@@ -20,7 +20,6 @@
     "node-env-file": "^0.1.8",
     "node-env-run": "^2.0.1",
     "node-fetch": "^2.1.1",
-    "nodemailer": "^4.6.3",
     "nodemailer-smtp-transport": "^2.7.4",
     "react": "^16.2.0",
     "react-animate-on-scroll": "^2.0.0",
