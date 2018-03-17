@@ -20,16 +20,6 @@ export default class ContactForm extends Component {
     };
   }
 
-  componentDidMount() {
-
-    this.setState({
-      name: 'Ronald McDonald',
-      email: 'ronald@mcdonalds.com',
-      message: 'hey, looks like we could make beautiful burgers together!'
-    })
-  }
-
-
   onChange(event) {
     const state = this.state;
     state[event.target.name] = event.target.value;
@@ -38,11 +28,11 @@ export default class ContactForm extends Component {
 
   onSubmit(event) {
     event.preventDefault();
-
+    
     let messagePayload = {
       name: this.state.name,
       email: this.state.email,
-      message: this.state.message
+      message: this.state.message    
     }
     
     axios.post('/contact', messagePayload)
@@ -67,15 +57,6 @@ export default class ContactForm extends Component {
     this.setState({
       showMessage: false
     });
-  }
-
-  callback(event) {
-    console.log("DONE LOADING!!");
-  }
-
-  verifyCallback(response) {
-    console.log("VERIFIED. RESPONSE:", response);
-    this.onSubmit(response);
   }
 
   render() {
@@ -119,19 +100,6 @@ export default class ContactForm extends Component {
               />
 
               <Message onClose={this.onClose} show={this.state.showMessage}/>
-
-                {/*<script src="https://www.google.com/recaptcha/api.js"></script>
-                <div className="g-recaptcha" data-sitekey={localHostSiteKey}></div>*/}
-              {/*<Recaptcha
-                ref={e => recaptchaInstance = e}
-                sitekey={localHostSiteKey}
-                size="invisible"
-                onloadCallback={this.callback}
-                verifyCallback={this.verifyCallback}
-              />*/}
-
-              <input type="hidden" name="_subject" value={`[israeldmatos.com] New email from ${this.state.name}!`}/>
-
 
               <button
                 className="contact-btn"
