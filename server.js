@@ -6,9 +6,18 @@ const sendEmail = require('./mailer');
 const compression = require('compression');
 const morgan = require('morgan');
 const path = require('path');
+// Load any undefined ENV variables from a specified file.
+var env = require('node-env-file');
+env(__dirname + '/.env');
+const sgMail = require('@sendgrid/mail');
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 const normalizePort = port => parseInt(port, 10);
 const PORT = normalizePort(process.env.PORT || 5000)
+const PROTOCOL = process.env.PROTOCOL || 'http'
+const HOSTNAME = process.env.HOST || 'localhost'
+const CORS =
+  process.env.NODE_ENV === 'production' ? `${PROTOCOL}://${HOSTNAME}` : `*`
 
 const app = express();
 app.use(bodyParser.json());
@@ -33,23 +42,31 @@ if (dev) {
 }
 
 app.post('/contact', async (req, res) => {
-  try {
-    const { email, name, message } = req.body
-    const message = {
-      from: `${name} <${email}`
-      text: message
-    }
-    await sendEmail(message)
-    console.log(`Sent the message "${message}" from ${name} <${email}>`);
-  } catch(error) {
-    console.log(`Failed to send message "${message}" from ${name} <${email}> with the error ${error && error.message}`);
+
+  res.header('Access-Control-Allow-Origin', CORS)
+  res.header(
+    'Access-Control-Allow-Headers',
+    'Origin, X-Requested-With, Content-Type, Accept'
+  )
+  res.header('Content-Type', 'application/json')
+  
+  const { email, name, message, key } = req.body
+  const mailOptions = {
+    from: `${email}`,
+    to: 'israeldmatos@gmail.com',
+    subject: `[israeldmatos.com] NEW message from ${name} <${email}>`,
+    html: `<p>${message}</p>`
   }
+  
+  sgMail
+  .send(mailOptions)
+  .then(() => console.log('Mail sent successfully'))
+  .catch(error => console.log(error.toString()))
 })
 
 const server = createServer(app);
 
 server.listen(PORT, err => {
   if (err) throw err;
-  
   console.log(`server listening on port ${PORT}`);
 })
