@@ -55,7 +55,10 @@ app.post('/contact', async (req, res) => {
     from: `${email}`,
     to: 'israeldmatos@gmail.com',
     subject: `[israeldmatos.com] NEW message from ${name} <${email}>`,
-    html: `<p>${message}</p>`
+    html: `<div style="border: 1px solid #e5e5e5; padding: 15px 20px; max-width: 600px; margin: auto;"
+    <p>Hello Israel,<br/><br/>You got a new message from ${name} at ${email}</p>
+    <p style="padding: 12px; border-left: 6px solid #eee; font-style: italic;">${message}</p>
+    <p>&nbsp<br/>Best wishes,<br/>SendGrid</p></div>`
   }
   
   sgMail
