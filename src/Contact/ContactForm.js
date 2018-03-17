@@ -10,8 +10,6 @@ export default class ContactForm extends Component {
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
     this.onClose = this.onClose.bind(this);
-    this.callback = this.callback.bind(this);
-    this.verifyCallback = this.verifyCallback.bind(this);
     this.state = {
       name: '',
       email: '',
