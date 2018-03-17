@@ -5,6 +5,9 @@
   "dependencies": {
     "animate.css": "^3.6.1",
     "axios": "^0.18.0",
+    "babel-polyfill": "^6.26.0",
+    "body-parser": "^1.18.2",
+    "combined-stream": "^1.0.6",
     "compression": "^1.7.2",
     "emailjs-com": "^1.5.14",
     "enzyme": "^3.3.0",
@@ -15,6 +18,7 @@
     "hover.css": "^2.2.1",
     "morgan": "^1.9.0",
     "node-fetch": "^2.1.1",
+    "nodemailer": "^4.6.3",
     "react": "^16.2.0",
     "react-animate-on-scroll": "^2.0.0",
     "react-dom": "^16.2.0",
