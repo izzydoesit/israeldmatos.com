@@ -1,17 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import ScrollAnimation from 'react-animate-on-scroll';
-import emailjs from 'emailjs-com';
 import Message from './Message';
-import Recaptcha from 'react-recaptcha';
 import './ContactForm.css';
-
-const userId = process.env.REACT_APP_EMAIL_JS_USER_ID;
-const serviceId = process.env.REACT_APP_EMAIL_JS_SERVICE_ID;
-const templateId = process.env.REACT_APP_EMAIL_JS_TEMPLATE_ID;
-const sitekey = process.env.REACT_APP_RECAPTCHA_SITEKEY
-const localHostSiteKey = process.env.REACT_APP_LOCALHOST_RECAPTCHA_SITEKEY
-let recaptchaInstance;
 
 export default class ContactForm extends Component {
   constructor(props) {
@@ -30,31 +21,19 @@ export default class ContactForm extends Component {
   }
 
   componentDidMount() {
-    {/*emailjs.init(userId);
-    emailjs.send(serviceId, templateId, {
-      name: 'Yo',
-      email: 'my email',
-      message: "hi"
-    }).then((response) => {
-      console.log('SUCCESS. status=%d, text=%s', response.status, response.text);
-    }, (err) => {
-      console.log('FAILED. err=', err)
-    });*/}
+
+    this.setState({
+      name: 'Ronald McDonald',
+      email: 'ronald@mcdonalds.com',
+      message: 'hey, looks like we could make beautiful burgers together!'
+    })
   }
 
-  validateEmail(value) {
-     // regex from http://stackoverflow.com/questions/46155/validate-email-address-in-javascript
-    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(value);
-  }
 
   onChange(event) {
     const state = this.state;
     state[event.target.name] = event.target.value;
     this.setState(state);
-  }
-
-  executeCaptcha() {
   }
 
   onSubmit(event) {
@@ -65,33 +44,14 @@ export default class ContactForm extends Component {
       email: this.state.email,
       message: this.state.message
     }
-
-    axios({
-      url: '//formspree.io/israeldmatos@gmail.com',
-      method: 'post',
-      data: messagePayload
-    })
+    
+    axios.post('/contact', messagePayload)
     .then((response) => {
-      console.log('FORMSPREE RESPONSE:', response);
+      console.log('response:', response);
     })
     .catch((error) => {
-      console.log('ERROR:', error)
+      console.log('error:', error)
     })
-
-    console.log('response from ONSUBMIT:', event)
-    let formParams = {
-      email: this.state.email,
-      name: this.state.name,
-      message: this.state.message,
-
-    }
-    emailjs.init(userId);
-    {/*emailjs.send(serviceId, templateId, formParams)
-    .then((response) => {
-      console.log('SUCCESS. status=%d, text=%s', response.status, response.text);
-    }, (err) => {
-      console.log('FAILED. err=', err)
-    });*/}
 
     console.log('SUBMITTED!!!', event);
 
@@ -105,10 +65,7 @@ export default class ContactForm extends Component {
 
   onClose(event) {
     this.setState({
-      showMessage: false,
-      name: '',
-      email: '',
-      message: ''
+      showMessage: false
     });
   }
 
@@ -132,7 +89,7 @@ export default class ContactForm extends Component {
           <form
             className="flex contact-form"
             id="contactForm"
-            action="https://formspree.io/israeldmatos@gmail.com"
+            onSubmit={this.onSubmit}
           >
 
             <div className="flex input-wrap">
@@ -178,10 +135,8 @@ export default class ContactForm extends Component {
 
               <button
                 className="contact-btn"
-                data-sitekey={localHostSiteKey}
                 type="submit"
                 value="Submit"
-                onClick={this.onSubmit}
               >
                 Submit
               </button>
