@@ -10,21 +10,17 @@ const transporter = nodemailer.createTransport({
   }
 });
 
-const send = ({ email, name, text }) => {
-  const from = name && email ? `${name} <${email}>` : `${name || email}`
-  const message = {
-    from,
-    to: 'israeldmatos@gmail.com',
-    subject: `New message from ${from} at creating-contact-forms-with-nodemailer-and-react`,
-    text,
-    replyTo: from
-  };
+const sendEmail = (message) => {
 
   return new Promise((resolve, reject) => {
-    transporter.sendMail(message, (error, info) =>
-      error ? reject(error) : resolve(info)
-    )
+    transporter.sendMail(message, (error, info) => {
+      if (error) {
+        reject(error); 
+        return   
+      }
+      resolve(info)
+    })
   })
 }
 
-module.exports = send
+module.exports = sendEmail

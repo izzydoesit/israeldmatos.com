@@ -2,7 +2,7 @@ require('babel-polyfill');
 const {createServer} = require('http');
 const express = require('express');
 const bodyParser = require('body-parser');
-const mailer = require('./mailer');
+const sendEmail = require('./mailer');
 const compression = require('compression');
 const morgan = require('morgan');
 const path = require('path');
@@ -32,16 +32,18 @@ if (dev) {
   app.use(morgan('dev'));
 }
 
-app.post('/contact', (req, res) => {
-  const { email = 'fromExpress', name = 'Exp', message = 'test' } = req.body
-  
-  mailer({ email, name, text: message }).then(() => {
+app.post('/contact', async (req, res) => {
+  try {
+    const { email, name, message } = req.body
+    const message = {
+      from: `${name} <${email}`
+      text: message
+    }
+    await sendEmail(message)
     console.log(`Sent the message "${message}" from ${name} <${email}>`);
-    
-  }).catch((error) => {
-    console.log(`Failed to send message "${message}" from ${name} <${email} with the error ${error && error.message}`);
-    
-  })
+  } catch(error) {
+    console.log(`Failed to send message "${message}" from ${name} <${email}> with the error ${error && error.message}`);
+  }
 })
 
 const server = createServer(app);
