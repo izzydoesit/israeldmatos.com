@@ -41,8 +41,6 @@ export default class ContactForm extends Component {
       console.log('error:', error)
     })
 
-    console.log('SUBMITTED!!!', event);
-
     this.setState({
       showMessage: true,
       name: '',
