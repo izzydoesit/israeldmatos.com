@@ -1,5 +1,8 @@
+require('babel-polyfill');
 const {createServer} = require('http');
 const express = require('express');
+const bodyParser = require('body-parser');
+const mailer = require('./mailer');
 const compression = require('compression');
 const morgan = require('morgan');
 const path = require('path');
@@ -8,6 +11,9 @@ const normalizePort = port => parseInt(port, 10);
 const PORT = normalizePort(process.env.PORT || 5000)
 
 const app = express();
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
 const dev = app.get('env') !== 'production'
 
 if (!dev) {
@@ -26,10 +32,22 @@ if (dev) {
   app.use(morgan('dev'));
 }
 
+app.post('/contact', (req, res) => {
+  const { email = 'fromExpress', name = 'Exp', message = 'test' } = req.body
+  
+  mailer({ email, name, text: message }).then(() => {
+    console.log(`Sent the message "${message}" from ${name} <${email}>`);
+    
+  }).catch((error) => {
+    console.log(`Failed to send message "${message}" from ${name} <${email} with the error ${error && error.message}`);
+    
+  })
+})
+
 const server = createServer(app);
 
 server.listen(PORT, err => {
   if (err) throw err;
   
-  console.log('server started!');
+  console.log(`server listening on port ${PORT}`);
 })
