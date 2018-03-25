@@ -14,10 +14,17 @@ export default class Projects extends Component {
         <ScrollableAnchor id={'projects'}>
 
           <div className="flex container">
-            <ScrollAnimation animateIn="bounceInRight" animateOnce={true}>
+            <ScrollAnimation 
+              animateOnce={true}
+              animateIn="bounceInRight"
+            >
               <div className="header">Projects</div>
             </ScrollAnimation>
-            <ScrollAnimation animateIn="bounceInRight" animateOnce={true} delay={200}>
+            <ScrollAnimation 
+              animateOnce={true} 
+              animateIn="bounceInRight" 
+              delay={200}
+            >
               <div className="header-bar"></div>
             </ScrollAnimation>
             <Slider />

@@ -14,7 +14,11 @@ export default class BulletCard extends Component {
     return (
       <div className="flex bullet-wrap">
 
-        <ScrollAnimation animateIn="flipInY" delay={iconDelay}>
+        <ScrollAnimation 
+          animateOnce={true} 
+          animateIn="flipInY" 
+          delay={iconDelay}
+        >
           <div className="hex-wrap">
             <div className="hexagon">
               <Icon size={55} className="hex-icon"/>
@@ -22,7 +26,11 @@ export default class BulletCard extends Component {
           </div>
         </ScrollAnimation>
 
-        <ScrollAnimation animateIn="fadeInUp" delay={textDelay}>
+        <ScrollAnimation 
+          animateOnce={true} 
+          animateIn="fadeInUp" 
+          delay={textDelay}
+        >
           <div className="bullet-text">
             <div className="label bold">{label}</div>
             <div className="description">{tagLine}

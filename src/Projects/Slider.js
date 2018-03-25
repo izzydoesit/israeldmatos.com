@@ -79,10 +79,12 @@ export default class Slider extends Component {
     return (
       <div className="flex slider-container">
 
-          <ScrollAnimation animateIn="flip" delay={700}>
-
+          <ScrollAnimation 
+            animateOnce={true} 
+            animateIn="bounceIn" 
+            delay={600}
+          >
             <div id="gallery" className="flex row slider-wrapper">
-
               <SliderArrow
                 direction="left"
                 onClick={e => this.goToPrevSlide(e)}
