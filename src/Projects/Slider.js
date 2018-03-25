@@ -11,43 +11,14 @@ import curvaFit from './curvaFit.png';
 import hackerHaus from './hackerhaus.png';
 import frais from './frais.png';
 
-const slideArray = [
-  { title: 'Smarter Bear', url: 'https://smarterbear.herokuapp.com/', blurb: 'Find out what the insiders are trading...', src: smarterBear },
-  { title: 'The Color Game', url: 'http://izzydoesit.github.io/colorGame', blurb: 'Test your hex-guessing skills here', src: colorGame },
-  { title: 'Curva Fitness', url: 'https://curva.herokuapp.com/', blurb: 'Get CURVA fit!', src: curvaFit },
-  { title: 'Hackerhaus', url: 'https://hackerhaus.herokuapp.com/', blurb: 'The NEXT best thing in SF housing...', src: hackerHaus },
-  { title: 'Frais Recipes', url: 'https://recipesbyfrais.herokuapp.com/', blurb: 'Discover a new dish or share your fav', src: frais }
-]
-
 export default class Slider extends Component {
-  constructor(props) {
-    super(props);
-
-    this.goToSlide = this.goToSlide.bind(this);
-    this.goToPrevSlide = this.goToPrevSlide.bind(this);
-    this.goToNextSlide = this.goToNextSlide.bind(this);
-
-    this.state = {
-      activeIndex: 0
-    }
-  }
-
-  componentWillMount() {
-    this.setState({
-      slides: slideArray
-    });
-}
-
-  goToSlide(index) {
-    this.setState({activeIndex: index});
-  }
 
   goToPrevSlide(e) {
     e.preventDefault();
 
-    let index = this.state.activeIndex;
+    let index = this.props.currentProjectId;
     // let { slides } = this.props;
-    let slidesLength = this.state.slides.length;
+    let slidesLength = this.props.projects.length;
 
     --index;
 
@@ -55,15 +26,15 @@ export default class Slider extends Component {
       index = slidesLength - 1;
     }
 
-    this.goToSlide(index);
+    this.props.updateProjectId(index);
   }
 
   goToNextSlide(e) {
     e.preventDefault();
 
-    let index = this.state.activeIndex;
+    let index = this.props.currentProjectId;
     // let { slides } = this.props;
-    let slidesLength = this.state.slides.length;
+    let slidesLength = this.props.projects.length;
 
     ++index;
 
@@ -71,10 +42,12 @@ export default class Slider extends Component {
       index = 0
     }
 
-    this.goToSlide(index);
+    this.props.updateProjectId(index);
   }
 
   render() {
+    
+    const { openModal, currentProjectId, updateProjectId, projects } = this.props;
 
     return (
       <div className="flex slider-container">
@@ -90,12 +63,13 @@ export default class Slider extends Component {
                 onClick={e => this.goToPrevSlide(e)}
               />
               <ul className="slide-list">
-                  {this.state.slides.map((slide, index) =>
+                  {projects.map((project, index) =>
                     <Slide
-                      key={index}
+                      key={project.id}
                       index={index}
-                      activeIndex={this.state.activeIndex}
-                      slide={slide}
+                      activeIndex={currentProjectId}
+                      project={project}
+                      openModal={openModal}
                     />
                   )}
               </ul>
@@ -108,13 +82,13 @@ export default class Slider extends Component {
 
           <div className="indicator-wrap">
             <ul className="slider-indicators">
-              {this.state.slides.map((slide, index) =>
+              {projects.map((slide, index) =>
                 <SliderIndicator
                   key={index}
                   index={index}
-                  activeIndex={this.state.activeIndex}
-                  isActive={this.state.activeIndex===index}
-                  onClick={e => this.goToSlide(index)}
+                  activeIndex={currentProjectId}
+                  isActive={currentProjectId===index}
+                  onClick={e => updateProjectId(index)}
                 />
               )}
             </ul>

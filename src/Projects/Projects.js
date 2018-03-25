@@ -7,6 +7,7 @@ import ScrollableAnchor from 'react-scrollable-anchor/lib/ScrollableAnchor';
 export default class Projects extends Component {
 
   render() {
+    const { openModal, updateProjectId, currentProjectId, projects } = this.props
 
     return (
       <section id="projects-section">
@@ -27,7 +28,12 @@ export default class Projects extends Component {
             >
               <div className="header-bar"></div>
             </ScrollAnimation>
-            <Slider />
+            <Slider 
+              openModal={openModal}
+              updateProjectId={updateProjectId}
+              currentProjectId={currentProjectId}
+              projects={projects}
+            />
           </div>
         </ScrollableAnchor>
       </section>
