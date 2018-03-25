@@ -12,23 +12,19 @@
   font-size: 25px;
   padding: 0;
   opacity: 1;
-  color: #857698;
+  background-color: #857698;
 }
 
 .slider-btn > i.fa {
-  color: #857698;
+  color: #FFF;
 }
 
 @media screen and (min-width: 900px) {
 
   .slider-btn {
-    opacity: .4;
+    opacity: .6;  
   }
   
-  .slider-btn > i.fa {
-    color: #857698;
-  }
-
   .slider-btn:hover {
     opacity: 1;
     transition: opacity .15s cubic-bezier(.4, 0, 1, 1);
@@ -36,7 +32,7 @@
     box-shadow:	0px 1px 3px 0px rgba(0, 0, 0, .3);
   }
   
-  .slider-btn:hover i.fa {
+  .slider-btn:hover > i.fa {
     color: #857698;
   }
 }
