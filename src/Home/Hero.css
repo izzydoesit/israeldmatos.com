@@ -31,13 +31,6 @@ img.hero-bg {
   }
 }
 
-@media screen and (min-width: 1200px) {
-
-  img.hero-bg {
-    height: 55em;
-  }
-}
-
 .hero-content {
   color: white;
   position: absolute;
