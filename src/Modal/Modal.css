@@ -18,9 +18,9 @@ body: {
   background-color: rgba(0; 0; 0; 0.7);
   z-index: 9999;
   opacity: 1;
-  overflow-x: 'hidden';
-  overflow-y: 'auto';
-  animation: 'show .5s ease';
+  overflow-x: hidden;
+  overflow-y: auto;
+  animation: show .5s ease;
 };
 
 /* Fade-in open animation*/
@@ -43,7 +43,6 @@ body: {
   width: 100%;
   background-color: #fff;
   box-shadow: [0; 0; 0.625rem; rgba(0; 0; 0; 0.2)];
-
 };
 
 @media and (min-width: 576px): {
