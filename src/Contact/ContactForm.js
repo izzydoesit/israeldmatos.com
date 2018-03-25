@@ -61,14 +61,17 @@ export default class ContactForm extends Component {
     return (
       <div className="form-wrap">
 
-        <ScrollAnimation animateOnce={true} animateIn="tada" delay={1200}>
+        <ScrollAnimation 
+          animateOnce={true} 
+          animateIn="tada" 
+          delay={1200}
+        >
 
           <form
             className="flex contact-form"
             id="contactForm"
             onSubmit={this.onSubmit}
           >
-
             <div className="flex input-wrap">
               <input
                 className="flex name-input"
