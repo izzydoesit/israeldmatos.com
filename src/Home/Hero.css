@@ -20,18 +20,11 @@ img.hero-bg {
 @media screen and (min-width: 600) {
 
   .hero-image > img.hero-bg {
-    height: 500px;
+    height: 35em;
   }
 }
 
 @media screen and (min-width: 900px) {
-
-  img.hero-bg {
-    height: 45em;
-  }
-}
-
-@media screen and (min-width: 1200px) {
 
   img.hero-bg {
     height: 55em;

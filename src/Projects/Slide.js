@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ModalLauncher from '../Modal/ModalLauncher';
 import './Slide.css';
 
 const cardHover = {
@@ -13,8 +14,8 @@ const buttonLightUp = {
 export default class Slide extends Component {
   constructor(props) {
     super(props);
-    this.handleMouseCardHover = this.handleMouseCardHover.bind(this)
-    this.handleMouseButtonHover = this.handleMouseButtonHover.bind(this)
+    this.handleMouseCardHover = this.handleMouseCardHover.bind(this);
+    this.handleMouseButtonHover = this.handleMouseButtonHover.bind(this);
     this.state = {
       cardHover: false,
       buttonHover: false,
@@ -70,29 +71,27 @@ export default class Slide extends Component {
           <img
             resizemode="stretch"
             className="slide-pic"
-            src={this.props.slide.src}
+            src={this.props.project.src}
             alt='web project'
           />
         </div>
 
         <div className="flex card-text" style={textStyles}>
           <div className="bold title">
-            {this.props.slide.title}
+            {this.props.project.title}
           </div>
-          <div className="blurb">{this.props.slide.blurb}</div>
+          <div className="blurb">{this.props.project.blurb}</div>
         </div>
 
-        <a
-          href={this.props.slide.url}
-          target="_blank"
-          rel="noopener noreferrer"
+        <button
           className="flex card-button"
           style={buttonStyles}
+          onClick={this.props.openModal}
           onMouseEnter={this.handleMouseButtonHover}
           onMouseLeave={this.handleMouseButtonHover}
         >
-          VISIT WEBSITE
-        </a>
+        LEARN MORE
+        </button>
       </li>
     )
   }

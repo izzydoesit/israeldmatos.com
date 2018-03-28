@@ -1,218 +1,126 @@
-
-> uws@9.14.0 install /Users/izzy/Documents/workspace/israeldmatos.com/node_modules/uws
-> node-gyp rebuild > build_log.txt 2>&1 || exit 0
-
-israeldmatos.com@0.1.0 /Users/izzy/Documents/workspace/israeldmatos.com
-├─┬ karma@2.0.0 
-│ ├─┬ browserify@14.5.0 
-│ │ ├─┬ browser-pack@6.0.4 
-│ │ │ ├─┬ combine-source-map@0.8.0 
-│ │ │ │ ├── convert-source-map@1.1.3 
-│ │ │ │ ├─┬ inline-source-map@0.6.2 
-│ │ │ │ │ └── source-map@0.5.7 
-│ │ │ │ ├── lodash.memoize@3.0.4 
-│ │ │ │ └── source-map@0.5.7 
-│ │ │ └── umd@3.0.3 
-│ │ ├── buffer@5.1.0 
-│ │ ├── cached-path-relative@1.0.1 
-│ │ ├─┬ concat-stream@1.5.2 
-│ │ │ └─┬ readable-stream@2.0.6 
-│ │ │   ├── process-nextick-args@1.0.7 
-│ │ │   └── string_decoder@0.10.31 
-│ │ ├── deps-sort@2.0.0 
-│ │ ├── domain-browser@1.1.7 
-│ │ ├── duplexer2@0.1.4 
-│ │ ├── htmlescape@1.1.1 
-│ │ ├─┬ insert-module-globals@7.0.4 
-│ │ │ ├─┬ combine-source-map@0.7.2 
-│ │ │ │ ├── convert-source-map@1.1.3 
-│ │ │ │ ├── lodash.memoize@3.0.4 
-│ │ │ │ └── source-map@0.5.7 
-│ │ │ └─┬ lexical-scope@1.2.0 
-│ │ │   └─┬ astw@2.2.0 
-│ │ │     └── acorn@4.0.13 
-│ │ ├─┬ JSONStream@1.3.2 
-│ │ │ └── jsonparse@1.3.1 
-│ │ ├─┬ labeled-stream-splicer@2.0.1 
-│ │ │ ├── isarray@2.0.4 
-│ │ │ └── stream-splicer@2.0.0 
-│ │ ├─┬ module-deps@4.1.1 
-│ │ │ ├─┬ concat-stream@1.5.2 
-│ │ │ │ └─┬ readable-stream@2.0.6 
-│ │ │ │   ├── process-nextick-args@1.0.7 
-│ │ │ │   └── string_decoder@0.10.31 
-│ │ │ ├── detective@4.7.1 
-│ │ │ └── stream-combiner2@1.1.1 
-│ │ ├─┬ parents@1.0.1 
-│ │ │ └── path-platform@0.11.15 
-│ │ ├── read-only-stream@2.0.0 
-│ │ ├─┬ shasum@1.0.2 
-│ │ │ └── json-stable-stringify@0.0.1 
-│ │ ├─┬ subarg@1.0.0 
-│ │ │ └── minimist@1.2.0 
-│ │ ├─┬ syntax-error@1.4.0 
-│ │ │ └── acorn-node@1.3.0 
-│ │ ├── through2@2.0.3 
-│ │ └── timers-browserify@1.4.2 
-│ ├── chokidar@1.7.0 
-│ ├── colors@1.2.1 
-│ ├── combine-lists@1.0.1 
-│ ├─┬ connect@3.6.6 
-│ │ ├── debug@2.6.9 
-│ │ └─┬ finalhandler@1.1.0 
-│ │   └── statuses@1.3.1 
-│ ├── di@0.0.1 
-│ ├─┬ dom-serialize@2.2.1 
-│ │ ├── custom-event@1.0.1 
-│ │ ├── ent@2.2.0 
-│ │ └── void-elements@2.0.1 
-│ ├─┬ expand-braces@0.1.2 
-│ │ ├── array-slice@0.2.3 
-│ │ ├── array-unique@0.2.1 
-│ │ └─┬ braces@0.1.5 
-│ │   └─┬ expand-range@0.1.1 
-│ │     ├── is-number@0.1.1 
-│ │     └── repeat-string@0.2.2 
-│ ├── isbinaryfile@3.0.2 
-│ ├─┬ log4js@2.5.3 
-│ │ ├─┬ amqplib@0.5.2 
-│ │ │ ├── bitsyntax@0.0.4 
-│ │ │ ├── buffer-more-ints@0.0.2 
-│ │ │ └─┬ readable-stream@1.1.14 
-│ │ │   ├── isarray@0.0.1 
-│ │ │   └── string_decoder@0.10.31 
-│ │ ├─┬ axios@0.15.3 
-│ │ │ └─┬ follow-redirects@1.0.0 
-│ │ │   └── debug@2.6.9 
-│ │ ├── circular-json@0.5.1 
-│ │ ├── date-format@1.2.0 
-│ │ ├── hipchat-notifier@1.1.0 
-│ │ ├─┬ loggly@1.1.1 
-│ │ │ ├─┬ request@2.75.0 
-│ │ │ │ ├── aws-sign2@0.6.0 
-│ │ │ │ ├─┬ bl@1.1.2 
-│ │ │ │ │ └─┬ readable-stream@2.0.6 
-│ │ │ │ │   ├── process-nextick-args@1.0.7 
-│ │ │ │ │   └── string_decoder@0.10.31 
-│ │ │ │ ├── caseless@0.11.0 
-│ │ │ │ ├── form-data@2.0.0 
-│ │ │ │ ├─┬ har-validator@2.0.6 
-│ │ │ │ │ ├─┬ chalk@1.1.3 
-│ │ │ │ │ │ ├── ansi-styles@2.2.1 
-│ │ │ │ │ │ └── supports-color@2.0.0 
-│ │ │ │ │ └─┬ is-my-json-valid@2.17.2 
-│ │ │ │ │   ├── generate-function@2.0.0 
-│ │ │ │ │   ├─┬ generate-object-property@1.2.0 
-│ │ │ │ │   │ └── is-property@1.0.2 
-│ │ │ │ │   ├── is-my-ip-valid@1.0.0 
-│ │ │ │ │   └── jsonpointer@4.0.1 
-│ │ │ │ ├─┬ hawk@3.1.3 
-│ │ │ │ │ ├── boom@2.10.1 
-│ │ │ │ │ ├── cryptiles@2.0.5 
-│ │ │ │ │ ├── hoek@2.16.3 
-│ │ │ │ │ └── sntp@1.0.9 
-│ │ │ │ ├─┬ http-signature@1.1.1 
-│ │ │ │ │ └── assert-plus@0.2.0 
-│ │ │ │ ├── node-uuid@1.4.8 
-│ │ │ │ ├── qs@6.2.3 
-│ │ │ │ └── tunnel-agent@0.4.3 
-│ │ │ └── timespan@2.3.0 
-│ │ ├─┬ mailgun-js@0.7.15 
-│ │ │ ├── async@2.1.5 
-│ │ │ ├─┬ debug@2.2.0 
-│ │ │ │ └── ms@0.7.1 
-│ │ │ ├── form-data@2.1.4 
-│ │ │ ├── inflection@1.10.0 
-│ │ │ ├─┬ path-proxy@1.0.0 
-│ │ │ │ └── inflection@1.3.8 
-│ │ │ ├─┬ proxy-agent@2.0.0 
-│ │ │ │ ├─┬ agent-base@2.1.1 
-│ │ │ │ │ └── semver@5.0.3 
-│ │ │ │ ├── debug@2.6.9 
-│ │ │ │ ├─┬ http-proxy-agent@1.0.0 
-│ │ │ │ │ └── debug@2.6.9 
-│ │ │ │ ├─┬ https-proxy-agent@1.0.0 
-│ │ │ │ │ └── debug@2.6.9 
-│ │ │ │ ├── lru-cache@2.6.5 
-│ │ │ │ ├─┬ pac-proxy-agent@1.1.0 
-│ │ │ │ │ ├── debug@2.6.9 
-│ │ │ │ │ ├─┬ get-uri@2.0.1 
-│ │ │ │ │ │ ├── data-uri-to-buffer@1.2.0 
-│ │ │ │ │ │ ├── debug@2.6.9 
-│ │ │ │ │ │ ├── file-uri-to-path@1.0.0 
-│ │ │ │ │ │ └─┬ ftp@0.3.10 
-│ │ │ │ │ │   ├─┬ readable-stream@1.1.14 
-│ │ │ │ │ │   │ ├── isarray@0.0.1 
-│ │ │ │ │ │   │ └── string_decoder@0.10.31 
-│ │ │ │ │ │   └── xregexp@2.0.0 
-│ │ │ │ │ └─┬ pac-resolver@2.0.0 
-│ │ │ │ │   ├── co@3.0.6 
-│ │ │ │ │   ├─┬ degenerator@1.0.4 
-│ │ │ │ │   │ ├── ast-types@0.11.3 
-│ │ │ │ │   │ └── esprima@3.1.3 
-│ │ │ │ │   ├── ip@1.0.1 
-│ │ │ │ │   ├── netmask@1.0.6 
-│ │ │ │ │   └── thunkify@2.1.2 
-│ │ │ │ └─┬ socks-proxy-agent@2.1.1 
-│ │ │ │   └── socks@1.1.10 
-│ │ │ ├── q@1.4.1 
-│ │ │ └── tsscmp@1.0.5 
-│ │ ├─┬ nodemailer@2.7.2 
-│ │ │ ├─┬ libmime@3.0.0 
-│ │ │ │ ├── iconv-lite@0.4.15 
-│ │ │ │ ├── libbase64@0.1.0 
-│ │ │ │ └── libqp@1.1.0 
-│ │ │ ├─┬ mailcomposer@4.0.1 
-│ │ │ │ └─┬ buildmail@4.0.1 
-│ │ │ │   └── addressparser@1.0.1 
-│ │ │ ├── nodemailer-direct-transport@3.3.2 
-│ │ │ ├── nodemailer-smtp-pool@2.8.2 
-│ │ │ ├── nodemailer-smtp-transport@2.7.2 
-│ │ │ └─┬ socks@1.1.9 
-│ │ │   └── smart-buffer@1.1.15 
-│ │ ├─┬ redis@2.8.0 
-│ │ │ ├── double-ended-queue@2.1.0-0 
-│ │ │ ├── redis-commands@1.3.5 
-│ │ │ └── redis-parser@2.6.0 
-│ │ ├─┬ slack-node@0.2.0 
-│ │ │ └─┬ requestretry@1.13.0 
-│ │ │   └── when@3.7.8 
-│ │ └── streamroller@0.7.0 
-│ ├── qjobs@1.2.0 
-│ ├─┬ socket.io@2.0.4 
-│ │ ├── debug@2.6.9 
-│ │ ├─┬ engine.io@3.1.5 
-│ │ │ ├── base64id@1.0.0 
-│ │ │ ├─┬ engine.io-parser@2.1.2 
-│ │ │ │ ├── after@0.8.2 
-│ │ │ │ ├── arraybuffer.slice@0.0.7 
-│ │ │ │ └── blob@0.0.4 
-│ │ │ ├── uws@9.14.0 
-│ │ │ └─┬ ws@3.3.3 
-│ │ │   ├── async-limiter@1.0.0 
-│ │ │   └── ultron@1.1.1 
-│ │ ├── socket.io-adapter@1.1.1 
-│ │ ├─┬ socket.io-client@2.0.4 
-│ │ │ ├── backo2@1.0.2 
-│ │ │ ├── base64-arraybuffer@0.1.5 
-│ │ │ ├── component-bind@1.0.0 
-│ │ │ ├── debug@2.6.9 
-│ │ │ ├─┬ engine.io-client@3.1.6 
-│ │ │ │ ├── component-inherit@0.0.3 
-│ │ │ │ ├── xmlhttprequest-ssl@1.5.5 
-│ │ │ │ └── yeast@0.1.2 
-│ │ │ ├── has-cors@1.1.0 
-│ │ │ ├── object-component@0.0.3 
-│ │ │ ├─┬ parseqs@0.0.5 
-│ │ │ │ └─┬ better-assert@1.0.2 
-│ │ │ │   └── callsite@1.0.0 
-│ │ │ ├── parseuri@0.0.5 
-│ │ │ └── to-array@0.1.4 
-│ │ └─┬ socket.io-parser@3.1.3 
-│ │   ├─┬ has-binary2@1.0.2 
-│ │   │ └── isarray@2.0.1 
-│ │   └── isarray@2.0.1 
-│ └── useragent@2.3.0 
-├── UNMET PEER DEPENDENCY react@16.2.0
-└── UNMET PEER DEPENDENCY react-dom@16.2.0
-
+yarn add v1.5.1
+[1/4] Resolving packages...
+[2/4] Fetching packages...
+[3/4] Linking dependencies...
+[4/4] Building fresh packages...
+success Saved lockfile.
+success Saved 115 new dependencies.
+info Direct dependencies
+└─ karma@2.0.0
+info All dependencies
+├─ acorn-node@1.3.0
+├─ addressparser@1.0.1
+├─ after@0.8.2
+├─ amqplib@0.5.2
+├─ array-slice@0.2.3
+├─ arraybuffer.slice@0.0.7
+├─ ast-types@0.11.3
+├─ astw@2.2.0
+├─ async-limiter@1.0.0
+├─ backo2@1.0.2
+├─ base64id@1.0.0
+├─ bitsyntax@0.0.4
+├─ bl@1.1.2
+├─ blob@0.0.4
+├─ braces@0.1.5
+├─ browser-pack@6.0.4
+├─ browserify@14.5.0
+├─ buffer-from@1.0.0
+├─ buffer@5.1.0
+├─ buildmail@4.0.1
+├─ callsite@1.0.0
+├─ circular-json@0.5.1
+├─ colors@1.2.1
+├─ combine-lists@1.0.1
+├─ combine-source-map@0.7.2
+├─ component-bind@1.0.0
+├─ component-inherit@0.0.3
+├─ concat-stream@1.5.2
+├─ connect@3.6.6
+├─ custom-event@1.0.1
+├─ data-uri-to-buffer@1.2.0
+├─ degenerator@1.0.4
+├─ deps-sort@2.0.0
+├─ detective@4.7.1
+├─ di@0.0.1
+├─ dom-serialize@2.2.1
+├─ domain-browser@1.1.7
+├─ double-ended-queue@2.1.0-0
+├─ duplexer2@0.1.4
+├─ engine.io-client@3.1.6
+├─ engine.io-parser@2.1.2
+├─ engine.io@3.1.5
+├─ ent@2.2.0
+├─ expand-braces@0.1.2
+├─ expand-range@0.1.1
+├─ file-uri-to-path@1.0.0
+├─ ftp@0.3.10
+├─ generate-function@2.0.0
+├─ generate-object-property@1.2.0
+├─ get-uri@2.0.1
+├─ hipchat-notifier@1.1.0
+├─ htmlescape@1.1.1
+├─ inflection@1.10.0
+├─ insert-module-globals@7.0.4
+├─ is-my-ip-valid@1.0.0
+├─ is-my-json-valid@2.17.2
+├─ is-number@0.1.1
+├─ is-property@1.0.2
+├─ isbinaryfile@3.0.2
+├─ jsonparse@1.3.1
+├─ jsonpointer@4.0.1
+├─ karma@2.0.0
+├─ labeled-stream-splicer@2.0.1
+├─ lexical-scope@1.2.0
+├─ log4js@2.5.3
+├─ loggly@1.1.1
+├─ lru-cache@4.1.2
+├─ mailcomposer@4.0.1
+├─ mailgun-js@0.7.15
+├─ module-deps@4.1.1
+├─ netmask@1.0.6
+├─ node-uuid@1.4.8
+├─ nodemailer-direct-transport@3.3.2
+├─ nodemailer-smtp-pool@2.8.2
+├─ nodemailer@2.7.2
+├─ object-component@0.0.3
+├─ pac-proxy-agent@1.1.0
+├─ pac-resolver@2.0.0
+├─ parents@1.0.1
+├─ path-platform@0.11.15
+├─ path-proxy@1.0.0
+├─ proxy-agent@2.0.0
+├─ q@1.4.1
+├─ qjobs@1.2.0
+├─ read-only-stream@2.0.0
+├─ redis-commands@1.3.5
+├─ redis-parser@2.6.0
+├─ redis@2.8.0
+├─ requestretry@1.13.0
+├─ slack-node@0.2.0
+├─ smart-buffer@1.1.15
+├─ socket.io-adapter@1.1.1
+├─ socket.io-client@2.0.4
+├─ socket.io@2.0.4
+├─ socks@1.1.9
+├─ stream-combiner2@1.1.1
+├─ stream-http@2.8.1
+├─ stream-splicer@2.0.0
+├─ streamroller@0.7.0
+├─ syntax-error@1.4.0
+├─ thunkify@2.1.2
+├─ timers-browserify@1.4.2
+├─ timespan@2.3.0
+├─ to-array@0.1.4
+├─ tsscmp@1.0.5
+├─ tty-browserify@0.0.1
+├─ ultron@1.1.1
+├─ umd@3.0.3
+├─ useragent@2.3.0
+├─ uws@9.14.0
+├─ void-elements@2.0.1
+├─ when@3.7.8
+├─ xmlhttprequest-ssl@1.5.5
+├─ xregexp@2.0.0
+└─ yeast@0.1.2
+Done in 75.39s.

@@ -34,10 +34,17 @@ export default class About extends Component {
         <ScrollableAnchor id={'about'}>
           <div className="container flex">
 
-            <ScrollAnimation animateIn="bounceInLeft" animateOnce={true}>
+            <ScrollAnimation 
+              animateOnce={true} 
+              animateIn="bounceInLeft"
+            >
               <div className="header">About</div>
             </ScrollAnimation>
-            <ScrollAnimation animateIn="bounceInLeft" animateOnce={true} delay={200}>
+            <ScrollAnimation 
+              animateOnce={true} 
+              animateIn="bounceInLeft" 
+              delay={200}
+            >
               <div className="header-bar"></div>
             </ScrollAnimation>
 
@@ -68,7 +75,10 @@ export default class About extends Component {
 
               <div className="flex flex-50-gt-sm">
 
-                <ScrollAnimation animateIn="bounceInLeft">
+                <ScrollAnimation 
+                  animateOnce={true}
+                  animateIn="bounceInLeft"
+                >
                   <div className="bio">
                     <img
                       src={ ProfilePic }
@@ -92,7 +102,10 @@ export default class About extends Component {
 
               <div className="flex flex-50-gt-sm bars-wrap">
 
-                <ScrollAnimation animateIn="bounceInRight">
+                <ScrollAnimation 
+                  animateOnce={true}
+                  animateIn="bounceInRight"
+                >
                   <SkillBar skill={'CSS'} width={'85%'} rating={'90%'}/>
                   <SkillBar skill={'HTML'} width={'76%'} rating={'81%'}/>
                   <SkillBar skill={'React'} width={'72%'} rating={'77%'}/>
