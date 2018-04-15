@@ -24,7 +24,7 @@ export default class ModalLauncher extends Component {
           className="modalButton"
           onClick={() => this.handleToggleModal()}
         >
-          Learn More
+          LEARN MORE
         </button>
 
         {showModal &&
