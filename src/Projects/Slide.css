@@ -63,7 +63,7 @@
   font-style: italic;
 }
 
-a.card-button {
+.card-button {
   opacity: 0;
   position: absolute;
   left: 50%;
