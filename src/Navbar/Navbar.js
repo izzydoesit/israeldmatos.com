@@ -27,7 +27,6 @@ handleScroll(event) {
     this.setState({
       transform: itemTranslate
     });
-    console.log('TRAHNSLAATE:', itemTranslate)
   }
 
   render() {
