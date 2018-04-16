@@ -27,7 +27,6 @@ export default class Slide extends Component {
   }
 
   handleButtonClick = () => {
-    console.log('clicked')
     this.props.toggleModal(true);
   }
 

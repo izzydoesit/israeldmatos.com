@@ -76,7 +76,7 @@ class App extends Component {
 
   render() {
     const { currentProject, modalOpen } = this.props;
-    console.log('app', this.props.modalOpen)
+
     return (
         <div className="App" id="App">
             <div

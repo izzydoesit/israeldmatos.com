@@ -44,7 +44,6 @@ export default class Slider extends Component {
 
   render() {
     const { projects, currentProject, updateModal, modalOpen } = this.props; 
-    console.log('slider modal open', this.props.modalOpen)
 
     return (
       <div className="flex slider-container">

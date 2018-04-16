@@ -10,7 +10,6 @@ export default function(state = initialState, action) {
   }
 
   if (action.type === TOGGLE_MODAL) {
-    console.log('toggle modal', action)
     return { 
       ...state, 
       modalOpen: action.modalOpen, 
