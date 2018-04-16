@@ -17,7 +17,6 @@
   top: 0;
   left: 0;
   height: 100%;
-
 }
 
 /* .bar.fill:after {
@@ -32,7 +31,7 @@
   background-color: #F9CFBA;
   padding: 0;
   opacity: 1;
-  transition: 1.1s 0.2s width ease-in-out;
+  transition: 1.1s 0.2s width ease-out;
 }
 
 .fill {
