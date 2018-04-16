@@ -27,7 +27,6 @@
 }
 
 #gallery .card-text {
-  opacity: 0;
   width: 100%;
   height: 30%;
   top: 0;
@@ -64,23 +63,7 @@
 }
 
 .card-button {
-  opacity: 0;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  -webkit-transform: translateX(-50%);
-  bottom: 0;
-  width: 25%;
-  height: 13%;
-  margin: 0 auto;
-  border-radius: 10px;
-  background-color: #857698;
-  color: #FFF;
-  border: 2px solid #857698;
-  font-size: 0.5em;
-  justify-content: center;
-  text-decoration: none;
-  transition: all 0.5s;
+
 }
 
 @media screen and (min-width: 600px) {
