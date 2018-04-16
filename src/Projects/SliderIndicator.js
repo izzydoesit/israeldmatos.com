@@ -3,7 +3,12 @@ import './SliderIndicator.css'
 
 export default class SliderIndicator extends Component {
 
+  handleClick = () => {
+    this.props.updateModal(this.props.index);
+  }
+
   render() {
+    const { updateModal, index } = this.props;
     return (
       <li>
         <a
@@ -13,7 +18,7 @@ export default class SliderIndicator extends Component {
             : "slider-indicator"
           }
           alt="project slide"
-          onClick={this.props.onClick}
+          onClick={this.handleClick}
         />
       </li>
     );
