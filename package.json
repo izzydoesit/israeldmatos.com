@@ -40,6 +40,7 @@
     "react-redux": "^5.0.7",
     "react-scripts": "1.1.1",
     "react-scrollable-anchor": "^0.6.1",
+    "react-snowflakes": "^1.0.0",
     "react-sticky": "^6.0.1",
     "react-test-renderer": "^16.2.0",
     "react-transition-group": "^2.2.1",
