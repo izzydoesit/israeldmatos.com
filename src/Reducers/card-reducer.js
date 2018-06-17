@@ -19,7 +19,7 @@ export default function(state = initialState, action) {
   if (action.type === TOGGLE_MODAL) {
     return { 
       ...state, 
-      modalOpen: action.modalOpen, 
+      modalIsOpen: action.modalIsOpen, 
     }
   }
   return state;

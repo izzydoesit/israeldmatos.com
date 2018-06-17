@@ -21,10 +21,7 @@ export default class Modal extends Component {
           className="modal"
           ref={node => (this.modal = node)}
         >
-          <div className="modalContent">
-            
-        
-            
+          <div className="modalContent">            
             {children}
           </div>
         </div>

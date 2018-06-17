@@ -11,7 +11,6 @@ export default class ModalSlider extends Component {
       <div className="slider-container">
         <div className="prev"></div>
           <ModalSlide />
-        }}
         <div className="next"></div>
       </div>
     )

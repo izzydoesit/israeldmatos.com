@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Modal from 'react-modal';
 import ModalSlider from '../Modal/ModalSlider';
-import Slider from '../Projects/Slider';
 
 import Headroom from 'react-headroom';
 import Home from '../Home/Home';
@@ -15,16 +14,16 @@ import Footer from '../Footer/Footer';
 
 import './App.css';
 
-// const customStyles = {
-//   content : {
-//     top                   : '50%',
-//     left                  : '50%',
-//     right                 : 'auto',
-//     bottom                : 'auto',
-//     marginRight           : '-50%',
-//     transform             : 'translate(-50%, -50%)'
-//   }
-// };
+const customStyles = {
+  content : {
+    top                   : '0%',
+    left                  : '20%',
+    right                 : '20%',
+    bottom                : '5%',
+    marginRight           : '0%',
+    // transform             : 'translate(-50%, -50%)'
+  }
+};
 Modal.setAppElement('#root');
 
 class App extends Component {
@@ -53,11 +52,11 @@ class App extends Component {
   // }
   
   handleOutsideClick = (e) => {
-    const { onCloseRequest, children } = this.props;
+    const { onCloseRequest, toggleModal, children } = this.props;
 
     if (!(this.modal)) {
       if (!this.modal.contains(e.target)) {
-        this.props.toggleModal(false);
+        toggleModal(false);
         document.removeEventListener('click', this.handleOutsideClick, false);
       }
     }
@@ -75,7 +74,7 @@ class App extends Component {
   }
 
   render() {
-    const { currentProject, modalOpen } = this.props;
+    const { currentProject, modalIsOpen } = this.props;
 
     return (
         <div className="App" id="App">
@@ -85,12 +84,14 @@ class App extends Component {
             >
             {/*<button onClick={this.openModal}>Open Modal</button>*/}
               <Modal
-                isOpen={modalOpen}
+                isOpen={modalIsOpen}
                 onAfterOpen={this.afterOpenModal}
                 onRequestClose={this.closeModal}
+                style={customStyles}
                 contentLabel="Project Modal"
                 overlayClassName="modalOverlay"
               >
+                <ModalSlider />
 
                 <h1>{currentProject.title}</h1>
                 <h2>{currentProject.blurb}</h2>
@@ -127,7 +128,7 @@ class App extends Component {
 
 App.propTypes = {
   currentProject: PropTypes.object.isRequired,
-  modalOpen: PropTypes.bool.isRequired,
+  modalIsOpen: PropTypes.bool.isRequired,
   toggleModal: PropTypes.func.isRequired,
 
 }

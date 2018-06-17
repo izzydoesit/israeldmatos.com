@@ -80,7 +80,7 @@ export default class Slide extends Component {
         </div>
 
         <button
-          className="card-buttonn modalButton"
+          className="card-button modalButton"
           style={buttonStyles}
           onClick={this.handleButtonClick}
           buttonEnter={this.handleButtonEnter}

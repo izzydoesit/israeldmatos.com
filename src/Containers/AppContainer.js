@@ -12,7 +12,7 @@ const mapStateToProps = ( state ) => {
     projects: state.modal.projects,
     cardHover: state.card.cardHover,
     buttonHover: state.card.buttonHover,
-    modalOpen: state.modal.modalOpen,
+    modalIsOpen: state.modal.modalIsOpen,
   });
 }
 

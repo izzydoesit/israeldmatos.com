@@ -7,5 +7,5 @@ export const updateModal = (currentProject) => ({
 
 export const toggleModal = (modalState) => ({
   type: TOGGLE_MODAL,
-  modalOpen: modalState,
+  modalIsOpen: modalState,
 })

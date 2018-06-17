@@ -11,8 +11,8 @@ export default class ModalLauncher extends Component {
 
 
   render() {
-    const { modalOpen, buttonEnter, buttonLeave } = this.props;
-    console.log('launcher modal open', this.props.modalOpen)
+    const { modalIsOpen, buttonEnter, buttonLeave } = this.props;
+    console.log('launcher modal open', this.props.modalIsOpen)
     return (
       <div>
         <button
@@ -26,7 +26,7 @@ export default class ModalLauncher extends Component {
           LEARN MORE
         </button>
 
-        {modalOpen &&
+        {modalIsOpen &&
           <Modal onCloseRequest={() => this.onCloseRequest()} {...this.props}>
             <img src="https://placeimg.com/900/650/nature" alt="Nature" />
           </Modal>
