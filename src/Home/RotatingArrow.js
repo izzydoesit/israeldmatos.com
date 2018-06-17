@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Motion, spring } from 'react-motion';
 
-
 export default class RotatingArrow extends Component {
 
   render () {
@@ -15,7 +14,7 @@ export default class RotatingArrow extends Component {
           style={{
             transform: `rotate( ${style.rotate}deg )`
           }}
-          className="arrow-icon fa fa-3x fa-arrow-right"
+          className="arrow-icon fa fa-2x fa-arrow-right"
 
         ></span>
       )}

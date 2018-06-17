@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import SnowStorm from 'react-snowstorm';
 import {DepthOfFieldSnowfall} from 'react-snowflakes';
 import RotatingArrow from './RotatingArrow';
 import './Home.css';
