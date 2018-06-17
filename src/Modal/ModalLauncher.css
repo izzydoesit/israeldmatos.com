@@ -8,38 +8,37 @@
   height: 13%;
   margin: 0 auto;
   border-radius: 10px;
-  background-color: #857698;
+  background-color: #df1862;
   color: #FFF;
-  border: 2px solid #857698;
   font-size: 0.5em;
+  text-shadow: 1px 1px 1px #000, 3px 3px 3px #666;
   justify-content: center;
   text-decoration: none;
   transition: all 0.5s;
 }
 
-/* .modalButton:hover: {
-  background-color: #466d87;
-} */
-
-
 @media screen and (min-width: 600px) {
 
   .modalButton {
     font-size: 1em;
-    width: 20%
+
+    width: 20%;
+    background-color: #07BAC2;
   }
 }
 
 @media screen and (min-width: 900px) {
 
   .modalButton {
+    color: #FFF;
     background-color: transparent;
-    color: #666;
+    border: 2px solid #07BAC2;
+    
   }
-
+  
   .modalButton:hover {
     bottom: 24%;
-    background-color: #857698;
-    color: #FFF;
+    border: 2px solid #df1862;
+    background-color: #df1862;
   }
 }

@@ -4,7 +4,7 @@ import ModalLauncher from '../Modal/ModalLauncher';
 import './Slide.css';
 
 const buttonLightUp = {
-  backgroundColor: '#E5B495',
+  backgroundColor: '#07BAC2',
   color: '#000',
 };
 
@@ -80,7 +80,7 @@ export default class Slide extends Component {
         </div>
 
         <button
-          className="modalButton"
+          className="card-buttonn modalButton"
           style={buttonStyles}
           onClick={this.handleButtonClick}
           buttonEnter={this.handleButtonEnter}

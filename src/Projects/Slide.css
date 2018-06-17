@@ -32,9 +32,7 @@
   top: 0;
   left: 0;
   z-index: 2;
-  background-color: #f2f7d8;
-  border-top: 2px solid #857698;
-  border-bottom: 2px solid #857698;
+  background-color: #07BAC2;
   color: #fff;
   text-shadow: 1px 1px 1px #000, 3px 3px 3px #666;
   text-align: center;
@@ -77,12 +75,12 @@
 
   a.card-button {
     background-color: transparent;
-    color: #666;
+    color: #07BAC2;
   }
 
-  a.card-button:hover {
+  button.card-button:hover {
     bottom: 24%;
-    background-color: #857698;
+    background-color: #07BAC2;
     color: #FFF;
   }
 }
