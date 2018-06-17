@@ -3,7 +3,7 @@ footer {
   bottom: 0;
   left: 0;
   width: 100%;
-  background: #6D5775;
+  background: #192029;
   padding: 17% 0 13% 0;
 }
 
@@ -25,7 +25,7 @@ footer {
   right: 0;
   font-size: 30pt;
   color: #FFF;
-  background: #E1C1A9;
+  background: #df1862;
   padding: 0.7%;
   margin: 0 auto;
 }
@@ -43,7 +43,7 @@ a.social-link {
   margin: 0 4%;
   height: 55px;
   width: 55px;
-  background: #50396C;
+  background: #21252e;
   cursor: pointer;
   position: relative;
 }
@@ -59,7 +59,7 @@ a.social-link:hover {
 }
 
 a.social-link:hover .icon {
-  color: #50396C;
+  color: #07BAC2;
   transform: scale(0.9);
   animation: toBottomFromTop 0.3s forwards;
 }
@@ -88,6 +88,6 @@ a.social-link:hover .icon {
 }
 
 .highlight {
-  color: #E1C1A9;
+  color: #df1862;
   padding-left: 0.5%;
 }

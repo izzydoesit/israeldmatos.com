@@ -16,6 +16,6 @@
 
 .subtitle {
   margin: 2% 2% 6% 2%;
-  color: #857698;
-  text-shadow: 1px 1px 1px #493f55, 3px 3px 4px #E1C1A9, 5px 5px 5px #493f55;
+  color: #222;
+  text-shadow: 1px 1px 1px #222, 3px 3px 4px #E1C1A9, 4px 4px 4px #493f55;
 }
