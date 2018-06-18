@@ -3,7 +3,7 @@ import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import App from '../App/App';
-import { toggleModal, updateModal } from '../actions/modal-actions';
+import { toggleModal, updateModal, updateModalSlide } from '../actions/modal-actions';
 import { updateButton, updateHover } from '../actions/card-actions';
 
 const mapStateToProps = ( state ) => {
@@ -13,6 +13,7 @@ const mapStateToProps = ( state ) => {
     cardHover: state.card.cardHover,
     buttonHover: state.card.buttonHover,
     modalIsOpen: state.modal.modalIsOpen,
+    activeModalIndex: state.modal.activeModalIndex
   });
 }
 
@@ -22,6 +23,9 @@ const mapDispatchToProps = (dispatch) => ({
   },
   updateModal(project) {
     dispatch(updateModal(project))
+  },
+  updateModalSlide(index) {
+    dispatch(updateModalSlide(index))
   },
   updateHover(hoverState) {
     dispatch(updateHover(hoverState))

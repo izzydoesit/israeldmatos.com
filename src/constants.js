@@ -1,4 +1,5 @@
 export const UPDATE_MODAL = 'UPDATE_MODAL';
+export const UPDATE_MODAL_SLIDE = 'UPDATE_MODAL_SLIDE';
 export const TOGGLE_MODAL = 'TOGGLE_MODAL';
 export const UPDATE_HOVER = 'UPDATE_HOVER';
 export const UPDATE_BUTTON = 'UPDATE_BUTTON';
