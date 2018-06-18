@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import Swipeable from 'react-swipeable'
+import { throttle } from 'lodash'
 import Slide from './Slide';
 import SliderArrow from './SliderArrow';
 import SliderIndicator from './SliderIndicator';
@@ -8,7 +10,7 @@ import './Slider.css'
 
 export default class Slider extends Component {
 
-  goToPrevSlide(e) {
+  goToPrevSlide = throttle((e) => {
     e.preventDefault();
     const { projects, currentProject, updateModal } = this.props;
         
@@ -20,9 +22,9 @@ export default class Slider extends Component {
     }
 
     updateModal(projects[index]);
-  }
+  }, 500, { trailing: false })
 
-  goToNextSlide(e) {
+  goToNextSlide = throttle((e) => {
     e.preventDefault();
     const { projects, currentProject, updateModal } = this.props;
 
@@ -33,7 +35,7 @@ export default class Slider extends Component {
       index = 0
     }
     updateModal(projects[index]);
-  }
+  }, 500, { trailing: false })
 
   render() {
     const { projects, currentProject, updateModal, modalIsOpen } = this.props; 
@@ -51,13 +53,20 @@ export default class Slider extends Component {
                 direction="left"
                 onClick={e => this.goToPrevSlide(e)}
               />
-              <div className="slide-list">
-                <Slide
-                  key={currentProject.id}
-                  index={currentProject.id}
-                  { ...this.props }
-                />
-              </div>
+              <Swipeable
+                className="project-swipeable"
+                onSwipingLeft={ (e) => this.goToPrevSlide(e) }
+                onSwipingRight={ (e) => this.goToNextSlide(e)}
+              >
+                <div className="slide-list">
+                  <Slide
+                    key={currentProject.id}
+                    index={currentProject.id}
+                    onSlideClick={this.goToNextSlide}
+                    { ...this.props }
+                  />
+                </div>
+              </Swipeable>
               <SliderArrow
                 direction="right"
                 onClick={e => this.goToNextSlide(e)}

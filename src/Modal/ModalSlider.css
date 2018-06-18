@@ -3,16 +3,15 @@
 
 }
 
+.modal-swipeable {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
 .wrapper {
   width: 100%;
   overflow: hidden;
-}
-
-.item {
-  background: darkorange;
-  text-align: center;
-  padding: 50px;
-  color: white;
 }
 
 .carousel-container {

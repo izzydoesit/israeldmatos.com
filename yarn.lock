@@ -3064,6 +3064,10 @@ detect-node@^2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/detect-node/-/detect-node-2.0.3.tgz#a2033c09cc8e158d37748fbde7507832bd6ce127"
 
+detect-passive-events@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/detect-passive-events/-/detect-passive-events-1.0.4.tgz#6ed477e6e5bceb79079735dcd357789d37f9a91a"
+
 detect-port-alt@1.1.5:
   version "1.1.5"
   resolved "https://registry.yarnpkg.com/detect-port-alt/-/detect-port-alt-1.1.5.tgz#a1aa8fc805a4a5df9b905b7ddc7eed036bcce889"
@@ -6019,6 +6023,10 @@ lodash.uniq@^4.5.0:
   version "4.17.5"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.5.tgz#99a92d65c0272debe8c96b6057bc8fbfa3bed511"
 
+lodash@^4.17.10:
+  version "4.17.10"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.10.tgz#1b7793cf7259ea38fb3661d4d38b3260af8ae4e7"
+
 log4js@^2.3.9:
   version "2.5.3"
   resolved "https://registry.yarnpkg.com/log4js/-/log4js-2.5.3.tgz#38bb7bde5e9c1c181bd75e8bc128c5cd0409caf1"
@@ -7877,6 +7885,13 @@ react-sticky@^6.0.1:
   dependencies:
     prop-types "^15.5.8"
     raf "^3.3.0"
+
+react-swipeable@^4.3.0:
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/react-swipeable/-/react-swipeable-4.3.0.tgz#818c0818ac565f5b169348f442153f343abff8bc"
+  dependencies:
+    detect-passive-events "^1.0.4"
+    prop-types "^15.5.8"
 
 react-test-renderer@^16.0.0-0, react-test-renderer@^16.2.0:
   version "16.2.0"
