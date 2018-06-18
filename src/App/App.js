@@ -91,18 +91,22 @@ class App extends Component {
                 contentLabel="Project Modal"
                 overlayClassName="modalOverlay"
               >
-                <ModalSlider />
+                <ModalSlider {...this.props} />
 
                 <h1>{currentProject.title}</h1>
                 <h2>{currentProject.blurb}</h2>
                 <p>{currentProject.description}</p>
 
                 <a
+                  className="modal-link-btn"
                   href={currentProject.github}
                   target="_blank"
                   rel="noopener noreferrer"
                 >See Code</a>
-                <button onClick={this.closeModal}>X</button>
+                <button 
+                  className="close-modal-btn" 
+                  onClick={this.closeModal}
+                >X</button>
               </Modal>
             </div>
           
@@ -130,7 +134,6 @@ App.propTypes = {
   currentProject: PropTypes.object.isRequired,
   modalIsOpen: PropTypes.bool.isRequired,
   toggleModal: PropTypes.func.isRequired,
-
 }
 
 export default App;

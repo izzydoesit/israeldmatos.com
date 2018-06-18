@@ -4,20 +4,33 @@ import './ModalSlide.css';
 
 export default class ModalSlide extends Component {
 
+  
   render() {
+    const { currentProject, activeModalIndex } = this.props;
+    const styles = {
+      // backgroundImage: `url(/src/Modal/smarterBear.png})`,
+      // backgroundSize: 'cover',
+      // backgroundPosition: 'center',
+      height: '300px'
+    };
 
-    const { activeModalSlide } = this.props;
-    return(
-      <div
-        className="slide slide-active"
-        key={activeModalSlide}
+    return (
+      <div 
+        className="carousel-slot" 
+        style={ styles }
       >
-      
+        <img
+          resizemode="stretch"
+          className="slide-pic"
+          src={ currentProject.pics[activeModalIndex] }
+          alt="project pic"
+        />
       </div>
     )
   }
 }
 
 ModalSlide.propTypes = {
-  activeModalSlide: PropTypes.number.isRequired,
+  currentProject: PropTypes.object.isRequired,
+  activeModalIndex: PropTypes.number.isRequired,
 }
