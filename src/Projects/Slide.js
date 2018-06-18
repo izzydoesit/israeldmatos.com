@@ -11,6 +11,7 @@ const buttonLightUp = {
 export default class Slide extends Component {
 
   handleMouseEnter = () => {
+    console.log('entered')
     this.props.updateHover(true);
   }
 
@@ -34,10 +35,7 @@ export default class Slide extends Component {
     const { 
       buttonHover, 
       cardHover,
-      currentProject, 
-      updateModal, 
-      toggleModal, 
-      activeIndex } = this.props;
+      currentProject } = this.props;
 
     let textStyles = {}, 
         buttonStyles = {},
@@ -60,10 +58,14 @@ export default class Slide extends Component {
       <div
         className="slide slide-active"
         key={currentProject.id}
-        onMouseEnter={this.handleMouseEnter}
-        onMouseLeave={this.handleMouseLeave}
+
       >
-        <div className="card" style={cardStyles}>
+        <div 
+          className="card" 
+          style={cardStyles}
+          onMouseEnter={this.handleMouseEnter}
+          onMouseLeave={this.handleMouseLeave}
+        >
           <img
             resizemode="stretch"
             className="slide-pic"
@@ -95,4 +97,6 @@ export default class Slide extends Component {
 Slide.propTypes = {
   updateModal: PropTypes.func.isRequired,
   currentProject: PropTypes.object.isRequired,
+  buttonHover: PropTypes.bool.isRequired,
+  cardHover: PropTypes.bool.isRequired,
 }
