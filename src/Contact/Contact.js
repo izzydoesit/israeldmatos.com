@@ -14,15 +14,15 @@ export default class Contact extends Component {
 
           <div className="container flex">
 
-            <ScrollAnimation animateIn="bounceInRight" animateOnce={true}>
+            <ScrollAnimation animateIn="bounceInLeft" animateOnce={true}>
               <div className="header">Contact</div>
             </ScrollAnimation>
 
-            <ScrollAnimation animateIn="bounceInRight" animateOnce={true} delay={200}>
+            <ScrollAnimation animateIn="bounceInLeft" animateOnce={true} delay={200}>
               <div className="header-bar"></div>
             </ScrollAnimation>
 
-            <ScrollAnimation animateIn="bounceInLeft" animateOnce={true} delay={500}>
+            <ScrollAnimation animateIn="bounceInRight" animateOnce={true} delay={500}>
               <div className="subtitle">Have a question or want to work together?</div>
             </ScrollAnimation>
 
