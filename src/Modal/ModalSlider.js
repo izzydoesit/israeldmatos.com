@@ -48,48 +48,26 @@ export default class ModalSlider extends Component {
         >
           <div className="wrapper">
 
-<<<<<<< HEAD
-        <div className="wrapper">
-
-          <div className="carousel-container">
-            <button
-              className="modal-slider-btn"
-              onClick={e => this.goToPrevSlide(e)}
-              style={ { left: '0' } }
-            >
-              <i className="fa fa-caret-left bounce-left" />
-            </button>
-=======
             <div className="carousel-container">
               <button
                 className="modal-slider-btn left"
                 onClick={e => this.goToPrevSlide(e)}
               >
-                prev
+                <i className="fa fa-caret-left bounce-left"/>
               </button>
->>>>>>> modal-slider
 
               <ModalSlide 
                 { ...this.props }
               />
 
-<<<<<<< HEAD
-            <button
-              className="modal-slider-btn"
-              onClick={e => this.goToNextSlide(e)}
-              style={ { right: '0' }}
-            >
-              <i className="fa fa-caret-right bounce-right"/>
-            </button>
-=======
               <button
-                className="modal-slider-btn right"
+                className="modal-slider-btn"
                 onClick={e => this.goToNextSlide(e)}
+                style={ { right: '0' }}
               >
-                next
+                <i className="fa fa-caret-right bounce-right"/>
               </button>
             </div>
->>>>>>> modal-slider
           </div>
         </Swipeable>
       </div>
