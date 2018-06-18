@@ -10,6 +10,7 @@ import Projects from '../Projects/Projects';
 import Blog from '../Blog/Blog';
 import Contact from '../Contact/Contact';
 import Footer from '../Footer/Footer';
+import 'font-awesome/css/font-awesome.css'
 
 import './App.css';
 
@@ -62,6 +63,7 @@ export default class App extends Component {
 
     return (
         <div className="App" id="App">
+          <div className="overflow-wrap">
             <div
               className="modal"
               ref={node => (this.modal = node)}
@@ -89,11 +91,13 @@ export default class App extends Component {
                 <button 
                   className="close-modal-btn" 
                   onClick={this.closeModal}
-                >X</button>
+                >
+                  <i className="fa fa-5x fa-times-circle" />
+                </button>
               </Modal>
             </div>
           
-          <div className="overflow-wrap">
+          
             <Headroom
               onPin={() => console.log('pinned')}
               onUnpin={() => console.log('unpinned')}
