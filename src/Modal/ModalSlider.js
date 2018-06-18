@@ -49,7 +49,7 @@ export default class ModalSlider extends Component {
 
             <div className="carousel-container">
               <button
-                className="modal-slider-btn"
+                className="modal-slider-btn left"
                 onClick={e => this.goToPrevSlide(e)}
               >
                 prev
@@ -60,7 +60,7 @@ export default class ModalSlider extends Component {
               />
 
               <button
-                className="modal-slider-btn"
+                className="modal-slider-btn right"
                 onClick={e => this.goToNextSlide(e)}
               >
                 next
