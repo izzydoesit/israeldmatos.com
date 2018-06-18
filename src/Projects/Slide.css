@@ -54,14 +54,14 @@
   font-size: 1.8em;
 }
 
+.card-button {
+  opacity: 0;
+}
+
 .blurb {
   font-size: 0.8em;
   font-weight: 100;
   font-style: italic;
-}
-
-.card-button {
-
 }
 
 @media screen and (min-width: 600px) {
@@ -69,18 +69,23 @@
   a.card-button {
     font-size: 1em;
   }
+
+  #gallery:hover .card-text {
+    top: 24%;
+    opacity: 1;
+  }
+
+  #gallery:hover .card-button {
+    bottom: 24%;
+    opacity: 1;
+  }
 }
 
 @media screen and (min-width: 900px) {
 
-  a.card-button {
+  button.card-button {
     background-color: transparent;
-    color: #07BAC2;
   }
 
-  button.card-button:hover {
-    bottom: 24%;
-    background-color: #07BAC2;
-    color: #FFF;
-  }
+
 }
