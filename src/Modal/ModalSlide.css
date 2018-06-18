@@ -1,0 +1,10 @@
+.modal-slide {
+  flex: 1 0 100%;
+  flex-basis: 80%;
+}
+
+.carousel-slot {
+  flex: 1 0 100%;
+  flex-basis: 100%;
+  margin-right: 20px;
+}
