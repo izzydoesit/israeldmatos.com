@@ -40,8 +40,9 @@ export default class Home extends Component {
             <div className="home-content">
 
               <div className="home-text-wrap">
-                <div className="greeting">Hello, I'm<span className="name">Israel D. Matos</span>.</div>
-                <div className="title">I'm a full-stack web developer.</div>
+                <div className="text">Hello, I'm<span className="name">Israel D. Matos</span>. 
+                <br/>
+                I'm a full-stack web developer.</div>
               </div>
 
               <a
@@ -54,7 +55,7 @@ export default class Home extends Component {
                 <div className="btn-content">
 
                   <span className="btn-text">
-                    See my work
+                    View my work
                   </span>
 
                   <RotatingArrow rotate={this.state.rotate}/>
