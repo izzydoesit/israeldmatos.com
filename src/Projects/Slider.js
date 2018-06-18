@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import Swipeable from 'react-swipeable'
+import { throttle } from 'lodash'
 import Slide from './Slide';
 import SliderArrow from './SliderArrow';
 import SliderIndicator from './SliderIndicator';
@@ -8,7 +10,16 @@ import './Slider.css'
 
 export default class Slider extends Component {
 
-  goToPrevSlide(e) {
+  handleMouseEnter = () => {
+    console.log('entered')
+    this.props.updateHover(true);
+  }
+
+  handleMouseLeave = () => {
+    this.props.updateHover(false);
+  }
+
+  goToPrevSlide = throttle((e) => {
     e.preventDefault();
     const { projects, currentProject, updateModal } = this.props;
         
@@ -20,9 +31,9 @@ export default class Slider extends Component {
     }
 
     updateModal(projects[index]);
-  }
+  }, 500, { trailing: false })
 
-  goToNextSlide(e) {
+  goToNextSlide = throttle((e) => {
     e.preventDefault();
     const { projects, currentProject, updateModal } = this.props;
 
@@ -33,51 +44,65 @@ export default class Slider extends Component {
       index = 0
     }
     updateModal(projects[index]);
-  }
+  }, 500, { trailing: false })
 
   render() {
     const { projects, currentProject, updateModal, modalIsOpen } = this.props; 
 
     return (
-      <div className="flex slider-container">
+      
+      <ScrollAnimation 
+        animateOnce={true} 
+        animateIn="bounceIn" 
+        delay={600}
+      >
+        <div className="flex carousel">
+                <Swipeable
+                  className="project-swipeable"
+                  onSwipingLeft={ (e) => this.goToPrevSlide(e) }
+                  onSwipingRight={ (e) => this.goToNextSlide(e)}
+                >
+                  <div className="slider-wrapper">
 
-          <ScrollAnimation 
-            animateOnce={true} 
-            animateIn="bounceIn" 
-            delay={600}
-          >
-            <div id="gallery" className="flex row slider-wrapper">
-              <SliderArrow
-                direction="left"
-                onClick={e => this.goToPrevSlide(e)}
-              />
-              <div className="slide-list">
-                <Slide
-                  key={currentProject.id}
-                  index={currentProject.id}
-                  { ...this.props }
-                />
-              </div>
-              <SliderArrow
-                direction="right"
-                onClick={e => this.goToNextSlide(e)}
-              />
+                    <div 
+                      id="gallery" 
+                      className="slider-container"
+                      onMouseEnter={this.handleMouseEnter}
+                      onMouseLeave={this.handleMouseLeave}
+                    >
+
+                      <SliderArrow
+                        direction="left"
+                        onClick={e => this.goToPrevSlide(e)}
+                      />
+                      <Slide
+                        key={currentProject.id}
+                        index={currentProject.id}
+                        onSlideClick={this.goToNextSlide}
+                        { ...this.props }
+                      />
+                      <SliderArrow
+                        direction="right"
+                        onClick={e => this.goToNextSlide(e)}
+                      />
+                    </div>
+                  </div>
+                </Swipeable>
+
+            <div className="indicator-wrap">
+              <ul className="slider-indicators">
+                {projects.map((slide, index) =>
+                  <SliderIndicator
+                    key={index}
+                    index={index}
+                    activeIndex={currentProject.id}
+                    updateModal={updateModal}
+                  />
+                )}
+              </ul>
             </div>
-          </ScrollAnimation>
-
-          <div className="indicator-wrap">
-            <ul className="slider-indicators">
-              {projects.map((slide, index) =>
-                <SliderIndicator
-                  key={index}
-                  index={index}
-                  activeIndex={currentProject.id}
-                  updateModal={updateModal}
-                />
-              )}
-            </ul>
-          </div>
-      </div>
+        </div>
+      </ScrollAnimation>
     );
   }
 }

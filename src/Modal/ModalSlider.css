@@ -1,24 +1,20 @@
-.slider-container {
-  max-height: 30vmax;
-
+.modal-swipeable {
+  width: 100%;
+  position: relative;
+  display: flex;
 }
 
 .wrapper {
-  width: 100%;
+  width: 100vw;
   overflow: hidden;
-}
-
-.item {
-  background: darkorange;
-  text-align: center;
-  padding: 50px;
-  color: white;
+  cursor: pointer;
 }
 
 .carousel-container {
   position: relative;
   display: flex;
-  margin: 0 0;
+  margin: 0;
+  position: relative;
 }
 
 .modal-slider-btn {
@@ -33,4 +29,13 @@
   opacity: 1;
   color: #fff;
   background-color: #222;
+  opacity: 0;
+}
+
+.right {
+  right: 0;
+}
+
+.left {
+  left: 0;
 }

@@ -11,6 +11,7 @@ const buttonLightUp = {
 export default class Slide extends Component {
 
   handleMouseEnter = () => {
+    console.log('entered slide')
     this.props.updateHover(true);
   }
 
@@ -18,26 +19,11 @@ export default class Slide extends Component {
     this.props.updateHover(false);
   }
 
- handleButtonEnter = () => {
-   this.props.updateButton(true);
- }
-
-  handleButtonLeave = () => {
-    this.props.updateButton(false);
-  }
-
-  handleButtonClick = () => {
-    this.props.toggleModal(true);
-  }
-
   render() {
     const { 
       buttonHover, 
       cardHover,
-      currentProject, 
-      updateModal, 
-      toggleModal, 
-      activeIndex } = this.props;
+      currentProject } = this.props;
 
     let textStyles = {}, 
         buttonStyles = {},
@@ -60,10 +46,14 @@ export default class Slide extends Component {
       <div
         className="slide slide-active"
         key={currentProject.id}
-        onMouseEnter={this.handleMouseEnter}
-        onMouseLeave={this.handleMouseLeave}
+
       >
-        <div className="card" style={cardStyles}>
+        <div 
+          className="card" 
+          style={cardStyles}
+          onMouseEnter={this.handleMouseEnter}
+          onMouseLeave={this.handleMouseLeave}
+        >
           <img
             resizemode="stretch"
             className="slide-pic"
@@ -79,14 +69,11 @@ export default class Slide extends Component {
           <div className="blurb">{currentProject.blurb}</div>
         </div>
 
-        <button
+        <ModalLauncher
           className="card-button modalButton"
-          style={buttonStyles}
-          onClick={this.handleButtonClick}
-          buttonEnter={this.handleButtonEnter}
-          buttonLeave={this.handleButtonLeave}
+          buttonStyles={buttonStyles}
           {...this.props}
-        >LEARN MORE</button>
+        >LEARN MORE</ModalLauncher>
       </div>
     )
   }
@@ -95,4 +82,6 @@ export default class Slide extends Component {
 Slide.propTypes = {
   updateModal: PropTypes.func.isRequired,
   currentProject: PropTypes.object.isRequired,
+  buttonHover: PropTypes.bool.isRequired,
+  cardHover: PropTypes.bool.isRequired,
 }

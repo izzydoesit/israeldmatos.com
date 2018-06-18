@@ -6,26 +6,32 @@ import { toggleModal } from '../actions/modal-actions';
 export default class ModalLauncher extends Component {
 
   handleClick = () => {
+    console.log('clicked', this.props.buttonStyles)
     this.props.toggleModal(true);
   }
 
+  handleButtonEnter = () => {
+    this.props.updateButton(true);
+  }
+ 
+   handleButtonLeave = () => {
+     this.props.updateButton(false);
+   }
 
   render() {
-    const { modalIsOpen, buttonEnter, buttonLeave } = this.props;
-    console.log('launcher modal open', this.props.modalIsOpen)
+    const { buttonStyles, modalIsOpen } = this.props;
+   
     return (
-      <div>
         <button
           type="button"
-          className="modalButton"
-          style={this.props.buttonStyles}
+          className="modalButton card-button"
+          style={buttonStyles}
           onClick={this.handleClick}
-          onMouseEnter={buttonEnter}
-          onMouseLeave={buttonLeave}
+          onMouseEnter={this.handleButtonEnter}
+          onMouseLeave={this.handleButtonLeave}
         >
           LEARN MORE
         </button>
-      </div>
     );
   }
 }
