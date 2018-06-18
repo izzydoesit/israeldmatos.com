@@ -1,18 +1,41 @@
 .arrow-container {
-  height: 100%;
-  width: 6%;
-  color: #857698;
+  height: 50vh;
+  width: 5vw;
+  color: #07BAC2;
+  position: absolute;
+  opacity: 0;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 900px) {
+
+  .arrow-container {
+    opacity: 1;
+  }
 }
 
 .slider-btn {
   height: 100%;
-  width: 100%;
+  width: 7vw;
   box-sizing: border-box;
   cursor: pointer;
   font-size: 25px;
   padding: 0;
-  opacity: 1;
+  opacity: 0;
   background-color: #07BAC2;
+  z-index: 99;
+  position: absolute;
+}
+
+.right {
+  right: 0;
+}
+
+.left {
+  left: 0;
 }
 
 .slider-btn > i.fa {
@@ -22,11 +45,10 @@
 @media screen and (min-width: 900px) {
 
   .slider-btn {
-    opacity: .6;  
+    opacity: 1;  
   }
   
   .slider-btn:hover {
-    opacity: 1;
     transition: opacity .15s cubic-bezier(.4, 0, 1, 1);
     border: 0.5px solid grey;
     box-shadow:	0px 1px 3px 0px rgba(0, 0, 0, .3);

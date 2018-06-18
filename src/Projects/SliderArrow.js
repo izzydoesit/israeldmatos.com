@@ -24,16 +24,14 @@ export default class SliderArrow extends Component {
   render() {
     
     return (
-      <div className="flex arrow-container">
         <button
-          className={`slider-btn ${this.state.direction}`}
+          className={`slider-btn ${this.props.direction}`}
           onClick={this.props.onClick}
           onMouseEnter={this.mouseOver}
           onMouseLeave={this.mouseOut}
         >
           <i className={`fa fa-caret-${this.state.direction} bounce-${this.state.direction}`}/>
         </button>
-      </div>
     )
   }
 }
