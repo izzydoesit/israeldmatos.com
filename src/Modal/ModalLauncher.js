@@ -25,12 +25,6 @@ export default class ModalLauncher extends Component {
         >
           LEARN MORE
         </button>
-
-        {modalIsOpen &&
-          <Modal onCloseRequest={() => this.onCloseRequest()} {...this.props}>
-            <img src="https://placeimg.com/900/650/nature" alt="Nature" />
-          </Modal>
-        }
       </div>
     );
   }
