@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ModalSlide from './ModalSlide';
+import 'font-awesome/css/font-awesome.css'
 import './ModalSlider.css';
 
 export default class ModalSlider extends Component {
@@ -45,8 +46,9 @@ export default class ModalSlider extends Component {
             <button
               className="modal-slider-btn"
               onClick={e => this.goToPrevSlide(e)}
+              style={ { left: '0' } }
             >
-              prev
+              <i className="fa fa-caret-left bounce-left" />
             </button>
 
             <ModalSlide 
@@ -56,8 +58,9 @@ export default class ModalSlider extends Component {
             <button
               className="modal-slider-btn"
               onClick={e => this.goToNextSlide(e)}
+              style={ { right: '0' }}
             >
-              next
+              <i className="fa fa-caret-right bounce-right"/>
             </button>
           </div>
         </div>

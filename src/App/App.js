@@ -21,6 +21,7 @@ const customStyles = {
     right                 : '20%',
     bottom                : '5%',
     marginRight           : '0%',
+    padding               : '0',
     // transform             : 'translate(-50%, -50%)'
   }
 };

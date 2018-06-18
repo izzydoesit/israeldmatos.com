@@ -8,7 +8,7 @@
   height: 13%;
   margin: 0 auto;
   border-radius: 10px;
-  background-color: #df1862;
+  background-color: #07BAC2;
   color: #FFF;
   font-size: 0.5em;
   text-shadow: 1px 1px 1px #000, 3px 3px 3px #666;
@@ -21,9 +21,7 @@
 
   .modalButton {
     font-size: 1em;
-
     width: 20%;
-    background-color: #07BAC2;
   }
 }
 
@@ -38,7 +36,6 @@
   
   .modalButton:hover {
     bottom: 24%;
-    border: 2px solid #df1862;
     background-color: #df1862;
   }
 }
