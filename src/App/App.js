@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Modal from 'react-modal';
 import ModalSlider from '../Modal/ModalSlider';
-
 import Headroom from 'react-headroom';
 import Home from '../Home/Home';
 import Navbar from '../Navbar/Navbar';
@@ -26,7 +25,7 @@ const customStyles = {
 };
 Modal.setAppElement('#root');
 
-class App extends Component {
+export default class App extends Component {
 
   componentDidMount() {
     // window.addEventListener('keyup', this.handleKeyUp, false);
@@ -38,25 +37,11 @@ class App extends Component {
     document.removeEventListener('click', this.handleOutsideClick, false);
   }
   
-  // handleKeyUp = (e) => {
-  //   const { onCloseRequest } = this.props;
-  //   const keys = {
-  //     27: () => {
-  //       e.preventDefault();
-  //       this.props.toggleModal(false);
-  //       window.removeEventListener('keyup', this.handleKeyUp, false);
-  //     },
-  //   };
-
-  //   if (keys[e.keyCode]) { keys[e.keyCode](); }
-  // }
-  
   handleOutsideClick = (e) => {
-    const { onCloseRequest, toggleModal, children } = this.props;
 
     if (!(this.modal)) {
       if (!this.modal.contains(e.target)) {
-        toggleModal(false);
+        this.closeModal();
         document.removeEventListener('click', this.handleOutsideClick, false);
       }
     }
@@ -68,8 +53,7 @@ class App extends Component {
   }
 
   closeModal = (e) => {
-    console.log('closing')
-    
+    this.props.updateModalSlide(0);
     this.props.toggleModal(false);
   }
 
@@ -82,7 +66,6 @@ class App extends Component {
               className="modal"
               ref={node => (this.modal = node)}
             >
-            {/*<button onClick={this.openModal}>Open Modal</button>*/}
               <Modal
                 isOpen={modalIsOpen}
                 onAfterOpen={this.afterOpenModal}
@@ -135,5 +118,3 @@ App.propTypes = {
   modalIsOpen: PropTypes.bool.isRequired,
   toggleModal: PropTypes.func.isRequired,
 }
-
-export default App;
