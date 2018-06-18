@@ -6,13 +6,6 @@ import SliderIndicator from './SliderIndicator';
 import ScrollAnimation from 'react-animate-on-scroll'
 import './Slider.css'
 
-import smarterBear from './smarterbear.png';
-import colorGame from './colorGame.png';
-import curvaFit from './curvaFit.png';
-import hackerHaus from './hackerhaus.png';
-import frais from './frais.png';
-import { updateModal } from '../actions/modal-actions';
-
 export default class Slider extends Component {
 
   goToPrevSlide(e) {
