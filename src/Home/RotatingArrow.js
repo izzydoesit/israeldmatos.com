@@ -14,7 +14,7 @@ export default class RotatingArrow extends Component {
           style={{
             transform: `rotate( ${style.rotate}deg )`
           }}
-          className="arrow-icon fa fa-2x fa-arrow-right"
+          className="arrow-icon fa fa-arrow-right"
 
         ></span>
       )}
