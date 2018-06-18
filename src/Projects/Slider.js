@@ -10,6 +10,15 @@ import './Slider.css'
 
 export default class Slider extends Component {
 
+  handleMouseEnter = () => {
+    console.log('entered')
+    this.props.updateHover(true);
+  }
+
+  handleMouseLeave = () => {
+    this.props.updateHover(false);
+  }
+
   goToPrevSlide = throttle((e) => {
     e.preventDefault();
     const { projects, currentProject, updateModal } = this.props;
@@ -55,7 +64,12 @@ export default class Slider extends Component {
                 >
                   <div className="slider-wrapper">
 
-                    <div id="gallery" className="slider-container">
+                    <div 
+                      id="gallery" 
+                      className="slider-container"
+                      onMouseEnter={this.handleMouseEnter}
+                      onMouseLeave={this.handleMouseLeave}
+                    >
 
                       <SliderArrow
                         direction="left"

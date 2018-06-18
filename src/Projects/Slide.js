@@ -11,24 +11,12 @@ const buttonLightUp = {
 export default class Slide extends Component {
 
   handleMouseEnter = () => {
-    console.log('entered')
+    console.log('entered slide')
     this.props.updateHover(true);
   }
 
   handleMouseLeave = () => {
     this.props.updateHover(false);
-  }
-
- handleButtonEnter = () => {
-   this.props.updateButton(true);
- }
-
-  handleButtonLeave = () => {
-    this.props.updateButton(false);
-  }
-
-  handleButtonClick = () => {
-    this.props.toggleModal(true);
   }
 
   render() {
@@ -81,14 +69,11 @@ export default class Slide extends Component {
           <div className="blurb">{currentProject.blurb}</div>
         </div>
 
-        <button
+        <ModalLauncher
           className="card-button modalButton"
-          style={buttonStyles}
-          onClick={this.handleButtonClick}
-          buttonEnter={this.handleButtonEnter}
-          buttonLeave={this.handleButtonLeave}
+          buttonStyles={buttonStyles}
           {...this.props}
-        >LEARN MORE</button>
+        >LEARN MORE</ModalLauncher>
       </div>
     )
   }
