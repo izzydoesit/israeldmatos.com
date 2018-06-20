@@ -64,7 +64,7 @@ export default class Slider extends Component {
                 >
                   <div className="slider-wrapper">
 
-                    <div 
+                    <div
                       id="gallery" 
                       className="slider-container"
                       onMouseEnter={this.handleMouseEnter}
@@ -96,6 +96,7 @@ export default class Slider extends Component {
                     key={index}
                     index={index}
                     activeIndex={currentProject.id}
+                    project={slide}
                     updateModal={updateModal}
                   />
                 )}

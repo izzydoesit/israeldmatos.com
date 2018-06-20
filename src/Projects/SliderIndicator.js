@@ -4,7 +4,7 @@ import './SliderIndicator.css'
 export default class SliderIndicator extends Component {
 
   handleClick = () => {
-    this.props.updateModal(this.props.index);
+    this.props.updateModal(this.props.project);
   }
 
   render() {
