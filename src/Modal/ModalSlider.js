@@ -11,7 +11,7 @@ export default class ModalSlider extends Component {
   goToPrevSlide = throttle((e) => {
     e.preventDefault();
     const { currentProject, activeModalIndex, updateModalSlide } = this.props;
-        
+    
     let index = activeModalIndex;
     --index;
 
@@ -56,9 +56,7 @@ export default class ModalSlider extends Component {
                 <i className="fa fa-caret-left bounce-left"/>
               </button>
 
-              <ModalSlide 
-                { ...this.props }
-              />
+              <ModalSlide { ...this.props } />
 
               <button
                 className="modal-slider-btn"
