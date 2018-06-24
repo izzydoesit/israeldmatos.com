@@ -6,7 +6,6 @@ import { renderToString } from 'react-dom/server';
 const App = require('./src/App/App');
 const Html = require('./src/Html');
 const bodyParser = require('body-parser');
-const sendEmail = require('./mailer');
 const compression = require('compression');
 const morgan = require('morgan');
 const path = require('path');
