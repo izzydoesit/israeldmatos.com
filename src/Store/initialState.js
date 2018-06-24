@@ -14,6 +14,9 @@ import hackerHaus3 from '../Modal/images/hackerHaus3.png';
 import frais1 from '../Modal/images/frais1.png';
 import frais2 from '../Modal/images/frais2.png';
 import frais3 from '../Modal/images/frais3.png';
+import portfolio1 from '../Modal/images/portfolio1.png';
+import portfolio2 from '../Modal/images/portfolio2.png';
+import portfolio3 from '../Modal/images/portfolio3.png';
 
 const projects = [
   { id: 0, 
@@ -50,7 +53,14 @@ const projects = [
     detail: "Interactive recipe-sharing site with user profiles and crowd upvoting capabilities, built in Sinatra framework using Ruby & JavaScript.", 
     url: 'https://recipesbyfrais.herokuapp.com/', 
     github: 'https://github.com/izzydoesit/frais',
-    pics: [ frais1, frais2, frais3 ] }
+    pics: [ frais1, frais2, frais3 ] },
+  { id: 5, 
+    title: 'Israel D. Matos.com', 
+    blurb: 'Portfolio site',
+    detail: "Mobile-first React UI w/ Redux architecture, Express.js server, interactive pop-up modal, custom-built image carousels, and fully functioning contact form.", 
+    url: 'https://www.israeldmatos.com/', 
+    github: 'https://github.com/izzydoesit/frais',
+    pics: [ portfolio1, portfolio2, portfolio3 ] }
 ];
 
 export default {
