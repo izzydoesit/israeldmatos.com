@@ -2,7 +2,7 @@ require('babel-polyfill');
 const {createServer} = require('http');
 const express = require('express');
 const React = require('react');
-import { renderToString } from 'react-dom/server';
+// import { renderToString } from 'react-dom/server';
 const App = require('./src/App/App');
 const Html = require('./src/Html');
 const bodyParser = require('body-parser');
@@ -74,18 +74,18 @@ app.post('/contact', async (req, res) => {
 
 const server = createServer(app);
 
-server.get('/', (req, res) => {
+// server.get('/', (req, res) => {
 
-  const body = renderToString(<App/>);
-  const title = "Rendering to server";
+//   const body = renderToString(<App/>);
+//   const title = "Rendering to server";
 
-  res.send(
-    Html({
-      body,
-      title,
-    })
-  );
-});
+//   res.send(
+//     Html({
+//       body,
+//       title,
+//     })
+//   );
+// });
 
 server.listen(PORT, err => {
   if (err) throw err;
