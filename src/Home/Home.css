@@ -93,7 +93,7 @@
   font-size: 1.1em;
   box-sizing: border-box;
   text-decoration: none;
-  padding: 4%;
+  padding: 3%;
   display: inline-flex;
   position: relative;
   color: #FFF;
@@ -127,11 +127,11 @@
   }
 
   a.page-link-btn {
-    font-size: 2em;
+    font-size: 2.3em;
   }
 }
 
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1800px) {
   .home-text-wrap .text {
     font-size: 4em;
   }
