@@ -10,8 +10,11 @@ import './Slider.css'
 
 export default class Slider extends Component {
 
+  handleOpenModal = () => {
+    this.props.toggleModal(true);
+  }
+
   handleMouseEnter = () => {
-    console.log('entered')
     this.props.updateHover(true);
   }
 
@@ -50,58 +53,62 @@ export default class Slider extends Component {
     const { projects, currentProject, updateModal, modalIsOpen } = this.props; 
 
     return (
-      
+
       <ScrollAnimation 
         animateOnce={true} 
         animateIn="bounceIn" 
         delay={600}
       >
         <div className="flex carousel">
-                <Swipeable
-                  className="project-swipeable"
-                  onSwipingLeft={ (e) => this.goToPrevSlide(e) }
-                  onSwipingRight={ (e) => this.goToNextSlide(e)}
+          <Swipeable
+            className="project-swipeable"
+            onSwipingLeft={ (e) => this.goToPrevSlide(e) }
+            onSwipingRight={ (e) => this.goToNextSlide(e)}
+          >
+            <div className="slider-wrapper">
+
+              <div
+                id="gallery" 
+                className="slider-container"
+                onMouseEnter={this.handleMouseEnter}
+                onMouseLeave={this.handleMouseLeave}
+              >
+
+                <SliderArrow
+                  direction="left"
+                  onClick={e => this.goToPrevSlide(e)}
+                />
+                <div 
+                  className="slide-wrapper"
+                  onClick={this.handleOpenModal}
                 >
-                  <div className="slider-wrapper">
-
-                    <div
-                      id="gallery" 
-                      className="slider-container"
-                      onMouseEnter={this.handleMouseEnter}
-                      onMouseLeave={this.handleMouseLeave}
-                    >
-
-                      <SliderArrow
-                        direction="left"
-                        onClick={e => this.goToPrevSlide(e)}
-                      />
-                      <Slide
-                        key={currentProject.id}
-                        index={currentProject.id}
-                        onSlideClick={this.goToNextSlide}
-                        { ...this.props }
-                      />
-                      <SliderArrow
-                        direction="right"
-                        onClick={e => this.goToNextSlide(e)}
-                      />
-                    </div>
-                  </div>
-                </Swipeable>
-
-            <div className="indicator-wrap">
-              <ul className="slider-indicators">
-                {projects.map((slide, index) =>
-                  <SliderIndicator
-                    key={index}
-                    index={index}
-                    activeIndex={currentProject.id}
-                    project={slide}
-                    updateModal={updateModal}
+                  <Slide
+                    key={currentProject.id}
+                    index={currentProject.id}
+                    { ...this.props }
                   />
-                )}
-              </ul>
+                </div>
+                <SliderArrow
+                  direction="right"
+                  onClick={e => this.goToNextSlide(e)}
+                />
+              </div>
             </div>
+          </Swipeable>
+
+          <div className="indicator-wrap">
+            <ul className="slider-indicators">
+              {projects.map((slide, index) =>
+                <SliderIndicator
+                  key={index}
+                  index={index}
+                  activeIndex={currentProject.id}
+                  project={slide}
+                  updateModal={updateModal}
+                />
+              )}
+            </ul>
+          </div>
         </div>
       </ScrollAnimation>
     );
