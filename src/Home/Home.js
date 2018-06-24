@@ -12,21 +12,20 @@ export default class Home extends Component {
     }
   }
 
-  enter() {
+  enterHomeButton = () => {
     this.setState({rotate: 90});
   }
 
-  leave() {
+ leaveHomeButton = () => {
     this.setState({rotate: 0});
   }
 
   render() {
 
     return (
-
       <section id="home" className="home">
         <ScrollableAnchor id={'landing'}>
-
+          <div className="home-wrapper">
             <div id="storm" className="canvas">
 
               <DepthOfFieldSnowfall count={80} style={{
@@ -37,29 +36,27 @@ export default class Home extends Component {
                 height: '100%'
               }}/>
 
+            </div>
             <div className="home-content">
 
               <div className="home-text-wrap">
                 <div className="text">Hello, I'm<span className="name">Israel D. Matos</span>. 
-                <br/>
-                I'm a full-stack web developer.</div>
+                  <br/>
+                  I'm a full-stack web developer.
+                </div>
               </div>
 
               <a
                 className="page-link-btn"
                 href="#about"
                 role="button"
-                onMouseOver={this.enter.bind(this)}
-                onMouseLeave={this.leave.bind(this)}
+                onMouseOver={this.enterHomeButton}
+                onMouseLeave={this.leaveHomeButton}
               >
-                <div className="btn-content">
+                <span className="btn-text">
+                View my work</span>
 
-                  <span className="btn-text">
-                    View my work
-                  </span>
-
-                  <RotatingArrow rotate={this.state.rotate}/>
-                </div>
+                <RotatingArrow rotate={this.state.rotate}/>
               </a>
             </div>
           </div>

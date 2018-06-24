@@ -35,17 +35,13 @@
   z-index: -99;
 }
 
-@media screen and (min-width: 600) {
-
-
-}
-
-@media screen and (min-width: 900px) {
-
-
+.home-wrapper {
+  width: 100%;
+  display: flex;
 }
 
 .home-content {
+  width: 100%;
   color: white;
   display: flex;
   flex-direction: column;
@@ -58,45 +54,20 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 1.1em;
+  font-size: 1.3em;
   margin: 0;
   padding: 2%;
   width: 100%;
 }
 
 .home-text-wrap > div {
+  margin-bottom: 4%;
   text-shadow: 3px 3px 6px #000, 3px 3px 3px #666;
   text-align: center;
 }
 
-@media screen and (min-width: 600px) {
-
-  .home-content > div {
-    font-size: 1.4em;
-  }
-
-  div.home-text-wrap {
-    margin: 2% auto;
-  }
-
-  .btn-text {
-    font-size: 1.2em;
-  }
-}
-
-@media screen and (min-width: 900px) {
-
-  .home-content > div {
-    font-size: 4vmax;
-  }
-
-  div.home-content {
-    margin: 1% auto;
-  }
-}
-
 .name {
-  line-height: 2.7em;
+  line-height: 2em;
   box-sizing: border-box;
   padding: 1% 0.5% 1% 1%;
   color: #df1862;
@@ -118,81 +89,78 @@
   hyphens: auto;
 }
 
-a.page-link-btn {
-  height: 20%;
-  width: 45vw;
+.page-link-btn {
+  font-size: 1.1em;
   box-sizing: border-box;
-  vertical-align: middle;
-  margin: 4% 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: #FFF;
-  text-shadow: 1px 1px 1px #000;
   text-decoration: none;
-  background-color: #21252E;
-  border: 1px solid #eee;
+  padding: 4%;
+  display: inline-flex;
+  position: relative;
+  color: #FFF;
+  text-shadow: 0.4px 0.4px 0.4px #000;
+  background-color: transparent;
+  border: 2px solid #eee;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 600px) {
 
-  a.page-link-btn {
-    width: 30vw;
-    height: 10vh;
-    margin: 1% 0;
-    position: relative;
+  .home-text-wrap  .text {
+    font-size: 2.2em;
   }
 
-  a > .btn-content {
-    width: 100%;
-  }
-}
-
-@media screen and (min-width: 900px) {
-
   a.page-link-btn {
-    margin-top: 2.3em;
-    background-color: transparent;
-    font-size: 1.4vmax;
-    color: #eee;
-    /* text-shadow: 2px 2px 1px #FFF, 1px 1px 5px #000; */
+    font-size: 1.8em;
   }
 
   a.page-link-btn:hover {
     background-color: #07BAC2;
     border-color: #6D5775;
-    text-shadow: 1px 1px 1px #000, 2.5px 2.5px 2.5px #fff;
     transition: 0.4s ease-in-out;
   }
 }
 
-.btn-content {
-  width: 100%;
-  height: 90%;
-  box-sizing: border-box;
-  line-height: 2em;
-  font-size: 1.4em;
-  display: flex;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
+@media screen and (min-width: 900px) {
+
+  .home-text-wrap  .text {
+    font-size: 2.6em;
+  }
+
+  a.page-link-btn {
+    font-size: 2em;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .home-text-wrap .text {
+    font-size: 4em;
+  }
+
+  a.page-link-btn {
+    font-size: 2.7em;
+  }
+}
+
+@media screen and (min-width: 2200px) {
+  .home-text-wrap .text {
+    font-size: 6em;
+  }
+
+  a.page-link-btn {
+    font-size: 5em;
+  }
 }
 
 .btn-text {
-  width: 70%;
-  font-size: 3vmax;
-  vertical-align: middle;
-  text-align: center;
-  display: inline-block;
-  margin-top: auto;
-  margin-bottom: auto;
-
+  white-space: nowrap;
+  padding-right: 4%;
+  margin-right: 1%
 }
+
 .arrow-icon {
-  width: 20%;
-  vertical-align: middle;
+  padding-left: 4%;
+  margin-left: 1%;
   line-height: inherit!important;
   display: inline-block;
-  top: 50%;
-  transition: transform 0.02s;
+  transition: transform 0.1s ease-in;
 }
