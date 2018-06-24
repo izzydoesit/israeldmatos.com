@@ -59,7 +59,7 @@ const projects = [
     blurb: 'Portfolio site',
     detail: "Mobile-first React UI w/ Redux architecture, Express.js server, interactive pop-up modal, custom-built image carousels, and fully functioning contact form.", 
     url: 'https://www.israeldmatos.com/', 
-    github: 'https://github.com/izzydoesit/frais',
+    github: 'https://github.com/izzydoesit/react_components',
     pics: [ portfolio1, portfolio2, portfolio3 ] }
 ];
 
