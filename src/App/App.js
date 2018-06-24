@@ -23,14 +23,15 @@ export default class App extends Component {
             
             <MyModal {...this.props} />
           
+            <Home />
             <Headroom
               onPin={() => console.log('pinned')}
               onUnpin={() => console.log('unpinned')}
+              pinStart={500}
             >
               <Navbar/>
             </Headroom>
 
-            <Home />
             <About />
             <Projects {...this.props}/>
             {/* <Blog /> */}

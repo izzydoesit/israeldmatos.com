@@ -6,19 +6,28 @@ export default class Navbar extends Component {
     super(props);
     this.handleScroll = this.handleScroll.bind(this);
     this.state = {
-      transform: 0
+      transform: 0,
+      windowWidth: window.innerWidth,
+      showMobileNav: false,
+      activeSection: 1
     };
   }
 
+  handleResize() {
+    this.setState({windowWidth: window.innerWidth});
+  }
+  
   componentDidMount() {
+    window.addEventListener('resize', this.handleResize.bind(this));
     window.addEventListener('scroll', this.handleScroll);
   }
-
-componentWillUnmount() {
+  
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleResize.bind(this));
     window.removeEventListener('scroll', this.handleScroll);
-  }
+  } 
 
-handleScroll(event) {
+  handleScroll(event) {
     // do something like call `this.setState`
     // access window.scrollY etc
     let scrollTop = event.srcElement.body.scrollTop,
@@ -29,16 +38,77 @@ handleScroll(event) {
     });
   }
 
+  navigationLinks = () => {
+    return [
+      <ul className="nav-links" onClick={this.handleNavClick}>
+        <li key={1} className="menu-item">
+          <a 
+          className={ this.state.activeSection === this.key 
+          ? "page-link active"
+          : "page-link"}
+          href="#landing" >Home</a>
+        </li>
+        <li key={2} className="menu-item">
+          <a 
+          className={ this.state.activeSection === this.key 
+          ? "page-link active" 
+          : "page-link"}
+          href="#about" >About</a>
+        </li>
+        <li key={3} className="menu-item">
+          <a 
+          className={ this.state.activeSection === this.key 
+          ? "page-link active" 
+          : "page-link"}
+          href="#projects" >Projects</a>
+        </li>
+        {/*<key={5} li className="menu-item">{<a className="page-link" href="#blog" >Blog</a>}</li>*/}
+        <li key={4} className="menu-item">
+          <a 
+          className={ this.state.activeSection === this.key 
+          ? "page-link active" 
+          : "page-link"}
+          href="#contact" >Contact</a>
+        </li>
+    </ul>
+    ]
+  }
+
+  renderMobileNav = () => {
+    if(this.state.showMobileNav) {
+      return this.navigationLinks();
+    }
+  }
+  
+  handleNavClick = () => {
+    if(!this.state.showMobileNav) {
+      this.setState({showMobileNav: true});
+    } else {
+      this.setState({showMobileNav: false});
+    }
+  }
+
+  renderNavigation = () => {
+    if(this.state.windowWidth <= 900) {
+      return [
+        <div className="mobile-nav">
+          <button onClick={this.handleNavClick}><i className="fa fa-bars fa-2x hamburger"></i></button>
+          {this.renderMobileNav()}
+        </div>
+      ];
+    } else {
+      return [
+        <div key={7} className="desk-nav">
+          {this.navigationLinks()}
+        </div>
+      ]; 
+    }
+  }
+
   render() {
     return (
-      <nav className="flex nav" >
-        <div className="link-wrap">
-          <a className="page-link active" href="#landing">Home</a>
-          <a className="page-link" href="#about">About</a>
-          <a className="page-link" href="#projects">Projects</a>
-          {/* <a className="page-link" href="#blog">Blog</a>*/}
-          <a className="page-link" href="#contact">Contact</a>
-        </div>
+      <nav className="flex nav-container" >
+        {this.renderNavigation()}
       </nav>
     )
   }
