@@ -43,8 +43,8 @@ export default class ModalSlider extends Component {
       <div className="carousel">
         <Swipeable
           className="modal-swipeable"
-          onSwipingLeft={ (e) => this.goToPrevSlide(e) }
-          onSwipingRight={ (e) => this.goToNextSlide(e)}
+          onSwipingRight={ (e) => this.goToPrevSlide(e) }
+          onSwipingLeft={ (e) => this.goToNextSlide(e)}
         >
           <div className="wrapper">
 

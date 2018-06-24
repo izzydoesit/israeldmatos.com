@@ -50,10 +50,9 @@ export default class Slider extends Component {
   }, 500, { trailing: false })
 
   render() {
-    const { projects, currentProject, updateModal, modalIsOpen } = this.props; 
+    const { projects, currentProject, updateModal } = this.props; 
 
     return (
-
       <ScrollAnimation 
         animateOnce={true} 
         animateIn="bounceIn" 
@@ -62,8 +61,8 @@ export default class Slider extends Component {
         <div className="flex carousel">
           <Swipeable
             className="project-swipeable"
-            onSwipingLeft={ (e) => this.goToPrevSlide(e) }
-            onSwipingRight={ (e) => this.goToNextSlide(e)}
+            onSwipingRight={ (e) => this.goToPrevSlide(e) }
+            onSwipingLeft={ (e) => this.goToNextSlide(e)}
           >
             <div className="slider-wrapper">
 
