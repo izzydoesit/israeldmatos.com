@@ -14,6 +14,14 @@ ul {
   cursor: pointer;
 }
 
+@media screen and (min-width: 900px) {
+
+  .slider-wrapper {
+    width: 85vw;
+    max-width: 1600px;
+  }
+}
+
 .slider-container {
   display: flex;
   margin: 0;
