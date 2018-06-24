@@ -1,36 +1,82 @@
 import React, { Component } from 'react';
+import Modal from 'react-modal';
+import ModalSlider from './ModalSlider';
 import './Modal.css';
 
-export default class Modal extends Component {
-  
+Modal.setAppElement('#root');
 
-  closeModal = () => {
-    this.props.toggleModal(false);
+export default class MyModal extends Component {
+
+  componentDidMount() {
+    // window.addEventListener('keyup', this.handleKeyUp, false);
+    document.addEventListener('click', this.handleOutsideClick, false);
+  }
+
+  componentWillUnmount() {
+    // window.removeEventListener('keyup', this.handleKeyUp, false);
+    document.removeEventListener('click', this.handleOutsideClick, false);
   }
   
+  handleOutsideClick = (e) => {
+
+    if (!(this.modal)) {
+      if (!this.modal.contains(e.target)) {
+        this.closeModal();
+        document.removeEventListener('click', this.handleOutsideClick, false);
+      }
+    }
+  }
+  
+  closeModal = (e) => {
+    this.props.toggleModal(false);
+    this.props.updateModalSlide(0);
+  }
+
+  afterOpenModal = () => {
+    // references are now sync'd and can be accessed.
+   // this.subtitle.style.color = '#f00';
+ }
+
   render () {
     const {
-      onCloseRequest,
-      currentProject,
-      children
+      modalIsOpen,
+      currentProject
     } = this.props;
 
-    return (  
-      <div className="modalOverlay">
-        <div
-          className="modal"
-          ref={node => (this.modal = node)}
+    return (
+      <div
+        className="modal-wrapper"
+        ref={node => (this.modal = node)}
+      >
+        <Modal
+          isOpen={modalIsOpen}
+          onAfterOpen={this.afterOpenModal}
+          onRequestClose={this.closeModal}
+          contentLabel="Project Modal"
+          className="Modal"
+          overlayClassName="Overlay"
         >
-          <div className="modalContent">            
-            {children}
-          </div>
-        </div>
+          <ModalSlider {...this.props} />
 
-        <button
-          type="button"
-          className="closeButton"
-          onClick={onCloseRequest}
-        />
+          <div className="info-box">
+            <div className="title">{currentProject.title}</div>
+            <div className="blurb">{currentProject.blurb}</div>
+            <div className="detail">{currentProject.detail}</div>
+            <a
+              className="modal-link-btn"
+              href={currentProject.github}
+              target="_blank"
+              rel="noopener noreferrer"
+            >See Code</a>
+          </div>
+
+          <button 
+            className="close-modal-btn" 
+            onClick={this.closeModal}
+          >
+            <i className="fa fa-5x fa-times-circle" />
+          </button>
+        </Modal>
       </div>
     );
   }
