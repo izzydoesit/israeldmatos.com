@@ -80,14 +80,16 @@ export default class ContactForm extends Component {
                 name="name"
                 value={name}
                 onChange={this.onChange}
+                required
               />
               <input
                 className="flex email-input"
-                type="text"
+                type="email"
                 placeholder="Your email"
                 name="email"
                 value={email}
                 onChange={this.onChange}
+                required
               />
               <textarea
                 className="flex message-input"
@@ -96,6 +98,7 @@ export default class ContactForm extends Component {
                 name="message"
                 value={message}
                 onChange={this.onChange}
+                required
               />
 
               <Message onClose={this.onClose} show={this.state.showMessage}/>
