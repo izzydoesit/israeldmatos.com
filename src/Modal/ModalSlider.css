@@ -1,11 +1,17 @@
+.carousel {
+  height: 65%;  
+}
+
 .modal-swipeable {
   width: 100%;
+  height: 100%;
   position: relative;
   display: flex;
 }
 
 .wrapper {
   width: 100vw;
+  height: 100%;
   overflow: hidden;
   cursor: pointer;
 }
@@ -14,22 +20,28 @@
   position: relative;
   display: flex;
   margin: 0;
-  position: relative;
+  height: 100%;
 }
 
 .modal-slider-btn {
   position: absolute;
   bottom: 0;
-  height: 10%;
-  width: 10%;
+  height: 15%;
+  width: 12%;
   box-sizing: border-box;
   cursor: pointer;
   font-size: 25px;
   padding: 0;
   opacity: 1;
   color: #fff;
-  background-color: #222;
-  opacity: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 999;
+}
+
+@media screen and (min-width: 600px) {
+  .modal-slider-btn {
+    width: 8%;
+  }
 }
 
 .right {
