@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import './Contact.css';
 import ScrollableAnchor from 'react-scrollable-anchor/lib/ScrollableAnchor';
 import ScrollAnimation from 'react-animate-on-scroll';
 import ContactForm from './ContactForm';
+import './Contact.css';
 
 export default class Contact extends Component {
 
