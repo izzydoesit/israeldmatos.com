@@ -50,9 +50,6 @@ export default class Slide extends Component {
       >
         <div 
           className="card" 
-          style={cardStyles}
-          onMouseEnter={this.handleMouseEnter}
-          onMouseLeave={this.handleMouseLeave}
         >
           <img
             resizemode="stretch"
@@ -62,25 +59,22 @@ export default class Slide extends Component {
           />
         </div>
 
-        <div className="flex card-text" style={textStyles}>
+        <div className="flex card-text" >
           <div className="bold title">
             {currentProject.title}
           </div>
           <div className="blurb">{currentProject.blurb}</div>
         </div>
 
-        <ModalLauncher
+        <button
           className="card-button modalButton"
-          buttonStyles={buttonStyles}
-          {...this.props}
-        >LEARN MORE</ModalLauncher>
+        >LEARN MORE</button>
       </div>
     )
   }
 }
 
 Slide.propTypes = {
-  updateModal: PropTypes.func.isRequired,
   currentProject: PropTypes.object.isRequired,
   buttonHover: PropTypes.bool.isRequired,
   cardHover: PropTypes.bool.isRequired,
