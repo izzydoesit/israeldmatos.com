@@ -2,7 +2,6 @@
   "name": "israeldmatos.com",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://www.israeldmatos.com",
   "dependencies": {
     "@fortawesome/fontawesome": "^1.1.8",
     "@fortawesome/fontawesome-free-solid": "^5.0.13",
