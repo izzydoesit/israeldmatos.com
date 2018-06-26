@@ -45,6 +45,10 @@ if (dev) {
   app.use(morgan('dev'));
 }
 
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('client/build'));
+}
+
 app.post('/contact', async (req, res) => {
 
   res.header('Access-Control-Allow-Origin', CORS)
@@ -71,7 +75,7 @@ app.post('/contact', async (req, res) => {
   .catch(error => console.log(error.toString()))
 })
 
-const server = createServer(app);
+// const server = createServer(app);
 
 // server.get('/', (req, res) => {
 
@@ -90,3 +94,4 @@ server.listen(PORT, err => {
   if (err) throw err;
   console.log(`server listening on port ${PORT}`);
 })
+
