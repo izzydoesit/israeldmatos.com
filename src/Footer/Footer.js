@@ -23,7 +23,7 @@ export default class Footer extends Component {
     }
   }
 
-  goHome() {
+  goHome = () => {
     goToAnchor('#home');
   }
 

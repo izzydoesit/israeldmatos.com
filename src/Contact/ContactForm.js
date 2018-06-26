@@ -18,13 +18,13 @@ export default class ContactForm extends Component {
     };
   }
 
-  onChange(event) {
+  onChange = (event) => {
     const state = this.state;
     state[event.target.name] = event.target.value;
     this.setState(state);
   }
 
-  onSubmit(event) {
+  onSubmit = (event) => {
     event.preventDefault();
     
     let messagePayload = {
@@ -49,7 +49,7 @@ export default class ContactForm extends Component {
     });
   }
 
-  onClose(event) {
+  onClose = (event) => {
     this.setState({
       showMessage: false
     });
