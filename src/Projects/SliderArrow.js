@@ -5,19 +5,19 @@ import './SliderArrow.css';
 export default class SliderArrow extends Component {
   constructor(props) {
     super(props);
-    this.mouseOver = this.mouseOver.bind(this);
-    this.mouseOut = this.mouseOut.bind(this);
+    this.mouseOver = this.mouseOver;
+    this.mouseOut = this.mouseOut;
     this.state = {
       direction: this.props.direction,
       hover: false
     }
   }
 
-  mouseOver() {
+  mouseOver = () => {
     this.setState({hover: true});
   }
 
-  mouseOut() {
+  mouseOut = () => {
     this.setState({hover: false});
   }
 
