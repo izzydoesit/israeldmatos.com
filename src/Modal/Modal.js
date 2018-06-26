@@ -35,13 +35,10 @@ export default class MyModal extends Component {
   afterOpenModal = () => {
     // references are now sync'd and can be accessed.
    // this.subtitle.style.color = '#f00';
- }
+  }
 
   render () {
-    const {
-      modalIsOpen,
-      currentProject
-    } = this.props;
+    const { modalIsOpen, currentProject } = this.props;
 
     return (
       <div
@@ -62,20 +59,22 @@ export default class MyModal extends Component {
             <div className="title">{currentProject.title}</div>
             <div className="blurb">{currentProject.blurb}</div>
             <div className="detail">{currentProject.detail}</div>
-            <a
-              className="modal-link-btn"
-              href={currentProject.github}
-              target="_blank"
-              rel="noopener noreferrer"
-            >See Code</a>
+            <div className="bottom-row">
+              <a
+                className="modal-link-btn"
+                href={currentProject.github}
+                target="_blank"
+                rel="noopener noreferrer"
+              >See Code</a>
+            <button 
+              className="close-modal-btn" 
+              onClick={this.closeModal}
+            >
+              <i className="fa fa-3x fa-times" />
+            </button>
+            </div>
           </div>
 
-          <button 
-            className="close-modal-btn" 
-            onClick={this.closeModal}
-          >
-            <i className="fa fa-5x fa-times-circle" />
-          </button>
         </Modal>
       </div>
     );
