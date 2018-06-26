@@ -10,9 +10,12 @@ export default class Blog extends Component {
       <section>
         <ScrollableAnchor id={'blog'}>
           <div className="container flex">
-            <div className="header animated slide-in-left">Blog</div>
-            <div className="header-bar animated slide-in-left"></div>
-
+            <ScrollAnimation>
+              <div className="header animated slide-in-left">Blog</div>
+            </ScrollAnimation>
+            <ScrollAnimation>
+              <div className="header-bar animated slide-in-left"></div>
+            </ScrollAnimation>
             <a href="">
               <div className="animated fade-in fade">
                 <div className="thumb"></div>

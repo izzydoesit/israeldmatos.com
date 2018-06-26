@@ -37,8 +37,6 @@ export default class ModalSlider extends Component {
   }, 500, { trailing: false })
 
   render() {
-    const { currentProject, activeModalIndex } = this.props;
-
     return(
       <div className="carousel">
         <Swipeable

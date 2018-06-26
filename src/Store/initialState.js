@@ -1,4 +1,3 @@
-import uniqueId from 'lodash/uniqueId';
 import smarterBear1 from '../Modal/images/smarterBear1.png';
 import smarterBear2 from '../Modal/images/smarterBear2.png';
 import smarterBear3 from '../Modal/images/smarterBear3.png';

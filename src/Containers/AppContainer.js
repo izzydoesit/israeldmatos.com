@@ -1,6 +1,3 @@
-import React from 'react';
-
-import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import App from '../App/App';
 import { toggleModal, updateModal, updateModalSlide } from '../actions/modal-actions';

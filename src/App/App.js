@@ -15,8 +15,6 @@ import './App.css';
 export default class App extends Component {
 
   render() {
-    const { currentProject, modalIsOpen } = this.props;
-
     return (
         <div className="App" id="App">
           <div className="overflow-wrap">

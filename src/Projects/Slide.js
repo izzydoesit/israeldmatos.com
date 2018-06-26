@@ -1,12 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import ModalLauncher from '../Modal/ModalLauncher';
 import './Slide.css';
-
-const buttonLightUp = {
-  backgroundColor: '#07BAC2',
-  color: '#000',
-};
 
 export default class Slide extends Component {
 
@@ -20,27 +14,7 @@ export default class Slide extends Component {
   }
 
   render() {
-    const { 
-      buttonHover, 
-      cardHover,
-      currentProject } = this.props;
-
-    let textStyles = {}, 
-        buttonStyles = {},
-        cardStyles = {}
-
-    if (cardHover) {
-      textStyles = { opacity: 1, top: '24%' };
-      buttonStyles = { opacity: 1, bottom: '24%' };
-      cardStyles = { opacity: 0 }
-    } else {
-      textStyles = { opacity: 0 }
-      buttonStyles = { opacity: 0 }
-    }
-
-    if (buttonHover) {
-      buttonStyles = { ...buttonStyles, ...buttonLightUp };
-    }
+    const { currentProject } = this.props;
     
     return (
       <div
