@@ -2,7 +2,6 @@ require('babel-polyfill');
 const {createServer} = require('http');
 const express = require('express');
 const React = require('react');
-// import { renderToString } from 'react-dom/server';
 const App = require('./src/App/App');
 const Html = require('./src/Html');
 const bodyParser = require('body-parser');
