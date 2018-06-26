@@ -1,4 +1,5 @@
 require('babel-polyfill');
+const {createServer} = require('http');
 const express = require('express');
 const bodyParser = require('body-parser');
 const compression = require('compression');
@@ -70,6 +71,8 @@ app.post('/contact', async (req, res) => {
   .then(() => console.log('Mail sent successfully'))
   .catch(error => console.log(error.toString()))
 })
+
+const server = createServer(app);
 
 server.listen(PORT, err => {
   if (err) throw err;
