@@ -33,7 +33,7 @@
 }
 
 section {
-  padding: 30% 0 30% 0;
+  padding: 20% 0 20% 0;
   color: #616161;
   line-height: 11pt;
   position: relative;
@@ -42,7 +42,7 @@ section {
 @media screen and (min-width: 600px) {
 
   section {
-    padding: 20% 0 20% 0;
+    padding: 10% 0 10% 0;
   }
 }
 
