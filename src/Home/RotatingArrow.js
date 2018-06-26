@@ -7,12 +7,13 @@ export default class RotatingArrow extends Component {
     return (
       <Motion
         defaultStyle={{ rotate: 0 }}
-        style={{ rotate: spring(this.props.rotate) }}
+        style={{ rotate: spring(this.props.rotate), speed: "transform .3s" }}
       >
       {(style) => (
         <span
           style={{
-            transform: `rotate( ${style.rotate}deg )`
+            transform: `rotate( ${style.rotate}deg )`,
+            transition: `${style.speed}`
           }}
           className="arrow-icon fa fa-arrow-right"
 
