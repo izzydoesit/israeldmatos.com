@@ -1,9 +1,5 @@
 require('babel-polyfill');
-const {createServer} = require('http');
 const express = require('express');
-const React = require('react');
-const App = require('./src/App/App');
-const Html = require('./src/Html');
 const bodyParser = require('body-parser');
 const compression = require('compression');
 const morgan = require('morgan');
@@ -74,21 +70,6 @@ app.post('/contact', async (req, res) => {
   .then(() => console.log('Mail sent successfully'))
   .catch(error => console.log(error.toString()))
 })
-
-// const server = createServer(app);
-
-// server.get('/', (req, res) => {
-
-//   const body = renderToString(<App/>);
-//   const title = "Rendering to server";
-
-//   res.send(
-//     Html({
-//       body,
-//       title,
-//     })
-//   );
-// });
 
 server.listen(PORT, err => {
   if (err) throw err;
