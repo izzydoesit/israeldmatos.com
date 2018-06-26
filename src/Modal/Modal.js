@@ -7,12 +7,12 @@ Modal.setAppElement('#root');
 
 export default class MyModal extends Component {
 
-  componentDidMount() {
+  componentDidMount = () => {
     // window.addEventListener('keyup', this.handleKeyUp, false);
     document.addEventListener('click', this.handleOutsideClick, false);
   }
 
-  componentWillUnmount() {
+  componentWillUnmount = () => {
     // window.removeEventListener('keyup', this.handleKeyUp, false);
     document.removeEventListener('click', this.handleOutsideClick, false);
   }
