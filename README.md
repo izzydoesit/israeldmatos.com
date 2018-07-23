@@ -15,11 +15,11 @@ __Portfolio Page__
 
 ### Express
 
-* Server 
+* Server framework used to add contact form functionality with SendGrid mail API integration
 
 ### React-Swipeable
 
-* Allows me to build mobile-first
+* Allows me to build mobile-first and respond to mobile-only events
 
 ### React-Modal
 
@@ -30,6 +30,10 @@ __Portfolio Page__
 * **Designed with User Experience first**
 
   80% of your users will be accessing your web application through a mobile-device, whether you want them to or not.    Mobile-first is no longer a nice-to-have in our modern development world, its a MUST-HAVE.
+  
+  We have also used a flat minimalist design and used plenty of negative space in our application to help create a smooth user experience. This guideline ensured every component had enough space to stand out and guides the user from land to finish.
+  
+  Animations were also something I wanted to incorporate into this page without letting them interfere with the user experience.  They were set on only animating once so the components became fixed after the user scrolled past them once.  Animating upon every viewport entry became too much and distracted from the purpose of the page, to showcase my work.
   
 * **Flexible Components**
 
