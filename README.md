@@ -81,7 +81,7 @@ $ npm run dev
 * [Express](https://www.expressjs.com) - web application framework
 * [React-swipeable]() - library to handle swiping events
 * [React-modal]() - modal component to build pop-up interactivity
-* [React-snowflakes)() - snowflake animation with custom controls
+* [React-snowflakes]() - snowflake animation with custom controls
 
 
 # Author
