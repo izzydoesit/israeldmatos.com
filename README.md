@@ -11,15 +11,19 @@ __Portfolio Page__
 
 ### Redux
 
-- Crucial for state management with modal pop-up and carousel components
+* Crucial for state management with modal pop-up and carousel components
+
+### Express
+
+* Server 
 
 ### React-Swipeable
 
-- Allows me to build mobile-first
+* Allows me to build mobile-first
 
 ### React-Modal
 
-- Adds a delightful user experience with interactivity that helps give color and detail to projects at the click of a mouse
+* Adds a delightful user experience with interactivity that helps give color and detail to projects at the click of a mouse
 
 ## Key decisions
 
@@ -70,10 +74,10 @@ $ npm run dev
 
 * [Babel/ES6](http://babeljs.io) - JavaScript ES6 compiler
 * [Redux](https://www.npmjs.com/package/body-parser) - State management architecture
-* [Express](https://www.expressjs.com)
-* [React-swipeable]
-* [React-modal]
-* [React-snowflakes)
+* [Express](https://www.expressjs.com) - web application framework
+* [React-swipeable]() - library to handle swiping events
+* [React-modal]() - modal component to build pop-up interactivity
+* [React-snowflakes)() - snowflake animation with custom controls
 
 
 # Author
