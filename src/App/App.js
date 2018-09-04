@@ -18,9 +18,9 @@ export default class App extends Component {
     return (
         <div className="App" id="App">
           <div className="overflow-wrap">
-            
+
             <MyModal {...this.props} />
-          
+
             <Home />
             <Headroom
               onPin={() => console.log('pinned')}
@@ -42,7 +42,6 @@ export default class App extends Component {
 }
 
 App.propTypes = {
-  currentProject: PropTypes.object.isRequired,
   modalIsOpen: PropTypes.bool.isRequired,
   toggleModal: PropTypes.func.isRequired,
 }
