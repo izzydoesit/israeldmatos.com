@@ -8,6 +8,10 @@ ul {
   background-color: #f5f5f5;
 }
 
+.slick-dots {
+  font-size: 20px;
+}
+
 .slider-wrapper {
   width: 100vw;
   overflow: hidden;
@@ -66,3 +70,17 @@ ul {
   position: relative;
   display: flex;
 }
+/*
+{// className="project-swipeable"
+  // onSwipingRight={ (e) => this.goToPrevSlide(e)}
+  // onSwipingLeft={ (e) => this.goToNextSlide(e)}
+  // onTap={ (e) => toggleModal(e)}}
+
+
+
+    enableMouseEvents={true}
+  children={projectSlides}
+  index={1}
+  onChangeIndex={updateModal}
+  // onSwitching={updateModal}
+  */
