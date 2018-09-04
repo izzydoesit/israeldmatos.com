@@ -16,7 +16,7 @@ export default class MyModal extends Component {
     // window.removeEventListener('keyup', this.handleKeyUp, false);
     document.removeEventListener('click', this.handleOutsideClick, false);
   }
-  
+
   handleOutsideClick = (e) => {
 
     if (!(this.modal)) {
@@ -26,7 +26,7 @@ export default class MyModal extends Component {
       }
     }
   }
-  
+
   closeModal = (e) => {
     this.props.toggleModal(false);
     this.props.updateModalSlide(0);
@@ -38,7 +38,8 @@ export default class MyModal extends Component {
   }
 
   render () {
-    const { modalIsOpen, currentProject } = this.props;
+    const { modalIsOpen, projects, activeIndex } = this.props;
+    const project = projects[activeIndex]
 
     return (
       <div
@@ -56,18 +57,18 @@ export default class MyModal extends Component {
           <ModalSlider {...this.props} />
 
           <div className="info-box">
-            <div className="title">{currentProject.title}</div>
-            <div className="blurb">{currentProject.blurb}</div>
-            <div className="detail">{currentProject.detail}</div>
+            <div className="title">{project.title}</div>
+            <div className="blurb">{project.blurb}</div>
+            <div className="detail">{project.detail}</div>
             <div className="bottom-row">
               <a
                 className="modal-link-btn"
-                href={currentProject.github}
+                href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
               >See Code</a>
-            <button 
-              className="close-modal-btn" 
+            <button
+              className="close-modal-btn"
               onClick={this.closeModal}
             >
               <i className="fa fa-3x fa-times" />

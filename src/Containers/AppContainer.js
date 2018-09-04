@@ -1,11 +1,11 @@
 import { connect } from 'react-redux';
 import App from '../App/App';
-import { toggleModal, updateModal, updateModalSlide } from '../actions/modal-actions';
+import { updateActiveIndex, toggleModal, updateModal, updateModalSlide } from '../actions/modal-actions';
 import { updateButton, updateHover } from '../actions/card-actions';
 
 const mapStateToProps = ( state ) => {
-  return ({ 
-    currentProject: state.modal.currentProject,
+  return ({
+    activeIndex: state.modal.activeIndex,
     projects: state.modal.projects,
     cardHover: state.card.cardHover,
     buttonHover: state.card.buttonHover,
@@ -20,6 +20,9 @@ const mapDispatchToProps = (dispatch) => ({
   },
   updateModal(project) {
     dispatch(updateModal(project))
+  },
+  updateActiveIndex(index) {
+    dispatch(updateActiveIndex(index))
   },
   updateModalSlide(index) {
     dispatch(updateModalSlide(index))

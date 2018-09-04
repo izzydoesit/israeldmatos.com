@@ -10,13 +10,13 @@ export default class ModalSlider extends Component {
 
   goToPrevSlide = throttle((e) => {
     e.preventDefault();
-    const { currentProject, activeModalIndex, updateModalSlide } = this.props;
-    
+    const { projects, activeIndex, activeModalIndex, updateModalSlide } = this.props;
+    const project = projects[activeIndex];
     let index = activeModalIndex;
     --index;
 
     if (index < 0) {
-      index = currentProject.pics.length - 1;
+      index = project.pics.length - 1;
     }
 
     updateModalSlide(index);
@@ -24,12 +24,12 @@ export default class ModalSlider extends Component {
 
   goToNextSlide = throttle((e) => {
     e.preventDefault();
-    const { currentProject, activeModalIndex, updateModalSlide } = this.props;
-    
+    const { projects, activeIndex, activeModalIndex, updateModalSlide } = this.props;
+    const project = projects[activeIndex];
     let index = activeModalIndex;
     ++index;
-    
-    if (index >= currentProject.pics.length) {
+
+    if (index >= project.pics.length) {
       index = 0
     }
 
@@ -37,6 +37,7 @@ export default class ModalSlider extends Component {
   }, 500, { trailing: false })
 
   render() {
+
     return(
       <div className="carousel">
         <Swipeable

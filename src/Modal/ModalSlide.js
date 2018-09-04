@@ -4,18 +4,18 @@ import './ModalSlide.css';
 
 export default class ModalSlide extends Component {
 
-  
+
   render() {
-    const { currentProject, activeModalIndex } = this.props;
+    const { activeIndex, projects, activeModalIndex } = this.props;
 
     return (
-      <div 
-        className="carousel-slot" 
+      <div
+        className="carousel-slot"
       >
         <img
           resizemode="stretch"
           className="slide-pic"
-          src={ currentProject.pics[activeModalIndex] }
+          src={ projects[activeIndex].pics[activeModalIndex] }
           alt="project pic"
         />
       </div>
@@ -24,6 +24,6 @@ export default class ModalSlide extends Component {
 }
 
 ModalSlide.propTypes = {
-  currentProject: PropTypes.object.isRequired,
+  activeIndex: PropTypes.number.isRequired,
   activeModalIndex: PropTypes.number.isRequired,
 }

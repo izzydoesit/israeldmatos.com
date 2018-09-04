@@ -14,30 +14,26 @@ export default class Slide extends Component {
   }
 
   render() {
-    const { currentProject } = this.props;
-    
+    const { project, handleOpenModal } = this.props;
     return (
       <div
-        className="slide slide-active"
-        key={currentProject.id}
-
+        className="slide"
       >
-        <div 
-          className="card" 
-        >
+        <div className="card">
           <img
-            resizemode="stretch"
             className="slide-pic"
-            src={currentProject.pics[0]}
+            resizemode="stretch"
+            src={project.pics[0]}
             alt='web project'
+            onClick={handleOpenModal}
           />
         </div>
 
         <div className="flex card-text" >
           <div className="bold title">
-            {currentProject.title}
+            {project.title}
           </div>
-          <div className="blurb">{currentProject.blurb}</div>
+          <div className="blurb">{project.blurb}</div>
         </div>
 
         <button
@@ -49,7 +45,7 @@ export default class Slide extends Component {
 }
 
 Slide.propTypes = {
-  currentProject: PropTypes.object.isRequired,
+  activeIndex: PropTypes.number.isRequired,
   buttonHover: PropTypes.bool.isRequired,
   cardHover: PropTypes.bool.isRequired,
 }
