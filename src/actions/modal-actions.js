@@ -1,12 +1,19 @@
-import { UPDATE_MODAL, TOGGLE_MODAL, UPDATE_MODAL_SLIDE } from '../constants';
+import { UPDATE_MODAL, TOGGLE_MODAL, UPDATE_ACTIVE_INDEX, UPDATE_MODAL_SLIDE } from '../constants';
 
-export const updateModal = (currentProject) => ({
+export const updateActiveIndex = (index) => {
+  return {
+    type: UPDATE_ACTIVE_INDEX,
+    index
+  }
+}
+
+export const updateModal = (index) => ({
   type: UPDATE_MODAL,
-  currentProject
+  index
 });
 
 export const updateModalSlide = (nextIndex) => ({
-  type: UPDATE_MODAL_SLIDE, 
+  type: UPDATE_MODAL_SLIDE,
   activeModalIndex: nextIndex
 });
 
