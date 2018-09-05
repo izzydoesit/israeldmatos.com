@@ -27,31 +27,30 @@ div.slick-slider > div.slick-arrow {
   display: block;
   top: 0;
   height: 100%;
-  width: 4vw;
+  width: 6vw;
   cursor: pointer;
-  font-size: 25em;
-  padding: 1%;
+  line-height: 10em;
   z-index: 99;
   background-color: transparent;
 }
 
 div.slick-slider > div.slick-arrow::before {
   color: #888;
-  font-size: 40px;
+  font-size: 15vh;
   position: absolute;
   top: 50%;
   transform: translateX(-50%);
 }
 
 div.slick-slider > .slick-prev {
-  left: 2%;
+  left: 10%;
   -moz-animation: bounce-left 2s infinite;
   -webkit-animation: bounce-left 2s infinite;
   animation: bounce-left 2s infinite;
 }
 
 div.slick-slider > .slick-next {
-  right: 6%;
+  right: 10%;
   -moz-animation: bounce-right 2s infinite;
   -webkit-animation: bounce-right 2s infinite;
   animation: bounce-right 2s infinite;
@@ -68,15 +67,20 @@ div.slick-slider > .slick-next {
 }
 
 @media screen and (min-width: 600px) {
+
   div.slick-slider > .slick-next {
-    right: 2%;
+    right: 3%;
+  }
+
+  div.slick-slider > .slick-prev {
+    left: 3%;
   }
 }
 
 @media screen and (min-width: 900px) {
 
-  div.slick-slider > div.slick-arrow {
-    /* background-color: #07BAC2; */
+  div.slick-slider > div.slick-arrow::before {
+    font-size: 10vh;
   }
 
   .slider-wrapper {
