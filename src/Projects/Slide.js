@@ -14,7 +14,7 @@ export default class Slide extends Component {
   }
 
   render() {
-    const { project, handleOpenModal } = this.props;
+    const { project } = this.props;
     return (
       <div
         className="slide"
@@ -25,7 +25,6 @@ export default class Slide extends Component {
             resizemode="stretch"
             src={project.pics[0]}
             alt='web project'
-            onClick={handleOpenModal}
           />
         </div>
 
