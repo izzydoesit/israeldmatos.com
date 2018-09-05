@@ -8,6 +8,34 @@ ul {
   background-color: #f5f5f5;
 }
 
+.slick-slider {
+  display: block;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.slick-list {
+
+  position: relative;
+}
+.slick-slide {
+
+}
+
+div.slick-slider > div.slick-arrow {
+  display: block;
+  height: 100%;
+  width: 8vw;
+  cursor: pointer;
+  font-size: 25em;
+  padding: 0;
+  background-color: #07BAC2;
+  z-index: 99;
+}
+div.slick-slider > .slick-next {
+
+}
+
 .slick-dots {
   font-size: 20px;
 }
