@@ -12,6 +12,28 @@ import './Carousel.css'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+function NextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style }}
+      onClick={onClick}
+    />
+  );
+}
+
+function PrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block" }}
+      onClick={onClick}
+    />
+  );
+}
+
 export default class Carousel extends Component {
 
   play = () => {
@@ -68,8 +90,8 @@ export default class Carousel extends Component {
       focusOnSelect: true,
       pauseOnFocus: true,
       pauseOnHover: true,
-      prevArrow: <SliderArrow direction="left" onClick={this.prevSlide} />,
-      nextArrow: <SliderArrow direction="right" onClick={this.nextSlide} />,
+      prevArrow: <PrevArrow onClick={this.prevSlide} />,
+      nextArrow: <NextArrow onClick={this.nextSlide} />,
       beforeChange: (current, next) => updateActiveIndex(next),
     };
 
