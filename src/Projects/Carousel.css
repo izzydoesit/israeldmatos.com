@@ -15,11 +15,8 @@ ul {
   align-items: center;
   position: relative;
 }
+
 .slick-list {
-
-}
-
-.slick-slide {
 
 }
 
@@ -27,11 +24,12 @@ div.slick-slider > div.slick-arrow {
   display: block;
   top: 0;
   height: 100%;
-  width: 6vw;
+  width: 20vw;
   cursor: pointer;
   line-height: 10em;
-  z-index: 99;
+  z-index: 99999;
   background-color: transparent;
+  position: absolute;
 }
 
 div.slick-slider > div.slick-arrow::before {
@@ -64,6 +62,8 @@ div.slick-slider > .slick-next {
   width: 100vw;
   overflow: hidden;
   cursor: pointer;
+  z-index: 1;
+  pointer-events: visibleFill
 }
 
 @media screen and (min-width: 600px) {
