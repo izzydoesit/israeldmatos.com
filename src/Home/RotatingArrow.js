@@ -16,7 +16,6 @@ export default class RotatingArrow extends Component {
             transition: `${style.speed}`
           }}
           className="arrow-icon fa fa-arrow-right"
-
         ></span>
       )}
 
