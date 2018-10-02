@@ -22,7 +22,7 @@ export default class SliderArrow extends Component {
   }
 
   render() {
-    
+
     return (
         <button
           className={`slider-btn ${this.props.direction}`}

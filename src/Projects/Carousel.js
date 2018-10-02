@@ -35,6 +35,12 @@ function PrevArrow(props) {
 }
 
 export default class Carousel extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      clicking: false
+    }
+  }
 
   play = () => {
     this.slider.slickPlay();
@@ -50,11 +56,17 @@ export default class Carousel extends Component {
     this.slider.slickGoTo(index)
   }
 
-  handleOpenModal = () => {
+  handleOpenModal = (e) => {
     console.log('opening modal');
-    this.pause();
-    this.props.toggleModal(true);
+    console.log('event on parent slider-cont', e.target, e.currentTarget)
+
+    if (e.clientX > 313 || e.clientX < 700) {
+      this.pause();
+      this.props.toggleModal(true);
+    }
   }
+
+
 
   handleMouseEnter = () => {
     this.props.updateHover(true);
@@ -65,17 +77,23 @@ export default class Carousel extends Component {
   }
 
   prevSlide = throttle((e) => {
+    console.log('click on arrow', e)
     e.preventDefault();
+    e.stopPropagation();
+    e.nativeEvent.stopImmediatePropagation();
     this.slider.slickPrev();
   }, 500, { trailing: false })
 
   nextSlide = throttle((e) => {
+    console.log('click on arrow', e)
     e.preventDefault();
+    e.stopPropagation();
+    e.nativeEvent.stopImmediatePropagation();
     this.slider.slickNext();
   }, 500, { trailing: false })
 
   render() {
-    const { projects, isModalOpen, activeIndex, updateModal, updateActiveIndex } = this.props;
+    const { projects, isModalOpen, activeIndex, updateActiveIndex } = this.props;
     const settings = {
       dots: true,
       fade: false,
@@ -102,7 +120,9 @@ export default class Carousel extends Component {
         animateIn="bounceIn"
         delay={600}
       >
-        <div className="flex carousel">
+        <div
+          className="flex carousel"
+        >
 
             <div className="slider-wrapper">
 
@@ -115,6 +135,7 @@ export default class Carousel extends Component {
 
                 <div
                   className="slide-wrapper"
+                  onClick={this.handleOpenModal}
                 >
                   <Slider ref={slider => (this.slider = slider)} {...settings}>
                   {projects.map((project, index) => {
@@ -122,7 +143,6 @@ export default class Carousel extends Component {
                       key={index}
                       index={index}
                       project={project}
-                      handleOpenModal={this.handleOpenModal.bind(this)}
                       { ...this.props }
                     />
                   })}
