@@ -1,0 +1,2299 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`class Slider extends _react.Component {
+  constructor(props) {
+    super(props);
+
+    this.goToSlide = this.goToSlide.bind(this);
+    this.goToPrevSlide = this.goToPrevSlide.bind(this);
+    this.goToNextSlide = this.goToNextSlide.bind(this);
+
+    this.state = {
+      activeIndex: 0 };
+
+  }
+
+  componentWillMount() {
+    this.setState({
+      slides: [{ imageUrl: \`\${_smarterbear2.default}\`, name: 'Smarter Bear' },
+      { imageUrl: _colorGame2.default, name: 'Color Game' },
+      { imageUrl: _curvaFit2.default, name: 'Curva Fit' },
+      { imageUrl: _hackerhaus2.default, name: 'HackerHaus' },
+      { imageUrl: _frais2.default, name: 'Frais' }] });
+
+
+  }
+
+  goToSlide(index) {
+    this.setState({ activeIndex: index });
+  }
+
+  goToPrevSlide(e) {
+    e.preventDefault();
+
+    let index = this.state.activeIndex;
+    // let { slides } = this.props;
+    let slidesLength = this.state.slides.length;
+
+    if (index < 1) {
+      index = slidesLength;
+    }
+
+    --index;
+
+    this.setState({
+      activeIndex: index });
+
+  }
+
+  goToNextSlide(e) {
+    e.preventDefault();
+
+    let index = this.state.activeIndex;
+    // let { slides } = this.props;
+    let slidesLength = this.state.slides.length - 1;
+
+    if (index === slidesLength) {
+      index = -1;
+    }
+
+    ++index;
+
+    this.setState({
+      activeIndex: index });
+
+  }
+
+  render() {
+    return (
+      _react2.default.createElement('div', { className: 'slider', __source: { fileName: _jsxFileName, lineNumber: 88 }, __self: this },
+
+        _react2.default.createElement(_LeftArrow2.default, { onClick: e => this.goToPrevSlide(e), __source: { fileName: _jsxFileName, lineNumber: 90 }, __self: this }),
+
+        _react2.default.createElement('ul', { className: 'slides', __source: { fileName: _jsxFileName, lineNumber: 92 }, __self: this },
+          this.state.slides.map((slide, index) => {
+            _react2.default.createElement(_Slide2.default, {
+              key: index,
+              index: index,
+              activeIndex: this.state.activeIndex,
+              slide: slide.imageUrl, __source: { fileName: _jsxFileName, lineNumber: 94 }, __self: this });
+
+          })),
+
+
+        _react2.default.createElement(_RightArrow2.default, { onClick: e => this.goToNextSlide(e), __source: { fileName: _jsxFileName, lineNumber: 103 }, __self: this }),
+
+        _react2.default.createElement('ul', { className: 'slider-indicator', __source: { fileName: _jsxFileName, lineNumber: 105 }, __self: this },
+          this.state.slides.map((slide, index) =>
+          _react2.default.createElement(_SliderIndicator2.default, {
+            key: index,
+            index: index,
+            activeIndex: this.state.activeIndex,
+            onClick: e => this.goToSlide(e), __source: { fileName: _jsxFileName, lineNumber: 107 }, __self: this })))));
+
+
+
+
+
+  }} renders and matches our snapshot 1`] = `
+<div
+  className="slider"
+>
+  <a
+    className="slider-arrow slider-arrow-left"
+    href="#"
+    onClick={[Function]}
+  >
+    <span
+      className="fa fa-2x fa-angle-left"
+    />
+  </a>
+  <ul
+    className="slides"
+  />
+  <a
+    className="slider-arrow slider-arrow-right"
+    href="#"
+    onClick={[Function]}
+  >
+    <span
+      className="fa fa-2x fa-angle-right"
+    />
+  </a>
+  <ul
+    className="slider-indicator"
+  >
+    <li>
+      <a
+        className="slider-indicator slider-indicator-active"
+        onClick={[Function]}
+      />
+    </li>
+    <li>
+      <a
+        className="slider-indicator"
+        onClick={[Function]}
+      />
+    </li>
+    <li>
+      <a
+        className="slider-indicator"
+        onClick={[Function]}
+      />
+    </li>
+    <li>
+      <a
+        className="slider-indicator"
+        onClick={[Function]}
+      />
+    </li>
+    <li>
+      <a
+        className="slider-indicator"
+        onClick={[Function]}
+      />
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`class Slider extends _react.Component {
+  constructor(props) {
+    super(props);
+
+    this.goToSlide = this.goToSlide.bind(this);
+    this.goToPrevSlide = this.goToPrevSlide.bind(this);
+    this.goToNextSlide = this.goToNextSlide.bind(this);
+
+    this.state = {
+      activeIndex: 0 };
+
+  }
+
+  componentWillMount() {
+    this.setState({
+      slides: [{ imageUrl: \`\${_smarterbear2.default}\`, name: 'Smarter Bear' },
+      { imageUrl: _colorGame2.default, name: 'Color Game' },
+      { imageUrl: _curvaFit2.default, name: 'Curva Fit' },
+      { imageUrl: _hackerhaus2.default, name: 'HackerHaus' },
+      { imageUrl: _frais2.default, name: 'Frais' }] });
+
+
+  }
+
+  goToSlide(index) {
+    this.setState({ activeIndex: index });
+  }
+
+  goToPrevSlide(e) {
+    e.preventDefault();
+
+    let index = this.state.activeIndex;
+    // let { slides } = this.props;
+    let slidesLength = this.state.slides.length;
+
+    if (index < 1) {
+      index = slidesLength;
+    }
+
+    --index;
+
+    this.setState({
+      activeIndex: index });
+
+  }
+
+  goToNextSlide(e) {
+    e.preventDefault();
+
+    let index = this.state.activeIndex;
+    // let { slides } = this.props;
+    let slidesLength = this.state.slides.length - 1;
+
+    if (index === slidesLength) {
+      index = -1;
+    }
+
+    ++index;
+
+    this.setState({
+      activeIndex: index });
+
+  }
+
+  render() {
+    return (
+      _react2.default.createElement('div', { className: 'slider', __source: { fileName: _jsxFileName, lineNumber: 88 }, __self: this },
+
+        _react2.default.createElement(_LeftArrow2.default, { onClick: e => this.goToPrevSlide(e), __source: { fileName: _jsxFileName, lineNumber: 90 }, __self: this }),
+
+        _react2.default.createElement('ul', { className: 'slides', __source: { fileName: _jsxFileName, lineNumber: 92 }, __self: this },
+          this.state.slides.map((slide, index) => {
+            _react2.default.createElement(_Slide2.default, {
+              key: index,
+              index: index,
+              activeIndex: this.state.activeIndex,
+              slide: slide.imageUrl, __source: { fileName: _jsxFileName, lineNumber: 94 }, __self: this });
+
+          })),
+
+
+        _react2.default.createElement(_RightArrow2.default, { onClick: e => this.goToNextSlide(e), __source: { fileName: _jsxFileName, lineNumber: 103 }, __self: this }),
+
+        _react2.default.createElement('ul', { className: 'slider-indicators', __source: { fileName: _jsxFileName, lineNumber: 105 }, __self: this },
+          this.state.slides.map((slide, index) =>
+          _react2.default.createElement(_SliderIndicator2.default, {
+            key: index,
+            index: index,
+            activeIndex: this.state.activeIndex,
+            onClick: e => this.goToSlide(e), __source: { fileName: _jsxFileName, lineNumber: 107 }, __self: this })))));
+
+
+
+
+
+  }} renders and matches our snapshot 1`] = `
+<div
+  className="slider"
+>
+  <a
+    className="slider-arrow slider-arrow-left"
+    href="#"
+    onClick={[Function]}
+  >
+    <span
+      className="fa fa-2x fa-angle-left"
+    />
+  </a>
+  <ul
+    className="slides"
+  />
+  <a
+    className="slider-arrow slider-arrow-right"
+    href="#"
+    onClick={[Function]}
+  >
+    <span
+      className="fa fa-2x fa-angle-right"
+    />
+  </a>
+  <ul
+    className="slider-indicators"
+  >
+    <li>
+      <a
+        className="slider-indicator slider-indicator-active"
+        onClick={[Function]}
+      />
+    </li>
+    <li>
+      <a
+        className="slider-indicator"
+        onClick={[Function]}
+      />
+    </li>
+    <li>
+      <a
+        className="slider-indicator"
+        onClick={[Function]}
+      />
+    </li>
+    <li>
+      <a
+        className="slider-indicator"
+        onClick={[Function]}
+      />
+    </li>
+    <li>
+      <a
+        className="slider-indicator"
+        onClick={[Function]}
+      />
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`class Slider extends _react.Component {
+  constructor(props) {
+    super(props);
+
+    this.goToSlide = this.goToSlide.bind(this);
+    this.goToPrevSlide = this.goToPrevSlide.bind(this);
+    this.goToNextSlide = this.goToNextSlide.bind(this);
+
+    this.state = {
+      activeIndex: 0 };
+
+  }
+
+  componentWillMount() {
+    this.setState({
+      slides: [{ imageUrl: \`\${_smarterbear2.default}\`, name: 'Smarter Bear' },
+      { imageUrl: _colorGame2.default, name: 'Color Game' },
+      { imageUrl: _curvaFit2.default, name: 'Curva Fit' },
+      { imageUrl: _hackerhaus2.default, name: 'HackerHaus' },
+      { imageUrl: _frais2.default, name: 'Frais' }] });
+
+
+  }
+
+  goToSlide(index) {
+    this.setState({ activeIndex: index });
+  }
+
+  goToPrevSlide(e) {
+    e.preventDefault();
+
+    let index = this.state.activeIndex;
+    // let { slides } = this.props;
+    let slidesLength = this.state.slides.length;
+
+    if (index < 1) {
+      index = slidesLength;
+    }
+
+    --index;
+
+    this.setState({
+      activeIndex: index });
+
+  }
+
+  goToNextSlide(e) {
+    e.preventDefault();
+
+    let index = this.state.activeIndex;
+    // let { slides } = this.props;
+    let slidesLength = this.state.slides.length - 1;
+
+    if (index === slidesLength) {
+      index = -1;
+    }
+
+    ++index;
+
+    this.setState({
+      activeIndex: index });
+
+  }
+
+  render() {
+    return (
+      _react2.default.createElement('div', { className: 'slider-container', __source: { fileName: _jsxFileName, lineNumber: 88 }, __self: this },
+        _react2.default.createElement('div', { className: 'slider', __source: { fileName: _jsxFileName, lineNumber: 89 }, __self: this },
+
+          _react2.default.createElement(_LeftArrow2.default, { onClick: e => this.goToPrevSlide(e), __source: { fileName: _jsxFileName, lineNumber: 91 }, __self: this }),
+
+          _react2.default.createElement('ul', { className: 'slides', __source: { fileName: _jsxFileName, lineNumber: 93 }, __self: this },
+            this.state.slides.map((slide, index) => {
+              _react2.default.createElement(_Slide2.default, {
+                key: index,
+                index: index,
+                activeIndex: this.state.activeIndex,
+                slide: slide, __source: { fileName: _jsxFileName, lineNumber: 95 }, __self: this });
+
+            })),
+
+
+          _react2.default.createElement(_RightArrow2.default, { onClick: e => this.goToNextSlide(e), __source: { fileName: _jsxFileName, lineNumber: 104 }, __self: this }),
+
+          _react2.default.createElement('ul', { className: 'slider-indicator', __source: { fileName: _jsxFileName, lineNumber: 106 }, __self: this },
+            this.state.slides.map((slide, index) =>
+            _react2.default.createElement(_SliderIndicator2.default, {
+              key: index,
+              index: index,
+              activeIndex: this.state.activeIndex,
+              onClick: e => this.goToSlide(e), __source: { fileName: _jsxFileName, lineNumber: 108 }, __self: this }))))));
+
+
+
+
+
+
+  }} renders and matches our snapshot 1`] = `
+<div
+  className="slider-container"
+>
+  <div
+    className="slider"
+  >
+    <a
+      className="slider-arrow slider-arrow-left"
+      href="#"
+      onClick={[Function]}
+    >
+      <span
+        className="fa fa-2x fa-angle-left"
+      />
+    </a>
+    <ul
+      className="slides"
+    />
+    <a
+      className="slider-arrow slider-arrow-right"
+      href="#"
+      onClick={[Function]}
+    >
+      <span
+        className="fa fa-2x fa-angle-right"
+      />
+    </a>
+    <ul
+      className="slider-indicator"
+    >
+      <li>
+        <a
+          className="slider-indicator slider-indicator-active"
+          onClick={[Function]}
+        />
+      </li>
+      <li>
+        <a
+          className="slider-indicator"
+          onClick={[Function]}
+        />
+      </li>
+      <li>
+        <a
+          className="slider-indicator"
+          onClick={[Function]}
+        />
+      </li>
+      <li>
+        <a
+          className="slider-indicator"
+          onClick={[Function]}
+        />
+      </li>
+      <li>
+        <a
+          className="slider-indicator"
+          onClick={[Function]}
+        />
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`class Slider extends _react.Component {
+  constructor(props) {
+    super(props);
+
+    this.goToSlide = this.goToSlide.bind(this);
+    this.goToPrevSlide = this.goToPrevSlide.bind(this);
+    this.goToNextSlide = this.goToNextSlide.bind(this);
+
+    this.state = {
+      activeIndex: 0 };
+
+  }
+
+  componentWillMount() {
+    this.setState({
+      slides: [{ imageUrl: \`\${_smarterbear2.default}\`, name: 'Smarter Bear' },
+      { imageUrl: _colorGame2.default, name: 'Color Game' },
+      { imageUrl: _curvaFit2.default, name: 'Curva Fit' },
+      { imageUrl: _hackerhaus2.default, name: 'HackerHaus' },
+      { imageUrl: _frais2.default, name: 'Frais' }] });
+
+
+  }
+
+  goToSlide(index) {
+    this.setState({ activeIndex: index });
+  }
+
+  goToPrevSlide(e) {
+    e.preventDefault();
+
+    let index = this.state.activeIndex;
+    // let { slides } = this.props;
+    let slidesLength = this.state.slides.length;
+
+    if (index < 1) {
+      index = slidesLength;
+    }
+
+    --index;
+
+    this.setState({
+      activeIndex: index });
+
+  }
+
+  goToNextSlide(e) {
+    e.preventDefault();
+
+    let index = this.state.activeIndex;
+    // let { slides } = this.props;
+    let slidesLength = this.state.slides.length - 1;
+
+    if (index === slidesLength) {
+      index = -1;
+    }
+
+    ++index;
+
+    this.setState({
+      activeIndex: index });
+
+  }
+
+  render() {
+    return (
+      _react2.default.createElement('div', { className: 'slider-container', __source: { fileName: _jsxFileName, lineNumber: 88 }, __self: this },
+        _react2.default.createElement('div', { className: 'slider', __source: { fileName: _jsxFileName, lineNumber: 89 }, __self: this },
+
+          _react2.default.createElement(_LeftArrow2.default, { onClick: e => this.goToPrevSlide(e), __source: { fileName: _jsxFileName, lineNumber: 91 }, __self: this }),
+
+          _react2.default.createElement('ul', { className: 'slides', __source: { fileName: _jsxFileName, lineNumber: 93 }, __self: this },
+            this.state.slides.map((slide, index) => {
+              _react2.default.createElement(_Slide2.default, {
+                key: index,
+                index: index,
+                activeIndex: this.state.activeIndex,
+                slide: slide.imageUrl, __source: { fileName: _jsxFileName, lineNumber: 95 }, __self: this });
+
+            })),
+
+
+          _react2.default.createElement(_RightArrow2.default, { onClick: e => this.goToNextSlide(e), __source: { fileName: _jsxFileName, lineNumber: 104 }, __self: this }),
+
+          _react2.default.createElement('ul', { className: 'slider-indicator', __source: { fileName: _jsxFileName, lineNumber: 106 }, __self: this },
+            this.state.slides.map((slide, index) =>
+            _react2.default.createElement(_SliderIndicator2.default, {
+              key: index,
+              index: index,
+              activeIndex: this.state.activeIndex,
+              onClick: e => this.goToSlide(e), __source: { fileName: _jsxFileName, lineNumber: 108 }, __self: this }))))));
+
+
+
+
+
+
+  }} renders and matches our snapshot 1`] = `
+<div
+  className="slider-container"
+>
+  <div
+    className="slider"
+  >
+    <a
+      className="slider-arrow slider-arrow-left"
+      href="#"
+      onClick={[Function]}
+    >
+      <span
+        className="fa fa-2x fa-angle-left"
+      />
+    </a>
+    <ul
+      className="slides"
+    />
+    <a
+      className="slider-arrow slider-arrow-right"
+      href="#"
+      onClick={[Function]}
+    >
+      <span
+        className="fa fa-2x fa-angle-right"
+      />
+    </a>
+    <ul
+      className="slider-indicator"
+    >
+      <li>
+        <a
+          className="slider-indicator slider-indicator-active"
+          onClick={[Function]}
+        />
+      </li>
+      <li>
+        <a
+          className="slider-indicator"
+          onClick={[Function]}
+        />
+      </li>
+      <li>
+        <a
+          className="slider-indicator"
+          onClick={[Function]}
+        />
+      </li>
+      <li>
+        <a
+          className="slider-indicator"
+          onClick={[Function]}
+        />
+      </li>
+      <li>
+        <a
+          className="slider-indicator"
+          onClick={[Function]}
+        />
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`class Slider extends _react.Component {
+  constructor(props) {
+    super(props);
+
+    this.goToSlide = this.goToSlide.bind(this);
+    this.goToPrevSlide = this.goToPrevSlide.bind(this);
+    this.goToNextSlide = this.goToNextSlide.bind(this);
+
+    this.state = {
+      activeIndex: 0 };
+
+  }
+
+  componentWillMount() {
+    this.setState({
+      slides: slideArray });
+
+  }
+
+  goToSlide(index) {
+    this.setState({ activeIndex: index });
+  }
+
+  goToPrevSlide(e) {
+    e.preventDefault();
+
+    let index = this.state.activeIndex;
+    // let { slides } = this.props;
+    let slidesLength = this.state.slides.length;
+
+    --index;
+
+    if (index < 0) {
+      index = slidesLength - 1;
+    }
+
+    this.goToSlide(index);
+  }
+
+  goToNextSlide(e) {
+    e.preventDefault();
+
+    let index = this.state.activeIndex;
+    // let { slides } = this.props;
+    let slidesLength = this.state.slides.length;
+
+    ++index;
+
+    if (index >= slidesLength) {
+      index = 0;
+    }
+
+    this.goToSlide(index);
+  }
+
+  render() {
+    return (
+      _react2.default.createElement('div', { className: 'container flex', __source: { fileName: _jsxFileName, lineNumber: 104 }, __self: this },
+
+
+
+
+
+
+        _react2.default.createElement('div', { className: 'slider-wrapper', __source: { fileName: _jsxFileName, lineNumber: 111 }, __self: this },
+
+          _react2.default.createElement(_SliderArrow2.default, {
+            direction: 'left',
+            onClick: e => this.goToPrevSlide(e), __source: { fileName: _jsxFileName, lineNumber: 113 }, __self: this }),
+
+          _react2.default.createElement('ul', { className: 'slides', __source: { fileName: _jsxFileName, lineNumber: 117 }, __self: this },
+            this.state.slides.map((slide, index) =>
+            _react2.default.createElement(_Slide2.default, {
+              key: index,
+              index: index,
+              activeIndex: this.state.activeIndex,
+              slide: slide, __source: { fileName: _jsxFileName, lineNumber: 119 }, __self: this }))),
+
+
+
+          _react2.default.createElement(_SliderArrow2.default, {
+            direction: 'right',
+            onClick: e => this.goToNextSlide(e), __source: { fileName: _jsxFileName, lineNumber: 127 }, __self: this })),
+
+
+
+        _react2.default.createElement('div', { className: 'indicator-wrap', __source: { fileName: _jsxFileName, lineNumber: 133 }, __self: this },
+          _react2.default.createElement('ul', { className: 'slider-indicators', __source: { fileName: _jsxFileName, lineNumber: 134 }, __self: this },
+            this.state.slides.map((slide, index) =>
+            _react2.default.createElement(_SliderIndicator2.default, {
+              key: index,
+              index: index,
+              activeIndex: this.state.activeIndex,
+              isActive: this.state.activeIndex === index,
+              onClick: e => this.goToSlide(index), __source: { fileName: _jsxFileName, lineNumber: 136 }, __self: this }))))));
+
+
+
+
+
+
+
+  }} renders and matches our snapshot 1`] = `
+<div
+  className="container flex"
+>
+  <div
+    className="slider-wrapper"
+  >
+    <div
+      className="arrow-container"
+    >
+      <button
+        className="slider-arrow left bounce-left"
+        onClick={[Function]}
+      >
+        <i
+          className="fa fa-5x fa-angle-left"
+        />
+      </button>
+    </div>
+    <ul
+      className="slides"
+    >
+      <li
+        className="slide slide-active"
+      >
+        <img
+          alt="web project"
+          className="slide-pic"
+          src="smarterbear.png"
+        />
+      </li>
+      <li
+        className="slide slide-hide"
+      >
+        <img
+          alt="web project"
+          className="slide-pic"
+          src="colorGame.png"
+        />
+      </li>
+      <li
+        className="slide slide-hide"
+      >
+        <img
+          alt="web project"
+          className="slide-pic"
+          src="curvaFit.png"
+        />
+      </li>
+      <li
+        className="slide slide-hide"
+      >
+        <img
+          alt="web project"
+          className="slide-pic"
+          src="hackerhaus.png"
+        />
+      </li>
+      <li
+        className="slide slide-hide"
+      >
+        <img
+          alt="web project"
+          className="slide-pic"
+          src="frais.png"
+        />
+      </li>
+    </ul>
+    <div
+      className="arrow-container"
+    >
+      <button
+        className="slider-arrow right bounce-right"
+        onClick={[Function]}
+      >
+        <i
+          className="fa fa-5x fa-angle-right"
+        />
+      </button>
+    </div>
+  </div>
+  <div
+    className="indicator-wrap"
+  >
+    <ul
+      className="slider-indicators"
+    >
+      <li>
+        <a
+          className="slider-indicator slider-indicator-active"
+          onClick={[Function]}
+        />
+      </li>
+      <li>
+        <a
+          className="slider-indicator"
+          onClick={[Function]}
+        />
+      </li>
+      <li>
+        <a
+          className="slider-indicator"
+          onClick={[Function]}
+        />
+      </li>
+      <li>
+        <a
+          className="slider-indicator"
+          onClick={[Function]}
+        />
+      </li>
+      <li>
+        <a
+          className="slider-indicator"
+          onClick={[Function]}
+        />
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`class Slider extends _react.Component {
+  constructor(props) {
+    super(props);
+
+    this.goToSlide = this.goToSlide.bind(this);
+    this.goToPrevSlide = this.goToPrevSlide.bind(this);
+    this.goToNextSlide = this.goToNextSlide.bind(this);
+
+    this.state = {
+      activeIndex: 0 };
+
+  }
+
+  componentWillMount() {
+    this.setState({
+      slides: slideArray });
+
+  }
+
+  goToSlide(index) {
+    this.setState({ activeIndex: index });
+  }
+
+  goToPrevSlide(e) {
+    e.preventDefault();
+
+    let index = this.state.activeIndex;
+    // let { slides } = this.props;
+    let slidesLength = this.state.slides.length;
+
+    --index;
+
+    if (index < 0) {
+      index = slidesLength - 1;
+    }
+
+    this.goToSlide(index);
+  }
+
+  goToNextSlide(e) {
+    e.preventDefault();
+
+    let index = this.state.activeIndex;
+    // let { slides } = this.props;
+    let slidesLength = this.state.slides.length;
+
+    ++index;
+
+    if (index >= slidesLength) {
+      index = 0;
+    }
+
+    this.goToSlide(index);
+  }
+
+  render() {
+    return (
+      _react2.default.createElement('div', { className: 'container slider', __source: { fileName: _jsxFileName, lineNumber: 104 }, __self: this },
+
+
+
+
+
+
+        _react2.default.createElement('div', { className: 'slider-wrapper', __source: { fileName: _jsxFileName, lineNumber: 111 }, __self: this },
+
+          _react2.default.createElement(_SliderArrow2.default, {
+            direction: 'left',
+            onClick: e => this.goToPrevSlide(e), __source: { fileName: _jsxFileName, lineNumber: 113 }, __self: this }),
+
+          _react2.default.createElement('ul', { className: 'slides', __source: { fileName: _jsxFileName, lineNumber: 117 }, __self: this },
+            this.state.slides.map((slide, index) =>
+            _react2.default.createElement(_Slide2.default, {
+              key: index,
+              index: index,
+              activeIndex: this.state.activeIndex,
+              slide: slide, __source: { fileName: _jsxFileName, lineNumber: 119 }, __self: this }))),
+
+
+
+          _react2.default.createElement(_SliderArrow2.default, {
+            direction: 'right',
+            onClick: e => this.goToNextSlide(e), __source: { fileName: _jsxFileName, lineNumber: 127 }, __self: this })),
+
+
+
+        _react2.default.createElement('div', { className: 'indicator-wrap', __source: { fileName: _jsxFileName, lineNumber: 133 }, __self: this },
+          _react2.default.createElement('ul', { className: 'slider-indicators', __source: { fileName: _jsxFileName, lineNumber: 134 }, __self: this },
+            this.state.slides.map((slide, index) =>
+            _react2.default.createElement(_SliderIndicator2.default, {
+              key: index,
+              index: index,
+              activeIndex: this.state.activeIndex,
+              isActive: this.state.activeIndex === index,
+              onClick: e => this.goToSlide(index), __source: { fileName: _jsxFileName, lineNumber: 136 }, __self: this }))))));
+
+
+
+
+
+
+
+  }} renders and matches our snapshot 1`] = `
+<div
+  className="container slider"
+>
+  <div
+    className="slider-wrapper"
+  >
+    <div
+      className="arrow-container"
+    >
+      <button
+        className="slider-arrow left bounce-left"
+        onClick={[Function]}
+      >
+        <i
+          className="fa fa-5x fa-angle-left"
+        />
+      </button>
+    </div>
+    <ul
+      className="slides"
+    >
+      <li
+        className="slide slide-active"
+      >
+        <img
+          alt="web project"
+          className="slide-pic"
+          src="smarterbear.png"
+        />
+      </li>
+      <li
+        className="slide slide-hide"
+      >
+        <img
+          alt="web project"
+          className="slide-pic"
+          src="colorGame.png"
+        />
+      </li>
+      <li
+        className="slide slide-hide"
+      >
+        <img
+          alt="web project"
+          className="slide-pic"
+          src="curvaFit.png"
+        />
+      </li>
+      <li
+        className="slide slide-hide"
+      >
+        <img
+          alt="web project"
+          className="slide-pic"
+          src="hackerhaus.png"
+        />
+      </li>
+      <li
+        className="slide slide-hide"
+      >
+        <img
+          alt="web project"
+          className="slide-pic"
+          src="frais.png"
+        />
+      </li>
+    </ul>
+    <div
+      className="arrow-container"
+    >
+      <button
+        className="slider-arrow right bounce-right"
+        onClick={[Function]}
+      >
+        <i
+          className="fa fa-5x fa-angle-right"
+        />
+      </button>
+    </div>
+  </div>
+  <div
+    className="indicator-wrap"
+  >
+    <ul
+      className="slider-indicators"
+    >
+      <li>
+        <a
+          className="slider-indicator slider-indicator-active"
+          onClick={[Function]}
+        />
+      </li>
+      <li>
+        <a
+          className="slider-indicator"
+          onClick={[Function]}
+        />
+      </li>
+      <li>
+        <a
+          className="slider-indicator"
+          onClick={[Function]}
+        />
+      </li>
+      <li>
+        <a
+          className="slider-indicator"
+          onClick={[Function]}
+        />
+      </li>
+      <li>
+        <a
+          className="slider-indicator"
+          onClick={[Function]}
+        />
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`class Slider extends _react.Component {
+  constructor(props) {
+    super(props);
+
+    this.goToSlide = this.goToSlide.bind(this);
+    this.goToPrevSlide = this.goToPrevSlide.bind(this);
+    this.goToNextSlide = this.goToNextSlide.bind(this);
+
+    this.state = {
+      activeIndex: 0 };
+
+  }
+
+  componentWillMount() {
+    this.setState({
+      slides: slideArray });
+
+  }
+
+  goToSlide(index) {
+    this.setState({ activeIndex: index });
+  }
+
+  goToPrevSlide(e) {
+    e.preventDefault();
+
+    let index = this.state.activeIndex;
+    // let { slides } = this.props;
+    let slidesLength = this.state.slides.length;
+
+    --index;
+
+    if (index < 0) {
+      index = slidesLength - 1;
+    }
+
+    this.goToSlide(index);
+  }
+
+  goToNextSlide(e) {
+    e.preventDefault();
+
+    let index = this.state.activeIndex;
+    // let { slides } = this.props;
+    let slidesLength = this.state.slides.length;
+
+    ++index;
+
+    if (index >= slidesLength) {
+      index = 0;
+    }
+
+    this.goToSlide(index);
+  }
+
+  render() {
+    return (
+      _react2.default.createElement('div', { className: 'container slider', __source: { fileName: _jsxFileName, lineNumber: 104 }, __self: this },
+
+
+
+
+
+
+        _react2.default.createElement('div', { id: 'gallery', className: 'slider-wrapper', __source: { fileName: _jsxFileName, lineNumber: 111 }, __self: this },
+
+          _react2.default.createElement(_SliderArrow2.default, {
+            direction: 'left',
+            onClick: e => this.goToPrevSlide(e), __source: { fileName: _jsxFileName, lineNumber: 113 }, __self: this }),
+
+          _react2.default.createElement('ul', { className: 'slides', __source: { fileName: _jsxFileName, lineNumber: 117 }, __self: this },
+            this.state.slides.map((slide, index) =>
+            _react2.default.createElement(_Slide2.default, {
+              key: index,
+              index: index,
+              activeIndex: this.state.activeIndex,
+              slide: slide, __source: { fileName: _jsxFileName, lineNumber: 119 }, __self: this }))),
+
+
+
+          _react2.default.createElement(_SliderArrow2.default, {
+            direction: 'right',
+            onClick: e => this.goToNextSlide(e), __source: { fileName: _jsxFileName, lineNumber: 127 }, __self: this })),
+
+
+
+        _react2.default.createElement('div', { className: 'indicator-wrap', __source: { fileName: _jsxFileName, lineNumber: 133 }, __self: this },
+          _react2.default.createElement('ul', { className: 'slider-indicators', __source: { fileName: _jsxFileName, lineNumber: 134 }, __self: this },
+            this.state.slides.map((slide, index) =>
+            _react2.default.createElement(_SliderIndicator2.default, {
+              key: index,
+              index: index,
+              activeIndex: this.state.activeIndex,
+              isActive: this.state.activeIndex === index,
+              onClick: e => this.goToSlide(index), __source: { fileName: _jsxFileName, lineNumber: 136 }, __self: this }))))));
+
+
+
+
+
+
+
+  }} renders and matches our snapshot 1`] = `
+<div
+  className="container slider"
+>
+  <div
+    className="slider-wrapper"
+    id="gallery"
+  >
+    <div
+      className="arrow-container"
+    >
+      <button
+        className="slider-arrow left bounce-left"
+        onClick={[Function]}
+      >
+        <i
+          className="fa fa-5x fa-angle-left"
+        />
+      </button>
+    </div>
+    <ul
+      className="slides"
+    >
+      <li
+        className="slide slide-active"
+      >
+        <div
+          className="card"
+        >
+          <img
+            alt="web project"
+            className="slide-pic"
+            src="smarterbear.png"
+          />
+        </div>
+        <div
+          className="text"
+        >
+          <div
+            className="bold"
+          >
+            Smarter Bear
+          </div>
+          <span
+            class="highlight"
+          />
+        </div>
+      </li>
+      <li
+        className="slide slide-hide"
+      >
+        <div
+          className="card"
+        >
+          <img
+            alt="web project"
+            className="slide-pic"
+            src="colorGame.png"
+          />
+        </div>
+        <div
+          className="text"
+        >
+          <div
+            className="bold"
+          >
+            The Color Game
+          </div>
+          <span
+            class="highlight"
+          />
+        </div>
+      </li>
+      <li
+        className="slide slide-hide"
+      >
+        <div
+          className="card"
+        >
+          <img
+            alt="web project"
+            className="slide-pic"
+            src="curvaFit.png"
+          />
+        </div>
+        <div
+          className="text"
+        >
+          <div
+            className="bold"
+          >
+            Curva Fitness
+          </div>
+          <span
+            class="highlight"
+          />
+        </div>
+      </li>
+      <li
+        className="slide slide-hide"
+      >
+        <div
+          className="card"
+        >
+          <img
+            alt="web project"
+            className="slide-pic"
+            src="hackerhaus.png"
+          />
+        </div>
+        <div
+          className="text"
+        >
+          <div
+            className="bold"
+          >
+            Hackerhaus
+          </div>
+          <span
+            class="highlight"
+          />
+        </div>
+      </li>
+      <li
+        className="slide slide-hide"
+      >
+        <div
+          className="card"
+        >
+          <img
+            alt="web project"
+            className="slide-pic"
+            src="frais.png"
+          />
+        </div>
+        <div
+          className="text"
+        >
+          <div
+            className="bold"
+          >
+            Frais Recipes
+          </div>
+          <span
+            class="highlight"
+          />
+        </div>
+      </li>
+    </ul>
+    <div
+      className="arrow-container"
+    >
+      <button
+        className="slider-arrow right bounce-right"
+        onClick={[Function]}
+      >
+        <i
+          className="fa fa-5x fa-angle-right"
+        />
+      </button>
+    </div>
+  </div>
+  <div
+    className="indicator-wrap"
+  >
+    <ul
+      className="slider-indicators"
+    >
+      <li>
+        <a
+          className="slider-indicator slider-indicator-active"
+          onClick={[Function]}
+        />
+      </li>
+      <li>
+        <a
+          className="slider-indicator"
+          onClick={[Function]}
+        />
+      </li>
+      <li>
+        <a
+          className="slider-indicator"
+          onClick={[Function]}
+        />
+      </li>
+      <li>
+        <a
+          className="slider-indicator"
+          onClick={[Function]}
+        />
+      </li>
+      <li>
+        <a
+          className="slider-indicator"
+          onClick={[Function]}
+        />
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`class Slider extends _react.Component {
+  constructor(props) {
+    super(props);
+
+    this.goToSlide = this.goToSlide.bind(this);
+    this.goToPrevSlide = this.goToPrevSlide.bind(this);
+    this.goToNextSlide = this.goToNextSlide.bind(this);
+
+    this.state = {
+      activeIndex: 0 };
+
+  }
+
+  componentWillMount() {
+    this.setState({
+      slides: slideArray });
+
+  }
+
+  goToSlide(index) {
+    this.setState({ activeIndex: index });
+  }
+
+  goToPrevSlide(e) {
+    e.preventDefault();
+
+    let index = this.state.activeIndex;
+    // let { slides } = this.props;
+    let slidesLength = this.state.slides.length;
+
+    --index;
+
+    if (index < 0) {
+      index = slidesLength - 1;
+    }
+
+    this.goToSlide(index);
+  }
+
+  goToNextSlide(e) {
+    e.preventDefault();
+
+    let index = this.state.activeIndex;
+    // let { slides } = this.props;
+    let slidesLength = this.state.slides.length;
+
+    ++index;
+
+    if (index >= slidesLength) {
+      index = 0;
+    }
+
+    this.goToSlide(index);
+  }
+
+  render() {
+    return (
+      _react2.default.createElement('div', { className: 'slider', __source: { fileName: _jsxFileName, lineNumber: 104 }, __self: this },
+
+
+
+
+
+
+        _react2.default.createElement('div', { className: 'slider-content', __source: { fileName: _jsxFileName, lineNumber: 111 }, __self: this },
+
+          _react2.default.createElement(_SliderArrow2.default, {
+            direction: 'left',
+            onClick: e => this.goToPrevSlide(e), __source: { fileName: _jsxFileName, lineNumber: 113 }, __self: this }),
+
+          _react2.default.createElement('ul', { className: 'slides', __source: { fileName: _jsxFileName, lineNumber: 117 }, __self: this },
+            this.state.slides.map((slide, index) =>
+            _react2.default.createElement(_Slide2.default, {
+              key: index,
+              index: index,
+              activeIndex: this.state.activeIndex,
+              slide: slide, __source: { fileName: _jsxFileName, lineNumber: 119 }, __self: this }))),
+
+
+
+          _react2.default.createElement(_SliderArrow2.default, {
+            direction: 'right',
+            onClick: e => this.goToNextSlide(e), __source: { fileName: _jsxFileName, lineNumber: 127 }, __self: this })),
+
+
+
+        _react2.default.createElement('div', { className: 'indicator-wrap', __source: { fileName: _jsxFileName, lineNumber: 133 }, __self: this },
+          _react2.default.createElement('ul', { className: 'slider-indicators', __source: { fileName: _jsxFileName, lineNumber: 134 }, __self: this },
+            this.state.slides.map((slide, index) =>
+            _react2.default.createElement(_SliderIndicator2.default, {
+              key: index,
+              index: index,
+              activeIndex: this.state.activeIndex,
+              isActive: this.state.activeIndex === index,
+              onClick: e => this.goToSlide(index), __source: { fileName: _jsxFileName, lineNumber: 136 }, __self: this }))))));
+
+
+
+
+
+
+
+  }} renders and matches our snapshot 1`] = `
+<div
+  className="slider"
+>
+  <div
+    className="slider-content"
+  >
+    <div
+      className="arrow-container"
+    >
+      <button
+        className="slider-arrow left bounce-left"
+        onClick={[Function]}
+      >
+        <i
+          className="fa fa-5x fa-angle-left"
+        />
+      </button>
+    </div>
+    <ul
+      className="slides"
+    >
+      <li
+        className="slide slide-active"
+      >
+        <img
+          alt="web project"
+          className="slide-pic"
+          src="smarterbear.png"
+        />
+      </li>
+      <li
+        className="slide slide-hide"
+      >
+        <img
+          alt="web project"
+          className="slide-pic"
+          src="colorGame.png"
+        />
+      </li>
+      <li
+        className="slide slide-hide"
+      >
+        <img
+          alt="web project"
+          className="slide-pic"
+          src="curvaFit.png"
+        />
+      </li>
+      <li
+        className="slide slide-hide"
+      >
+        <img
+          alt="web project"
+          className="slide-pic"
+          src="hackerhaus.png"
+        />
+      </li>
+      <li
+        className="slide slide-hide"
+      >
+        <img
+          alt="web project"
+          className="slide-pic"
+          src="frais.png"
+        />
+      </li>
+    </ul>
+    <div
+      className="arrow-container"
+    >
+      <button
+        className="slider-arrow right bounce-right"
+        onClick={[Function]}
+      >
+        <i
+          className="fa fa-5x fa-angle-right"
+        />
+      </button>
+    </div>
+  </div>
+  <div
+    className="indicator-wrap"
+  >
+    <ul
+      className="slider-indicators"
+    >
+      <li>
+        <a
+          className="slider-indicator slider-indicator-active"
+          onClick={[Function]}
+        />
+      </li>
+      <li>
+        <a
+          className="slider-indicator"
+          onClick={[Function]}
+        />
+      </li>
+      <li>
+        <a
+          className="slider-indicator"
+          onClick={[Function]}
+        />
+      </li>
+      <li>
+        <a
+          className="slider-indicator"
+          onClick={[Function]}
+        />
+      </li>
+      <li>
+        <a
+          className="slider-indicator"
+          onClick={[Function]}
+        />
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`class Slider extends _react.Component {
+  constructor(props) {
+    super(props);
+
+    this.goToSlide = this.goToSlide.bind(this);
+    this.goToPrevSlide = this.goToPrevSlide.bind(this);
+    this.goToNextSlide = this.goToNextSlide.bind(this);
+
+    this.state = {
+      activeIndex: 0 };
+
+  }
+
+  componentWillMount() {
+    this.setState({
+      slides: slideArray });
+
+  }
+
+  goToSlide(index) {
+    this.setState({ activeIndex: index });
+  }
+
+  goToPrevSlide(e) {
+    e.preventDefault();
+
+    let index = this.state.activeIndex;
+    // let { slides } = this.props;
+    let slidesLength = this.state.slides.length;
+
+    --index;
+
+    if (index < 0) {
+      index = slidesLength - 1;
+    }
+
+    this.goToSlide(index);
+  }
+
+  goToNextSlide(e) {
+    e.preventDefault();
+
+    let index = this.state.activeIndex;
+    // let { slides } = this.props;
+    let slidesLength = this.state.slides.length;
+
+    ++index;
+
+    if (index >= slidesLength) {
+      index = 0;
+    }
+
+    this.goToSlide(index);
+  }
+
+  render() {
+    return (
+      _react2.default.createElement('div', { className: 'slider', __source: { fileName: _jsxFileName, lineNumber: 104 }, __self: this },
+
+
+
+
+
+
+        _react2.default.createElement('div', { className: 'slider-content', __source: { fileName: _jsxFileName, lineNumber: 111 }, __self: this },
+          _react2.default.createElement(_SliderArrow2.default, {
+            direction: 'left',
+            onClick: e => this.goToPrevSlide(e), __source: { fileName: _jsxFileName, lineNumber: 112 }, __self: this }),
+
+          _react2.default.createElement('ul', { className: 'slides', __source: { fileName: _jsxFileName, lineNumber: 116 }, __self: this },
+            this.state.slides.map((slide, index) =>
+            _react2.default.createElement(_Slide2.default, {
+              key: index,
+              index: index,
+              activeIndex: this.state.activeIndex,
+              slide: slide, __source: { fileName: _jsxFileName, lineNumber: 118 }, __self: this }))),
+
+
+
+          _react2.default.createElement(_SliderArrow2.default, {
+            direction: 'right',
+            onClick: e => this.goToNextSlide(e), __source: { fileName: _jsxFileName, lineNumber: 126 }, __self: this })),
+
+
+
+        _react2.default.createElement('div', { className: 'indicator-wrap', __source: { fileName: _jsxFileName, lineNumber: 132 }, __self: this },
+          _react2.default.createElement('ul', { className: 'slider-indicators', __source: { fileName: _jsxFileName, lineNumber: 133 }, __self: this },
+            this.state.slides.map((slide, index) =>
+            _react2.default.createElement(_SliderIndicator2.default, {
+              key: index,
+              index: index,
+              activeIndex: this.state.activeIndex,
+              isActive: this.state.activeIndex === index,
+              onClick: e => this.goToSlide(index), __source: { fileName: _jsxFileName, lineNumber: 135 }, __self: this }))))));
+
+
+
+
+
+
+
+  }} renders and matches our snapshot 1`] = `
+<div
+  className="slider"
+>
+  <div
+    className="slider-content"
+  >
+    <div
+      className="arrow-container"
+    >
+      <button
+        className="slider-arrow left bounce-left"
+        onClick={[Function]}
+      >
+        <i
+          className="fa fa-5x fa-angle-left"
+        />
+      </button>
+    </div>
+    <ul
+      className="slides"
+    >
+      <li
+        className="slide slide-active"
+      >
+        <img
+          alt="web project"
+          className="slide-pic"
+          src="smarterbear.png"
+        />
+      </li>
+      <li
+        className="slide slide-hide"
+      >
+        <img
+          alt="web project"
+          className="slide-pic"
+          src="colorGame.png"
+        />
+      </li>
+      <li
+        className="slide slide-hide"
+      >
+        <img
+          alt="web project"
+          className="slide-pic"
+          src="curvaFit.png"
+        />
+      </li>
+      <li
+        className="slide slide-hide"
+      >
+        <img
+          alt="web project"
+          className="slide-pic"
+          src="hackerhaus.png"
+        />
+      </li>
+      <li
+        className="slide slide-hide"
+      >
+        <img
+          alt="web project"
+          className="slide-pic"
+          src="frais.png"
+        />
+      </li>
+    </ul>
+    <div
+      className="arrow-container"
+    >
+      <button
+        className="slider-arrow right bounce-right"
+        onClick={[Function]}
+      >
+        <i
+          className="fa fa-5x fa-angle-right"
+        />
+      </button>
+    </div>
+  </div>
+  <div
+    className="indicator-wrap"
+  >
+    <ul
+      className="slider-indicators"
+    >
+      <li>
+        <a
+          className="slider-indicator slider-indicator-active"
+          onClick={[Function]}
+        />
+      </li>
+      <li>
+        <a
+          className="slider-indicator"
+          onClick={[Function]}
+        />
+      </li>
+      <li>
+        <a
+          className="slider-indicator"
+          onClick={[Function]}
+        />
+      </li>
+      <li>
+        <a
+          className="slider-indicator"
+          onClick={[Function]}
+        />
+      </li>
+      <li>
+        <a
+          className="slider-indicator"
+          onClick={[Function]}
+        />
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`class Slider extends _react.Component {
+  constructor(props) {
+    super(props);
+
+    this.goToSlide = this.goToSlide.bind(this);
+    this.goToPrevSlide = this.goToPrevSlide.bind(this);
+    this.goToNextSlide = this.goToNextSlide.bind(this);
+
+    this.state = {
+      activeIndex: 0 };
+
+  }
+
+  componentWillMount() {
+    this.setState({
+      slides: slideArray });
+
+  }
+
+  goToSlide(index) {
+    this.setState({ activeIndex: index });
+  }
+
+  goToPrevSlide(e) {
+    e.preventDefault();
+
+    let index = this.state.activeIndex;
+    // let { slides } = this.props;
+    let slidesLength = this.state.slides.length;
+
+    --index;
+
+    if (index < 0) {
+      index = slidesLength - 1;
+    }
+
+    this.goToSlide(index);
+  }
+
+  goToNextSlide(e) {
+    e.preventDefault();
+
+    let index = this.state.activeIndex;
+    // let { slides } = this.props;
+    let slidesLength = this.state.slides.length;
+
+    ++index;
+
+    if (index >= slidesLength) {
+      index = 0;
+    }
+
+    this.goToSlide(index);
+  }
+
+  render() {
+    return (
+      _react2.default.createElement('div', { className: 'slider', __source: { fileName: _jsxFileName, lineNumber: 104 }, __self: this },
+
+
+
+
+
+
+        _react2.default.createElement('div', { className: 'slider-wrapper', __source: { fileName: _jsxFileName, lineNumber: 111 }, __self: this },
+
+          _react2.default.createElement(_SliderArrow2.default, {
+            direction: 'left',
+            onClick: e => this.goToPrevSlide(e), __source: { fileName: _jsxFileName, lineNumber: 113 }, __self: this }),
+
+          _react2.default.createElement('ul', { className: 'slides', __source: { fileName: _jsxFileName, lineNumber: 117 }, __self: this },
+            this.state.slides.map((slide, index) =>
+            _react2.default.createElement(_Slide2.default, {
+              key: index,
+              index: index,
+              activeIndex: this.state.activeIndex,
+              slide: slide, __source: { fileName: _jsxFileName, lineNumber: 119 }, __self: this }))),
+
+
+
+          _react2.default.createElement(_SliderArrow2.default, {
+            direction: 'right',
+            onClick: e => this.goToNextSlide(e), __source: { fileName: _jsxFileName, lineNumber: 127 }, __self: this })),
+
+
+
+        _react2.default.createElement('div', { className: 'indicator-wrap', __source: { fileName: _jsxFileName, lineNumber: 133 }, __self: this },
+          _react2.default.createElement('ul', { className: 'slider-indicators', __source: { fileName: _jsxFileName, lineNumber: 134 }, __self: this },
+            this.state.slides.map((slide, index) =>
+            _react2.default.createElement(_SliderIndicator2.default, {
+              key: index,
+              index: index,
+              activeIndex: this.state.activeIndex,
+              isActive: this.state.activeIndex === index,
+              onClick: e => this.goToSlide(index), __source: { fileName: _jsxFileName, lineNumber: 136 }, __self: this }))))));
+
+
+
+
+
+
+
+  }} renders and matches our snapshot 1`] = `
+<div
+  className="slider"
+>
+  <div
+    className="slider-wrapper"
+  >
+    <div
+      className="arrow-container"
+    >
+      <button
+        className="slider-arrow left bounce-left"
+        onClick={[Function]}
+      >
+        <i
+          className="fa fa-5x fa-angle-left"
+        />
+      </button>
+    </div>
+    <ul
+      className="slides"
+    >
+      <li
+        className="slide slide-active"
+      >
+        <img
+          alt="web project"
+          className="slide-pic"
+          src="smarterbear.png"
+        />
+      </li>
+      <li
+        className="slide slide-hide"
+      >
+        <img
+          alt="web project"
+          className="slide-pic"
+          src="colorGame.png"
+        />
+      </li>
+      <li
+        className="slide slide-hide"
+      >
+        <img
+          alt="web project"
+          className="slide-pic"
+          src="curvaFit.png"
+        />
+      </li>
+      <li
+        className="slide slide-hide"
+      >
+        <img
+          alt="web project"
+          className="slide-pic"
+          src="hackerhaus.png"
+        />
+      </li>
+      <li
+        className="slide slide-hide"
+      >
+        <img
+          alt="web project"
+          className="slide-pic"
+          src="frais.png"
+        />
+      </li>
+    </ul>
+    <div
+      className="arrow-container"
+    >
+      <button
+        className="slider-arrow right bounce-right"
+        onClick={[Function]}
+      >
+        <i
+          className="fa fa-5x fa-angle-right"
+        />
+      </button>
+    </div>
+  </div>
+  <div
+    className="indicator-wrap"
+  >
+    <ul
+      className="slider-indicators"
+    >
+      <li>
+        <a
+          className="slider-indicator slider-indicator-active"
+          onClick={[Function]}
+        />
+      </li>
+      <li>
+        <a
+          className="slider-indicator"
+          onClick={[Function]}
+        />
+      </li>
+      <li>
+        <a
+          className="slider-indicator"
+          onClick={[Function]}
+        />
+      </li>
+      <li>
+        <a
+          className="slider-indicator"
+          onClick={[Function]}
+        />
+      </li>
+      <li>
+        <a
+          className="slider-indicator"
+          onClick={[Function]}
+        />
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`class Slider extends _react.Component {
+  constructor(props) {
+    super(props);
+
+    this.goToSlide = this.goToSlide.bind(this);
+    this.goToPrevSlide = this.goToPrevSlide.bind(this);
+    this.goToNextSlide = this.goToNextSlide.bind(this);
+
+    this.state = {
+      activeIndex: 0 };
+
+  }
+
+  componentWillMount() {
+    this.setState({
+      slides: slideArray });
+
+  }
+
+  goToSlide(index) {
+    this.setState({ activeIndex: index });
+  }
+
+  goToPrevSlide(e) {
+    e.preventDefault();
+
+    let index = this.state.activeIndex;
+    // let { slides } = this.props;
+    let slidesLength = this.state.slides.length;
+
+    --index;
+
+    if (index < 0) {
+      index = slidesLength - 1;
+    }
+
+    this.goToSlide(index);
+  }
+
+  goToNextSlide(e) {
+    e.preventDefault();
+
+    let index = this.state.activeIndex;
+    // let { slides } = this.props;
+    let slidesLength = this.state.slides.length;
+
+    ++index;
+
+    if (index >= slidesLength) {
+      index = 0;
+    }
+
+    this.goToSlide(index);
+  }
+
+  render() {
+    return (
+      _react2.default.createElement('div', { className: 'slider', __source: { fileName: _jsxFileName, lineNumber: 104 }, __self: this },
+
+        _react2.default.createElement('div', { className: 'title', __source: { fileName: _jsxFileName, lineNumber: 106 }, __self: this },
+          _react2.default.createElement('h1', { __source: { fileName: _jsxFileName, lineNumber: 107 }, __self: this }, 'Projects')),
+
+
+
+
+
+
+
+        _react2.default.createElement('div', { className: 'slider-content', __source: { fileName: _jsxFileName, lineNumber: 115 }, __self: this },
+          _react2.default.createElement(_SliderArrow2.default, {
+            direction: 'left',
+            onClick: e => this.goToPrevSlide(e), __source: { fileName: _jsxFileName, lineNumber: 116 }, __self: this }),
+
+          _react2.default.createElement('ul', { className: 'slides', __source: { fileName: _jsxFileName, lineNumber: 120 }, __self: this },
+            this.state.slides.map((slide, index) =>
+            _react2.default.createElement(_Slide2.default, {
+              key: index,
+              index: index,
+              activeIndex: this.state.activeIndex,
+              slide: slide, __source: { fileName: _jsxFileName, lineNumber: 122 }, __self: this }))),
+
+
+
+          _react2.default.createElement(_SliderArrow2.default, {
+            direction: 'right',
+            onClick: e => this.goToNextSlide(e), __source: { fileName: _jsxFileName, lineNumber: 130 }, __self: this })),
+
+
+
+        _react2.default.createElement('div', { className: 'indicator-wrap', __source: { fileName: _jsxFileName, lineNumber: 136 }, __self: this },
+          _react2.default.createElement('ul', { className: 'slider-indicators', __source: { fileName: _jsxFileName, lineNumber: 137 }, __self: this },
+            this.state.slides.map((slide, index) =>
+            _react2.default.createElement(_SliderIndicator2.default, {
+              key: index,
+              index: index,
+              activeIndex: this.state.activeIndex,
+              isActive: this.state.activeIndex === index,
+              onClick: e => this.goToSlide(index), __source: { fileName: _jsxFileName, lineNumber: 139 }, __self: this }))))));
+
+
+
+
+
+
+
+  }} renders and matches our snapshot 1`] = `
+<div
+  className="slider"
+>
+  <div
+    className="title"
+  >
+    <h1>
+      Projects
+    </h1>
+  </div>
+  <div
+    className="slider-content"
+  >
+    <div
+      className="arrow-container"
+    >
+      <button
+        className="slider-arrow left bounce-left"
+        onClick={[Function]}
+      >
+        <i
+          className="fa fa-5x fa-angle-left"
+        />
+      </button>
+    </div>
+    <ul
+      className="slides"
+    >
+      <li
+        className="slide slide-active"
+      >
+        <img
+          alt="web project"
+          className="slide-pic"
+          src="smarterbear.png"
+        />
+      </li>
+      <li
+        className="slide slide-hide"
+      >
+        <img
+          alt="web project"
+          className="slide-pic"
+          src="colorGame.png"
+        />
+      </li>
+      <li
+        className="slide slide-hide"
+      >
+        <img
+          alt="web project"
+          className="slide-pic"
+          src="curvaFit.png"
+        />
+      </li>
+      <li
+        className="slide slide-hide"
+      >
+        <img
+          alt="web project"
+          className="slide-pic"
+          src="hackerhaus.png"
+        />
+      </li>
+      <li
+        className="slide slide-hide"
+      >
+        <img
+          alt="web project"
+          className="slide-pic"
+          src="frais.png"
+        />
+      </li>
+    </ul>
+    <div
+      className="arrow-container"
+    >
+      <button
+        className="slider-arrow right bounce-right"
+        onClick={[Function]}
+      >
+        <i
+          className="fa fa-5x fa-angle-right"
+        />
+      </button>
+    </div>
+  </div>
+  <div
+    className="indicator-wrap"
+  >
+    <ul
+      className="slider-indicators"
+    >
+      <li>
+        <a
+          className="slider-indicator slider-indicator-active"
+          onClick={[Function]}
+        />
+      </li>
+      <li>
+        <a
+          className="slider-indicator"
+          onClick={[Function]}
+        />
+      </li>
+      <li>
+        <a
+          className="slider-indicator"
+          onClick={[Function]}
+        />
+      </li>
+      <li>
+        <a
+          className="slider-indicator"
+          onClick={[Function]}
+        />
+      </li>
+      <li>
+        <a
+          className="slider-indicator"
+          onClick={[Function]}
+        />
+      </li>
+    </ul>
+  </div>
+</div>
+`;

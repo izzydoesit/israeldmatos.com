@@ -1,0 +1,267 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`class Hero extends _react.Component {
+
+  render() {
+    return (
+      _react2.default.createElement('div', { className: 'hero', __source: { fileName: _jsxFileName, lineNumber: 9 }, __self: this },
+
+        _react2.default.createElement('div', { className: 'hero-image', __source: { fileName: _jsxFileName, lineNumber: 11 }, __self: this },
+          _react2.default.createElement('img', {
+            className: 'hero-bg',
+            src: _officeView2.default,
+            alt: 'background', __source: { fileName: _jsxFileName, lineNumber: 12 }, __self: this })),
+
+
+
+        _react2.default.createElement('div', { className: 'hero-text', __source: { fileName: _jsxFileName, lineNumber: 19 }, __self: this },
+          _react2.default.createElement('h1', { __source: { fileName: _jsxFileName, lineNumber: 20 }, __self: this }, 'Israel D. Matos'),
+          _react2.default.createElement('button', { __source: { fileName: _jsxFileName, lineNumber: 21 }, __self: this }, 'Portfolio'))));
+
+
+
+
+  }} renders and matches our snapshot 1`] = `
+<div
+  className="hero"
+>
+  <div
+    className="hero-image"
+  >
+    <img
+      alt="background"
+      className="hero-bg"
+      src="office-view.jpg"
+    />
+  </div>
+  <div
+    className="hero-text"
+  >
+    <h1>
+      Israel D. Matos
+    </h1>
+    <button>
+      Portfolio
+    </button>
+  </div>
+</div>
+`;
+
+exports[`class Hero extends _react.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      rotate: 0 };
+
+  }
+
+  enter() {
+    this.setState({ rotate: 90 });
+  }
+
+  leave() {
+    this.setState({ rotate: 0 });
+  }
+
+  render() {
+
+    return (
+      _react2.default.createElement('div', { className: 'hero', __source: { fileName: _jsxFileName, lineNumber: 25 }, __self: this },
+
+        _react2.default.createElement('div', { className: 'hero-image', __source: { fileName: _jsxFileName, lineNumber: 27 }, __self: this },
+          _react2.default.createElement('img', {
+            className: 'hero-bg',
+            src: _officeView2.default,
+            resizemode: 'cover',
+            alt: 'background', __source: { fileName: _jsxFileName, lineNumber: 28 }, __self: this })),
+
+
+
+        _react2.default.createElement('div', { className: 'hero-content', __source: { fileName: _jsxFileName, lineNumber: 36 }, __self: this },
+
+          _react2.default.createElement('h1', { __source: { fileName: _jsxFileName, lineNumber: 38 }, __self: this }, 'Hello, I\\'m', _react2.default.createElement('span', { className: 'name', __source: { fileName: _jsxFileName, lineNumber: 38 }, __self: this }, 'Israel D. Matos.')),
+          _react2.default.createElement('p', { __source: { fileName: _jsxFileName, lineNumber: 39 }, __self: this }, 'I\\'m a full-stack web developer.'),
+
+          _react2.default.createElement('a', {
+              href: '#about',
+              className: 'page-link-btn',
+              role: 'button',
+              onMouseOver: this.enter.bind(this),
+              onMouseLeave: this.leave.bind(this), __source: { fileName: _jsxFileName, lineNumber: 41 }, __self: this },
+
+            _react2.default.createElement('div', { className: 'btn-content', __source: { fileName: _jsxFileName, lineNumber: 48 }, __self: this },
+
+              _react2.default.createElement('span', { className: 'btn-text', __source: { fileName: _jsxFileName, lineNumber: 50 }, __self: this }, 'Prove it!'),
+
+
+
+              _react2.default.createElement(_RotatingArrow2.default, { rotate: this.state.rotate, __source: { fileName: _jsxFileName, lineNumber: 54 }, __self: this }))))));
+
+
+
+
+
+  }} renders and matches our snapshot 1`] = `
+<div
+  className="hero"
+>
+  <div
+    className="hero-image"
+  >
+    <img
+      alt="background"
+      className="hero-bg"
+      resizemode="cover"
+      src="office-view.jpg"
+    />
+  </div>
+  <div
+    className="hero-content"
+  >
+    <h1>
+      Hello, I'm
+      <span
+        className="name"
+      >
+        Israel D. Matos.
+      </span>
+    </h1>
+    <p>
+      I'm a full-stack web developer.
+    </p>
+    <a
+      className="page-link-btn"
+      href="#about"
+      onMouseLeave={[Function]}
+      onMouseOver={[Function]}
+      role="button"
+    >
+      <div
+        className="btn-content"
+      >
+        <span
+          className="btn-text"
+        >
+          Prove it!
+        </span>
+        <span
+          className="arrow-icon fa fa-3x fa-arrow-right"
+          style={
+            Object {
+              "transform": "rotate( 0deg )",
+            }
+          }
+        />
+      </div>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`class Hero extends _react.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      rotate: 0 };
+
+  }
+
+  enter() {
+    this.setState({ rotate: 90 });
+  }
+
+  leave() {
+    this.setState({ rotate: 0 });
+  }
+
+  render() {
+    return (
+      _react2.default.createElement('div', { className: 'hero', __source: { fileName: _jsxFileName, lineNumber: 25 }, __self: this },
+
+        _react2.default.createElement('div', { className: 'hero-image', __source: { fileName: _jsxFileName, lineNumber: 27 }, __self: this },
+          _react2.default.createElement('img', {
+            className: 'hero-bg',
+            src: _officeView2.default,
+            alt: 'background', __source: { fileName: _jsxFileName, lineNumber: 28 }, __self: this })),
+
+
+
+        _react2.default.createElement('div', { className: 'hero-content', __source: { fileName: _jsxFileName, lineNumber: 35 }, __self: this },
+
+          _react2.default.createElement('h1', { __source: { fileName: _jsxFileName, lineNumber: 37 }, __self: this }, 'Hello, I\\'m ', _react2.default.createElement('span', { className: 'name', __source: { fileName: _jsxFileName, lineNumber: 37 }, __self: this }, 'Israel D. Matos.')),
+          _react2.default.createElement('p', { __source: { fileName: _jsxFileName, lineNumber: 38 }, __self: this }, 'I\\'m a full-stack web developer.'),
+
+          _react2.default.createElement('a', {
+              href: '#about',
+              className: 'page-link-btn',
+              role: 'button',
+              onMouseOver: this.enter.bind(this),
+              onMouseLeave: this.leave.bind(this), __source: { fileName: _jsxFileName, lineNumber: 40 }, __self: this },
+
+            _react2.default.createElement('div', { className: 'btn-content', __source: { fileName: _jsxFileName, lineNumber: 47 }, __self: this },
+
+              _react2.default.createElement('span', { className: 'btn-text', __source: { fileName: _jsxFileName, lineNumber: 49 }, __self: this }, 'Show me yer GOODS!'),
+
+
+
+              _react2.default.createElement(_RotatingArrow2.default, { rotate: this.state.rotate, __source: { fileName: _jsxFileName, lineNumber: 53 }, __self: this }))))));
+
+
+
+
+
+  }} renders and matches our snapshot 1`] = `
+<div
+  className="hero"
+>
+  <div
+    className="hero-image"
+  >
+    <img
+      alt="background"
+      className="hero-bg"
+      src="office-view.jpg"
+    />
+  </div>
+  <div
+    className="hero-content"
+  >
+    <h1>
+      Hello, I'm 
+      <span
+        className="name"
+      >
+        Israel D. Matos.
+      </span>
+    </h1>
+    <p>
+      I'm a full-stack web developer.
+    </p>
+    <a
+      className="page-link-btn"
+      href="#about"
+      onMouseLeave={[Function]}
+      onMouseOver={[Function]}
+      role="button"
+    >
+      <div
+        className="btn-content"
+      >
+        <span
+          className="btn-text"
+        >
+          Show me yer GOODS!
+        </span>
+        <span
+          className="arrow-icon fa fa-3x fa-arrow-right"
+          style={
+            Object {
+              "transform": "rotate( 0deg )",
+            }
+          }
+        />
+      </div>
+    </a>
+  </div>
+</div>
+`;
