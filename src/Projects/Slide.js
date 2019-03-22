@@ -1,98 +1,50 @@
 import React, { Component } from 'react';
-import ModalLauncher from '../Modal/ModalLauncher';
+import PropTypes from 'prop-types';
 import './Slide.css';
 
-const cardHover = {
-  opacity: 1
-};
-
-const buttonLightUp = {
-  backgroundColor: '#E5B495',
-  color: '#FFF',
-};
-
 export default class Slide extends Component {
-  constructor(props) {
-    super(props);
-    this.handleMouseCardHover = this.handleMouseCardHover.bind(this);
-    this.handleMouseButtonHover = this.handleMouseButtonHover.bind(this);
-    this.state = {
-      cardHover: false,
-      buttonHover: false,
-    }
+
+  handleMouseEnter = () => {
+    console.log('entered slide')
+    this.props.updateHover(true);
   }
 
-  handleMouseCardHover() {
-    this.setState(this.toggleCardHoverState)
-  }
-
-  handleMouseButtonHover() {
-    this.setState(this.toggleButtonHoverState)
-  }
-
-  toggleCardHoverState() {
-    return {
-      cardHover: !this.state.cardHover
-    };
-  }
-
-  toggleButtonHoverState() {
-    return {
-      buttonHover: !this.state.buttonHover
-    };
+  handleMouseLeave = () => {
+    this.props.updateHover(false);
   }
 
   render() {
-    let textStyles = {}
-    let buttonStyles = {}
-    let cardStyles = { opacity: 1 }
-    if (this.state.cardHover) {
-      textStyles = {...cardHover, top: '24%' };
-      buttonStyles = {...cardHover, bottom: '24%' };
-      cardStyles = { opacity: 0 }
-    }
-
-    if (this.state.buttonHover) {
-      buttonStyles = { ...buttonStyles, buttonLightUp };
-    }
-
+    const { project } = this.props;
     return (
-      <li
-        className={
-          this.props.index === this.props.activeIndex
-          ? "slide slide-active"
-          : "slide slide-hide"
-        }
-        key={this.props.index}
-        onMouseEnter={this.handleMouseCardHover}
-        onMouseLeave={this.handleMouseCardHover}
+      <div
+        className="slide"
       >
-        <div className="card" style={cardStyles}>
+        <div className="card">
           <img
-            resizemode="stretch"
             className="slide-pic"
-            src={this.props.project.src}
+            resizemode="stretch"
+            src={project.pics[0]}
             alt='web project'
           />
         </div>
 
-        <div className="flex card-text" style={textStyles}>
+        <div className="flex card-text" >
           <div className="bold title">
-            {this.props.project.title}
+            {project.title}
           </div>
-          <div className="blurb">{this.props.project.blurb}</div>
+          <div className="blurb">{project.blurb}</div>
         </div>
 
         <button
-          className="flex card-button"
-          style={buttonStyles}
-          onClick={this.props.openModal}
-          onMouseEnter={this.handleMouseButtonHover}
-          onMouseLeave={this.handleMouseButtonHover}
-        >
-        LEARN MORE
-        </button>
-      </li>
+          className="card-button modalButton"
+        >LEARN MORE</button>
+      </div>
     )
   }
+}
+
+Slide.propTypes = {
+  activeIndex: PropTypes.number.isRequired,
+  buttonHover: PropTypes.bool.isRequired,
+  cardHover: PropTypes.bool.isRequired,
 }

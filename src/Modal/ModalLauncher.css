@@ -1,15 +1,41 @@
 .modalButton {
-  padding: 0.7rem 1.8rem;
-  background-color: #568db2;
-  border: 0;
-  border-radius: 0.3rem;
-  font-size: 1rem;
-  color: #fff;
-  cursor: pointer;
-  margin-bottom: 0.8rem;
-  position: relative;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  bottom: 0;
+  width: 25%;
+  height: 13%;
+  margin: 0 auto;
+  border-radius: 10px;
+  background-color: #07BAC2;
+  color: #FFF;
+  font-size: 0.5em;
+  text-shadow: 1px 1px 1px #000, 3px 3px 3px #666;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.5s;
 }
 
-.modalButton:hover: {
-  background-color: #466d87;
+@media screen and (min-width: 600px) {
+
+  .modalButton {
+    font-size: 1em;
+    width: 20%;
+  }
+}
+
+@media screen and (min-width: 900px) {
+
+  .modalButton {
+    color: #FFF;
+    background-color: transparent;
+    border: 2px solid #07BAC2;
+    
+  }
+  
+  .modalButton:hover {
+    bottom: 24%;
+    background-color: #df1862;
+  }
 }

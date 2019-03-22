@@ -4,12 +4,11 @@
   height: 3px;
   padding: 10%;
   margin-left: 9px;
-  background-color: #857698;
+  background-color: #CBEAEE;
   cursor: pointer;
-  opacity: 0.15;
   transition: opacity .15s cubic-bezier(.4, 0, 1, 1);
 }
 
 .slider-indicator-active {
-  opacity: 1;
+  background-color: #07BAC2;
 }

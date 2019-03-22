@@ -1,85 +1,130 @@
-
-body: { 
-  overflow: hidden 
-}
-
 /* The modal wrapper: absolute positioning;
    100% of the browser window height and width.*/
-.modalOverlay {
+
+  .Overlay {
+  position: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: fixed;
   top: 0;
-  right: 0;
   left: 0;
+  right: 0;
   bottom: 0;
-  padding: 1rem;
-  background-color: rgba(0; 0; 0; 0.7);
-  z-index: 9999;
-  opacity: 1;
+  padding: 0;
   overflow-x: hidden;
   overflow-y: auto;
-  animation: show .5s ease;
-};
-
-/* Fade-in open animation*/
-@keyframes show {
-  0%: {
-    display: none;
-    opacity: 0;
-  };
-  1%: {
-    display: flex;
-    opacity: 0;
-  };
-  100%: {
-    opacity: 1;
-  };
-};
-
+  background-color: #888;
+  animation: show 0.7s ease;
+}
+   
 /* The modal window: a empty div; vertical and horizontal cenetered.*/
-.modal {
-  width: 100%;
+.Modal {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
   background-color: #fff;
-  box-shadow: [0; 0; 0.625rem; rgba(0; 0; 0; 0.2)];
-};
+  z-index: 9999;
+  overflow-y: scroll;
+} 
 
-@media and (min-width: 576px): {
-  .modal {
-    width: 32rem;
+ @media screen and (min-width: 900px) {
+
+  .Modal {
+    top: 10%;
+    left: 20%;
+    right: 20%;
+    bottom: 10%;
   }
-};
+} 
 
-/* The close button: absolute positioning on top left of the
+.info-box {
+  padding: 2% 5% 3% 3%;
+}
+
+.info-box > .title {
+  font-size: 2em;
+  line-height: 1.8em;
+  font-weight: 800;
+  color: #000;
+}
+
+.info-box > .blurb {
+  font-size: 1em;
+  font-weight: 700;
+  line-height: 1em;
+  color: #909090;
+  padding-bottom: 4%;
+}
+
+.info-box > .detail {
+  font-size: 0.8em;
+  line-height: 1.3em;
+}
+
+.modal-link-btn {
+  padding: 3%;
+  margin: 3% 0% 2% 0.5%;
+  border-radius: 10px;
+  background-color: #df1862;
+  color: #FFF;
+  font-size: 1.5em;
+  text-shadow: 1px 1px 1px #000, 3px 3px 3px #666;
+  justify-content: center;
+  text-decoration: none;
+  display: inline-block;
+  /* bottom: 2%;
+  left: 2%; */
+}
+
+/* The close button: absolute positioning on bottom right of the
 // browser window; white background square with a gray X.*/
-.closeButton {
-  position: fixed;
-  top: 0;
-  right: 0;
+.close-modal-btn {
+  display: inline-block;
+  right: 3%;
   background: #fff;
   width: 2.5rem;
   height: 2.5rem;
-  padding: 0;
+  border-radius: 15px;
   border: 0;
   cursor: pointer;
   outline: 0;
-  box-shadow: 0, 0, 0.625rem, rgba(0; 0; 0; 0.2);
-
-  &:before &:after: {
-    content: "";
-    position: absolute;
-    top: 1.2rem;
-    left: 0.25rem;
-    width: 2rem;
-    height: 0.1rem;
-    background-color: #888;
-  };
-
-  &:before: { transform: rotate(45deg) }
-  &:after: { transform: rotate(-45deg) }
-
-  &:hover:before &:hover:after {
-    background-color: #444;
-  }
 }
+
+.close-modal-btn i {
+
+}
+
+.bottom-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.close-modal-btn::before .close-modal-btn::after {
+  content: "";
+  position: fixed;
+  bottom: 1.2rem;
+  left: 0.25rem;
+  width: 2rem;
+  height: 0.1rem;
+} 
+
+.close-modal-btn::before { transform: rotate(45deg) }
+.close-modal-btn::after { transform: rotate(-45deg) }
+
+/* Fade-in open animation*/
+@keyframes show {
+  0% {
+    display: none;
+    opacity: 0;
+  };
+  1% {
+    display: flex;
+    opacity: 0;
+  };
+  100% {
+    opacity: 1;
+  };
+};

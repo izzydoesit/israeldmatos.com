@@ -18,13 +18,13 @@ export default class ContactForm extends Component {
     };
   }
 
-  onChange(event) {
+  onChange = (event) => {
     const state = this.state;
     state[event.target.name] = event.target.value;
     this.setState(state);
   }
 
-  onSubmit(event) {
+  onSubmit = (event) => {
     event.preventDefault();
     
     let messagePayload = {
@@ -49,7 +49,7 @@ export default class ContactForm extends Component {
     });
   }
 
-  onClose(event) {
+  onClose = (event) => {
     this.setState({
       showMessage: false
     });
@@ -80,14 +80,16 @@ export default class ContactForm extends Component {
                 name="name"
                 value={name}
                 onChange={this.onChange}
+                required
               />
               <input
                 className="flex email-input"
-                type="text"
+                type="email"
                 placeholder="Your email"
                 name="email"
                 value={email}
                 onChange={this.onChange}
+                required
               />
               <textarea
                 className="flex message-input"
@@ -96,6 +98,7 @@ export default class ContactForm extends Component {
                 name="message"
                 value={message}
                 onChange={this.onChange}
+                required
               />
 
               <Message onClose={this.onClose} show={this.state.showMessage}/>

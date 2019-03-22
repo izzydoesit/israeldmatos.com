@@ -2,7 +2,6 @@ require('babel-polyfill');
 const {createServer} = require('http');
 const express = require('express');
 const bodyParser = require('body-parser');
-const sendEmail = require('./mailer');
 const compression = require('compression');
 const morgan = require('morgan');
 const path = require('path');
@@ -32,15 +31,19 @@ if (!dev) {
   app.use(compression());
   app.use(morgan('common'));
   
-  app.use(express.static(path.resolve(__dirname, 'build')));
+  app.use(express.static(path.join(__dirname, 'build')));
   
-  app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'build', 'index.html'));
+  app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'build', '/index.html'));
   })
 }
 
 if (dev) {
   app.use(morgan('dev'));
+}
+
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('/build'));
 }
 
 app.post('/contact', async (req, res) => {
@@ -75,3 +78,4 @@ server.listen(PORT, err => {
   if (err) throw err;
   console.log(`server listening on port ${PORT}`);
 })
+

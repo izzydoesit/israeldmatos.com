@@ -37,7 +37,7 @@ div.bullet-text > div.description {
   position: relative;
   width: 100px;
   height: 57.80px;
-  background-color: #695481;
+  background-color: #07BAC2;
   margin: 28.87px auto;
 }
 
@@ -53,13 +53,13 @@ div.bullet-text > div.description {
 .hexagon::before {
   bottom: 100%;
   left: 0;
-  border-bottom: 28.87px solid #695481;
+  border-bottom: 28.87px solid #07BAC2;
 }
 
 .hexagon::after {
   top: 100%;
   right: 0;
-  border-top: 28.87px solid #695481;
+  border-top: 28.87px solid #07BAC2;
 }
 
 .hex-icon {

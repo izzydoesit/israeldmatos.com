@@ -1,3 +1,10 @@
+/*
+  color scheme: 
+     base: dark charcoal (#222)
+     base-highlight: teal (#07BAC2)
+     highlight: magenta (#df1862)
+*/
+
 .App {
   text-align: center;
   position: static;
@@ -22,11 +29,11 @@
 
 .overflow-wrap {
   overflow-x: hidden;
-  overflow: scroll;
+  overflow-y: scroll !important;
 }
 
 section {
-  padding: 70px 0 70px 0;
+  padding: 20% 0 20% 0;
   color: #616161;
   line-height: 11pt;
   position: relative;
@@ -35,7 +42,7 @@ section {
 @media screen and (min-width: 600px) {
 
   section {
-    padding: 100px 0 130px 0;
+    padding: 10% 0 10% 0;
   }
 }
 
@@ -71,13 +78,12 @@ section:nth-of-type(1) .container {
 .header {
   font-size: 2.5em;
   text-transform: uppercase;
-  color: #6D5775;
+  color: #222;
   top: 0;
-  background-color: #Fffef4;
 }
 
 .header-bar {
-  background-color: #6D5775;
+  background-color: #222;
   width: 70px;
   height: 4px;
   margin: 1em auto 6em auto;
@@ -91,7 +97,3 @@ section:nth-of-type(1) .container {
 .bold {
   font-weight: 600;
 }
-
-/* .animated.slide-in-left {
-  animation: fadeIn 3s ease;
-} */

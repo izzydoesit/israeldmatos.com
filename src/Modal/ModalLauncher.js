@@ -1,37 +1,37 @@
 import React, { Component } from 'react';
 import Modal from './Modal';
 import './ModalLauncher.css';
+import { toggleModal } from '../actions/modal-actions';
 
 export default class ModalLauncher extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      showModal: false,
-    };
+
+  handleClick = () => {
+    console.log('clicked', this.props.buttonStyles)
+    this.props.toggleModal(true);
   }
 
-  handleToggleModal() {
-    this.setState({ showModal: !this.state.showModal });
+  handleButtonEnter = () => {
+    this.props.updateButton(true);
   }
-  
+ 
+   handleButtonLeave = () => {
+     this.props.updateButton(false);
+   }
+
   render() {
-    const { showModal } = this.state;
-
+    const { buttonStyles, modalIsOpen } = this.props;
+   
     return (
-      <div>
         <button
           type="button"
-          className="modalButton"
-          onClick={() => this.handleToggleModal()}
+          className="modalButton card-button"
+          style={buttonStyles}
+          onClick={this.handleClick}
+          onMouseEnter={this.handleButtonEnter}
+          onMouseLeave={this.handleButtonLeave}
         >
-          Learn More
+          LEARN MORE
         </button>
-
-        {showModal &&
-          <Modal onCloseRequest={() => this.handleToggleModal()}>
-            <img src="https://placeimg.com/900/650/nature" alt="Nature" />
-          </Modal>}
-      </div>
     );
   }
 }

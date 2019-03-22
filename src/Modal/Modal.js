@@ -1,69 +1,82 @@
 import React, { Component } from 'react';
+import Modal from 'react-modal';
+import ModalSlider from './ModalSlider';
 import './Modal.css';
 
-export default class Modal extends Component {
-  constructor(props) {
-    super(props);
-    this.handleKeyUp = this.handleKeyUp.bind(this);
-    this.handleOutsideClick = this.handleOutsideClick.bind(this);
-  }
-  
-  componentDidMount() {
-    window.addEventListener('keyup', this.handleKeyUp, false);
+Modal.setAppElement('#root');
+
+export default class MyModal extends Component {
+
+  componentDidMount = () => {
+    // window.addEventListener('keyup', this.handleKeyUp, false);
     document.addEventListener('click', this.handleOutsideClick, false);
   }
 
-  componentWillUnmount() {
-    window.removeEventListener('keyup', this.handleKeyUp, false);
+  componentWillUnmount = () => {
+    // window.removeEventListener('keyup', this.handleKeyUp, false);
     document.removeEventListener('click', this.handleOutsideClick, false);
   }
-  
-  handleKeyUp(e) {
-    const { onCloseRequest } = this.props;
-    const keys = {
-      27: () => {
-        e.preventDefault();
-        onCloseRequest();
-        window.removeEventListener('keyup', this.handleKeyUp, false);
-      },
-    };
 
-    if (keys[e.keyCode]) { keys[e.keyCode](); }
-  }
-  
-  handleOutsideClick(e) {
-    const { onCloseRequest } = this.props;
+  handleOutsideClick = (e) => {
 
     if (!(this.modal)) {
       if (!this.modal.contains(e.target)) {
-        onCloseRequest();
+        this.closeModal();
         document.removeEventListener('click', this.handleOutsideClick, false);
       }
     }
   }
-  
+
+  closeModal = (e) => {
+    this.props.toggleModal(false);
+    this.props.updateModalSlide(0);
+  }
+
+  afterOpenModal = () => {
+    // references are now sync'd and can be accessed.
+   // this.subtitle.style.color = '#f00';
+  }
+
   render () {
-    const {
-      onCloseRequest,
-      children
-    } = this.props;
+    const { modalIsOpen, projects, activeIndex } = this.props;
+    const project = projects[activeIndex]
 
     return (
-      <div className="modalOverlay}">
-        <div
-          className="modal"
-          ref={node => (this.modal = node)}
+      <div
+        className="modal-wrapper"
+        ref={node => (this.modal = node)}
+      >
+        <Modal
+          isOpen={modalIsOpen}
+          onAfterOpen={this.afterOpenModal}
+          onRequestClose={this.closeModal}
+          contentLabel="Project Modal"
+          className="Modal"
+          overlayClassName="Overlay"
         >
-          <div className="modalContent">
-            {children}
-          </div>
-        </div>
+          <ModalSlider {...this.props} />
 
-        <button
-          type="button"
-          className="closeButton"
-          onClick={onCloseRequest}
-        />
+          <div className="info-box">
+            <div className="title">{project.title}</div>
+            <div className="blurb">{project.blurb}</div>
+            <div className="detail">{project.detail}</div>
+            <div className="bottom-row">
+              <a
+                className="modal-link-btn"
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+              >See Code</a>
+            <button
+              className="close-modal-btn"
+              onClick={this.closeModal}
+            >
+              <i className="fa fa-3x fa-times" />
+            </button>
+            </div>
+          </div>
+
+        </Modal>
       </div>
     );
   }
