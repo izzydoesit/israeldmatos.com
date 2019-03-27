@@ -89,7 +89,7 @@ export default class About extends Component {
                     <div className="bio-text">
                       <div className="label bold">Who is this guy?</div>
                       <div className="description">
-                        I currently work at <a href="https://www.marqeta.com" target="_blank" rel="noopener noreferrer">Marqeta</a> playing with applications and APIs all day.
+                        I currently work at <a href="https://www.gemini.com" target="_blank" rel="noopener noreferrer">Gemini</a> playing with APIs and the blockchain all day.
                         <br/>
                         I have a passion for building awe-inspiring UI effects and buttery smooth user experiences.
                         <br/>
