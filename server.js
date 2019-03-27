@@ -6,10 +6,10 @@ const compression = require('compression');
 const morgan = require('morgan');
 const path = require('path');
 // Load any undefined ENV variables from a specified file.
-var env = require('node-env-file');
-if (process.env.NODE_ENV !== 'production') {
-  env(__dirname + '/.env');
-}
+// var env = require('node-env-file');
+// if (process.env.NODE_ENV !== 'production') {
+//   env(__dirname + '/.env');
+// }
 const sgMail = require('@sendgrid/mail');
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
