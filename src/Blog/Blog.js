@@ -16,38 +16,38 @@ export default class Blog extends Component {
             <ScrollAnimation>
               <div className="header-bar animated slide-in-left"></div>
             </ScrollAnimation>
-            <a href="">
+            <div>
               <div className="animated fade-in fade">
                 <div className="thumb"></div>
                 <div className="label bold"></div>
                 <div className="bar"></div>
                 <div className="text"></div>
               </div>                  
-            </a>
-            <a href="">
+            </div>
+            <div>
               <div className="animated fade-in fade">
                 <div className="thumb"></div>
                 <div className="label bold"></div>
                 <div className="bar"></div>
                 <div className="text"></div>
               </div>          
-            </a>
-            <a href="">
+            </div>
+            <div>
               <div className="animated fade-in fade">
                 <div className="thumb"></div>
                 <div className="label bold"></div>
                 <div className="bar"></div>
                 <div className="text"></div>
               </div>          
-            </a>
-            <a href="">
+            </div>
+            <div>
               <div className="animated fade-in fade">
                 <div className="thumb"></div>
                 <div className="label bold"></div>
                 <div className="bar"></div>
                 <div className="text"></div>
               </div>          
-            </a>
+            </div>
           </div>
         </ScrollableAnchor>
       </section>
