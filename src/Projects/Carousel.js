@@ -66,8 +66,6 @@ export default class Carousel extends Component {
     }
   }
 
-
-
   handleMouseEnter = () => {
     this.props.updateHover(true);
   }
