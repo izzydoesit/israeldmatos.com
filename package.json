@@ -26,7 +26,6 @@
     "karma": "^2.0.0",
     "lodash": "^4.17.10",
     "morgan": "^1.9.0",
-    "node-env-file": "^0.1.8",
     "node-env-run": "^3.0.1",
     "node-fetch": "^2.1.1",
     "nodemailer-smtp-transport": "^2.7.4",
