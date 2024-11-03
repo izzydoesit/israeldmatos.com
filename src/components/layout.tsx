@@ -13,6 +13,7 @@ import {
   socialLinkRow,
   socialLink,
   socialLinkIcon,
+  icon,
   footNote,
   highlight,
 } from "./layout.module.css";
@@ -89,10 +90,10 @@ const Layout: React.FC<LayoutProps> = ({ pageTitle, children }) => {
           })}
         </div>
 
-        <div className="info-box">
-          <div className="footNote">
+        <div className="infoBox">
+          <div className={footNote}>
             ISRAEL D. MATOS
-            <span className="highlight">©2024</span>
+            <span className={highlight}>©2024</span>
           </div>
         </div>
       </footer>
