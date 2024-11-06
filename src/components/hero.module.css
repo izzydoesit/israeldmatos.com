@@ -3,7 +3,7 @@
   border: 1px solid red;
   background-color: #21252e;
   color: white;
-  min-height: 80vw;
+  min-height: 90vh;
 }
 
 .name {
@@ -14,8 +14,13 @@
   text-shadow: 1px 1px 1px #000, 2px 3px 2px #f4f8dd, 3px 3px 6px #000;
   display: inline-block;
 }
+.wrapper {
+  display: flex;
+  width: 100%;
+}
 .content {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
