@@ -38,6 +38,24 @@ const About: React.FC = () => {
     <section className={about}>
       <div>
         <p>Hi, this is my about section!</p>
+        <div>
+          {firstRowIcons.map((item, index) => {
+            const Icon = item.image;
+            return (
+              <div key={index}>
+                <Icon size={55} />
+              </div>
+            );
+          })}
+          {secondRowIcons.map((item, index) => {
+            const Icon = item.image;
+            return (
+              <div key={index}>
+                <Icon size={55} />
+              </div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );
