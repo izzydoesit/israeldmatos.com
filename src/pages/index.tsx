@@ -6,7 +6,7 @@ import Layout from "../components/layout";
 import Hero from "../components/hero";
 import Projects from "../components/projects";
 import About from "../components/about";
-import Contact from "../components/Contact";
+import Contact from "../components/contact";
 import {
   pageStyles,
   headingStyles,
