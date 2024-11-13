@@ -3,3 +3,74 @@
   border: 1px solid;
   border-color: blue;
 }
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 2%;
+  width: 100%;
+  align-items: center;
+}
+.title {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.bullets-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.bullet-row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.bullet-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  padding: 5%;
+}
+.skills-wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.bio-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 2% 5%;
+}
+.bio-image {
+  display: block;
+  height: 100%;
+}
+.bio-text {
+  display: flex;
+  flex-direction: column;
+}
+.bio-label {
+  display: flex;
+  justify-content: center;
+  padding: 5%;
+}
+.bio-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3%;
+}
+.skill-bars-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 2% 5%;
+}
+.skill-bar {
+  display: flex;
+  margin-bottom: 2%;
+}
