@@ -16,7 +16,7 @@ import {
   icon,
   footNote,
   highlight,
-} from "./layout.module.css";
+} from "../styles/layout.module.css";
 
 import { FaChevronUp } from "@react-icons/all-files/fa/FaChevronUp";
 import { FaLinkedin } from "@react-icons/all-files/fa/FaLinkedin";
@@ -48,7 +48,7 @@ const icons = [
   },
 ];
 
-const Layout: React.FC<LayoutProps> = ({ pageTitle, children }) => {
+const Layout: React.FC<LayoutProps> = ({ pageTitle, children }: LayoutProps) => {
   return (
     <div className={container}>
       <main>{children}</main>
@@ -63,6 +63,7 @@ const Layout: React.FC<LayoutProps> = ({ pageTitle, children }) => {
 
             return (
               <a
+                key={index}
                 className={socialLink}
                 href={icon.url}
                 target="_blank"

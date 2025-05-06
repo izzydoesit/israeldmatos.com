@@ -1,5 +1,5 @@
 import * as React from "react";
-import { hero, name, content, wrapper } from "./hero.module.css";
+import { hero, name, content, wrapper } from "../styles/hero.module.css";
 import { Snowfall } from "react-snowfall";
 
 const Hero: React.FC = () => {

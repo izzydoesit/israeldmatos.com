@@ -15,7 +15,7 @@ import {
   bioDescription,
   skillBarsWrapper,
   skillBar,
-} from "./about.module.css";
+} from "../styles/about.module.css";
 import { BsStopwatch } from "@react-icons/all-files/bs/BsStopwatch";
 import { BiDevices } from "@react-icons/all-files/bi/BiDevices";
 import { FaRegThumbsUp } from "@react-icons/all-files/fa/FaRegThumbsUp";

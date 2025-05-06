@@ -1,5 +1,5 @@
 import * as React from "react";
-import { projects } from "./projects.module.css";
+import { projects } from "../styles/projects.module.css";
 
 const Projects: React.FC = () => {
   return (
