@@ -10,6 +10,14 @@ const config: GatsbyConfig = {
   // Learn more at: https://gatsby.dev/graphql-typegen
   graphqlTypegen: true,
   plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `projects`,
+        path: `${__dirname}/src/content/projects/`,
+      },
+    },
+    "gatsby-transformer-remark",
     "gatsby-plugin-image",
     "gatsby-plugin-sitemap",
     {
