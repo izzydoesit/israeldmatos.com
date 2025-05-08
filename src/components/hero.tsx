@@ -7,8 +7,8 @@ const Hero: React.FC = () => {
     <section className={hero}>
       <div className={wrapper}>
         <div className={content}>
-          Hello, I am <span className={name}>Israel D. Matos</span> I am a
-          software engineer and this is my HERO section.
+          <h1>Hello, I am <span className={name}>Israel D. Matos 👋</span></h1>
+          <p>Software Engineer. Polyglot. Builder of cool stuff.</p>
         </div>
         <Snowfall snowflakeCount={500} />
       </div>
