@@ -3,10 +3,11 @@
   border: 1px solid red;
   background-color: #21252e;
   color: white;
-  min-height: 90vh;
+  min-height: 100vh;
 }
 .name {
   line-height: 2em;
+  font-size: 4em;
   box-sizing: border-box;
   padding: 1% 0.5% 1% 1%;
   color: #df1862;
