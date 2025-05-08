@@ -2,22 +2,7 @@ import * as React from "react";
 import { Link } from "gatsby";
 import type { HeadFC, PageProps } from "gatsby";
 import Footer from "./Footer"
-import {
-  container,
-  heading,
-  navLinks,
-  navLinkItem,
-  navLinkText,
-  footer,
-  chevronLinkWrapper,
-  chevron,
-  socialLinkRow,
-  socialLink,
-  socialLinkIcon,
-  icon,
-  footNote,
-  highlight,
-} from "../styles/layout.module.css";
+
 
 type LayoutProps = {
   pageTitle: string;
@@ -26,8 +11,8 @@ type LayoutProps = {
 
 const Layout: React.FC<LayoutProps> = ({ pageTitle, children }: LayoutProps) => {
   return (
-    <div className={container}>
-      <main>{children}</main>
+    <div className="min-h-screen flex flex-col bg-gray-900 text-white">
+      <main className="flex-grow px-4 py-8">{children}</main>
       <Footer />
     </div>
   );
