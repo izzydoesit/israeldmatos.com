@@ -43,6 +43,7 @@
   transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
 }
 .social-link-row {
+  /* TODO: add .icon-wrap styles */
   display: flex;
   flex-direction: row;
   text-align: center;
@@ -92,4 +93,8 @@
 .highlight {
   color: #df1862;
   padding-left: 0.5%;
+}
+
+.info-box {
+  /* TODO: fill in */
 }
