@@ -4,10 +4,7 @@ import ContactForm from "./ContactForm";
 
 const Contact = () => {
 	return (
-		<section
-			id="contact"
-			className="flex flex-col max-w-xl mx-auto px-6 py-16 border-purple-500"
-		>
+		<section id="contact" className="flex flex-col max-w-xl mx-auto px-6 py-16">
 			{/* Title */}
 			<motion.div
 				className="text-center mb-16"
