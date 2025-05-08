@@ -7,6 +7,7 @@ import Hero from "../components/Hero";
 import Projects from "../components/Projects";
 import About from "../components/About";
 import Contact from "../components/Contact";
+import "../styles/index.module.css"
 
 
 const IndexPage: React.FC<PageProps> = ({}: PageProps) => {
