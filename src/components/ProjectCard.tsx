@@ -1,5 +1,5 @@
 import * as React from "react";
-import { GatsbyImage, getImage, IGatsbyImageData } from "gatsby-plugin-image";
+import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
 import { FaGithub } from "@react-icons/all-files/fa/FaGithub";
 import { FaExternalLinkAlt } from "@react-icons/all-files/fa/FaExternalLinkAlt";
 import { motion } from "framer-motion";
@@ -31,7 +31,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 		>
 			<div className="mb-4 rounded-lg overflow-hidden">
 				<GatsbyImage
-					image={getImage(image)}
+					image={image}
 					alt={`${title} preview`}
 					className="w-full h-60 object-cover rounded-md mb-4"
 				/>

@@ -1,10 +1,33 @@
 import * as React from "react";
-import ProjectCard from "./ProjectCard";
-import { motion } from "framer-motion";
 import { graphql, useStaticQuery } from "gatsby";
+import { IGatsbyImageData } from "gatsby-plugin-image";
+import { motion } from "framer-motion";
+import ProjectCard from "./ProjectCard";
+
+type ProjectNode = {
+	id: string;
+	frontmatter: {
+		title: string;
+		description: string;
+		stack: string[];
+		github: string;
+		live: string;
+		image: {
+			childImageSharp: {
+				gatsbyImageData: IGatsbyImageData;
+			};
+		};
+	};
+};
+
+type ProjectsQueryData = {
+	allMarkdownRemark: {
+		nodes: ProjectNode[];
+	};
+};
 
 const Projects: React.FC = () => {
-	const data = useStaticQuery(graphql`
+	const data = useStaticQuery<ProjectsQueryData>(graphql`
 		query ProjectsQuery {
 			allMarkdownRemark {
 				nodes {
@@ -42,6 +65,7 @@ const Projects: React.FC = () => {
 			>
 				<h2 className="text-4xl font-bold text-white mb-8">Projects</h2>
 			</motion.div>
+
 			{/* Project Cards */}
 			<div className="grid gap-8 md:grid-cols-2">
 				{data.allMarkdownRemark.nodes.map(({ id, frontmatter }) => (
@@ -52,7 +76,7 @@ const Projects: React.FC = () => {
 						stack={frontmatter.stack}
 						github={frontmatter.github}
 						live={frontmatter.live}
-						image={frontmatter.image} // now this is an image object, not a string
+						image={frontmatter.image.childImageSharp.gatsbyImageData}
 					/>
 				))}
 			</div>
