@@ -1,40 +1,33 @@
 import React from 'react';
-import Chevron from 'react-icons/lib/fa/angle-double-up';
-import LinkedIn from 'react-icons/lib/fa/linkedin';
-import Facebook from 'react-icons/lib/fa/facebook';
-import Instagram from 'react-icons/lib/fa/instagram';
-import Github from 'react-icons/lib/fa/github';
 import { FaChevronUp } from "@react-icons/all-files/fa/FaChevronUp";
 import { FaLinkedin } from "@react-icons/all-files/fa/FaLinkedin";
 import { FaFacebook } from "@react-icons/all-files/fa/FaFacebook";
 import { FaInstagram } from "@react-icons/all-files/fa/FaInstagram";
 import { FaGithub } from "@react-icons/all-files/fa/FaGithub";
-import { footer } from "../styles/layout.module.css";
-import { chevronLinkWrapper, socialLink, socialLinkIcon, socialLinkRow, chevron, infoBox, footNote, highlight } from '../styles/layout.module.css';
+import { footer, chevronLinkWrapper, socialLink, socialLinkIcon, socialLinkRow, chevron, infoBox, footNote, highlight } from '../styles/layout.module.css';
 
 const icons = [
-    { src: FaLinkedin, url: 'https://www.linkedin.com/in/izzy-matos' },
-    { src: FaFacebook, url: 'https://www.facebook.com/israel.matos.963' },
-    { src: FaInstagram, url: 'https://www.instagram.com/izzydoesreels/' },
-    { src: FaGithub, url: 'https://www.github.com/izzydoesit' },
+    { Icon: FaLinkedin, url: 'https://www.linkedin.com/in/izzy-matos' },
+    { Icon: FaFacebook, url: 'https://www.facebook.com/israel.matos.963' },
+    { Icon: FaInstagram, url: 'https://www.instagram.com/izzydoesreels/' },
+    { Icon: FaGithub, url: 'https://www.github.com/izzydoesit' },
   ]
 
 const Footer: React.FC = () => {
     return (
-        <footer id="footer" className={footer}>
-            <a href="#footer" className={chevronLinkWrapper}>
-                <FaChevronUp className={chevron} />
+        <footer id="footer" className="bg-gray-800 py-6 text-center relative">
+            <a href="#home" className="absolute top-[-20px] left-1/2 transform -translate-x-1/2 bg-highlight-color p-2 rounded-full hover:bg-gray-600 transition">
+                <FaChevronUp className="text-white" />
             </a>
   
-            <div className={socialLinkRow}>
-                {icons.map((icon, index) => {
-                    const Icon = icon.src;
+            <div className="flex justify-center space-x-6 my-4">
+                {icons.map(({Icon, url}, index) => {
     
                     return (
                         <a
                         key={index}
-                        className={socialLink}
-                        href={icon.url}
+                        className="hover:scale-150 transition-transform"
+                        href={url}
                         target="_blank"
                         rel="noopener noreferrer"
                         >
@@ -44,10 +37,10 @@ const Footer: React.FC = () => {
                 })}
             </div>
                 
-            <div className={infoBox}>
-                <div className={footNote}>
+            <div className="text-center">
+                <div className="text-sm tracking-wide mt-10">
                     ISRAEL D. MATOS
-                    <span className={highlight}>©2025</span>
+                    <span className="text-highlight-color pl-1">©2025</span>
                 </div>
             </div>
         </footer>
