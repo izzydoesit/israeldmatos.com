@@ -5,6 +5,7 @@ import { BiDevices } from "@react-icons/all-files/bi/BiDevices";
 import { FaRegThumbsUp } from "@react-icons/all-files/fa/FaRegThumbsUp";
 import { FaMagic } from "@react-icons/all-files/fa/FaMagic";
 import { motion } from "framer-motion";
+import { scrollToSection } from "../util/animation";
 
 const bulletItems = [
 	{
@@ -131,7 +132,10 @@ const About: React.FC = () => {
 							<br />
 							I'm passionate about crafting smooth UIs and magical experiences.
 							<br />
-							<a href="#contact" className="text-highlight-color">
+							<a
+								onClick={() => scrollToSection("#contact")}
+								className="text-highlight-color hover:pointer hover:underline font-bold cursor-pointer"
+							>
 								Let’s make something special together...
 							</a>
 						</p>
