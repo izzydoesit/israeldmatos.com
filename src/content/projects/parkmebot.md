@@ -4,5 +4,5 @@ description: "The Slack bot that finds you a spot! Slack API integration using N
 stack: ["JavaScript", "Node.js", "Express", "Slack API", "MongoLab"]
 github: "https://github.com/izzydoesit/parkMeBot"
 live: "https://github.com/izzydoesit/parkMeBot"
-image: "../images/parkmebot-parking-channel.png"
+image: "./parkmebot-parking-channel.png"
 ---

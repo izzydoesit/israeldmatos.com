@@ -8,5 +8,5 @@ stack:
     - "Tailwind CSS"
 github: "https://github.com/izzydoesit/bagholderpro"
 live: "https://bagholder.pro"
-image: ../../images/bagholderpro.jpeg
+image: ./bagholderpro.jpeg
 ---
