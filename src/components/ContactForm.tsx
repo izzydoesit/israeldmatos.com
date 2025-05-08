@@ -63,6 +63,7 @@ const ContactForm: React.FC = () => {
 				Message
 				<textarea
 					name="message"
+					placeholder="Your message here..."
 					required
 					rows={5}
 					className="mt-1 p-2 w-full rounded bg-gray-800 border border-gray-700"
