@@ -8,7 +8,7 @@
     "gatsby"
   ],
   "scripts": {
-    "develop": "gatsby develop",
+    "dev": "gatsby develop",
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
@@ -18,7 +18,7 @@
   "dependencies": {
     "@react-icons/all-files": "^4.1.0",
     "@vanilla-extract/css": "^1.17.1",
-    "gatsby": "^5.13.7",
+    "gatsby": "^5.8.0",
     "gatsby-plugin-image": "^3.13.1",
     "gatsby-plugin-manifest": "^5.13.1",
     "gatsby-plugin-sharp": "^5.13.1",
@@ -33,6 +33,9 @@
     "@types/node": "^20.17.5",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^3.4.17",
     "typescript": "^5.3.3"
   }
 }
