@@ -42,6 +42,7 @@ const Projects: React.FC = () => {
 							childImageSharp {
 								gatsbyImageData(
 									width: 800
+									layout: CONSTRAINED
 									placeholder: BLURRED
 									formats: [AUTO, WEBP, AVIF]
 								)
