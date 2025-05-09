@@ -16,7 +16,7 @@ const icons = [
 
 const Footer: React.FC = () => {
 	return (
-		<footer id="footer" className="bg-gray-800 py-6 text-center relative">
+		<footer id="footer" className="bg-gray-800 py-12 text-center relative">
 			<button
 				onClick={() => scrollToSection("#home")}
 				className="absolute top-[-20px] left-1/2 transform -translate-x-1/2 bg-highlight-color p-2 rounded-full hover:bg-gray-600 transition"
