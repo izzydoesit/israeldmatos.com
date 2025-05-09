@@ -3,8 +3,9 @@ import { graphql, useStaticQuery } from "gatsby";
 import { IGatsbyImageData } from "gatsby-plugin-image";
 import { motion } from "framer-motion";
 import ProjectCard from "./ProjectCard";
+import ProjectsSlider from "./ProjectsSlider";
 
-type ProjectNode = {
+export type ProjectNode = {
 	id: string;
 	frontmatter: {
 		title: string;
@@ -54,20 +55,24 @@ const Projects: React.FC = () => {
 	`);
 
 	return (
-		<section className="flex flex-col border-orange-500 pt-16 pb-16 px-4 bg-[#1a1c24] mx-w-4xl mx-auto border-t-2 border-b-2">
+		<section
+			id="projects"
+			className="w-full flex flex-col py-16 px-4 bg-[#1a1c24] max-w-4xl mx-auto border-t-2 border-b-2"
+		>
 			{/* Title */}
 			<motion.div
-				className="text-center mb-16"
+				className="text-center mb-8"
 				initial={{ opacity: 0, y: -40 }}
 				whileInView={{ opacity: 1, y: 0 }}
 				transition={{ duration: 0.6 }}
 				viewport={{ once: true }}
 			>
-				<h2 className="text-4xl font-bold text-white mb-8">Projects</h2>
+				<h2 className="text-4xl font-bold text-white mb-2">Projects</h2>
+				<p className="text-gray-400">Swipe through my creations</p>
 			</motion.div>
 
 			{/* Project Cards */}
-			<div className="grid gap-8 md:grid-cols-2">
+			{/* <div className="grid gap-8 md:grid-cols-2">
 				{data.allMarkdownRemark.nodes.map(({ id, frontmatter }) => (
 					<ProjectCard
 						key={id}
@@ -79,7 +84,10 @@ const Projects: React.FC = () => {
 						image={frontmatter.image.childImageSharp.gatsbyImageData}
 					/>
 				))}
-			</div>
+			</div> */}
+
+			{/* Slider Component */}
+			<ProjectsSlider projects={data.allMarkdownRemark.nodes} />
 		</section>
 	);
 };
