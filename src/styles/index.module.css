@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .pageStyles {
   color: "#232129";
   padding: 96;
