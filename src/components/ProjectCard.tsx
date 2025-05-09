@@ -44,7 +44,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 			<div className="mb-4 rounded-lg overflow-hidden">
 				{image?.childImageSharp?.gatsbyImageData ? (
 					<GatsbyImage
-						image={image}
+						image={image.childImageSharp.gatsbyImageData}
 						alt={`${title} preview`}
 						className="w-full h-60 object-cover rounded-xl mb-4"
 					/>
