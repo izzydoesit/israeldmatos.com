@@ -18,7 +18,7 @@ const ContactForm: React.FC = () => {
 	return (
 		<form
 			onSubmit={handleSubmit}
-			className="bg-[#2b2f3a] p-8 rounded-lg shadow-md text-white"
+			className="bg-[#2b2f3a] p-8 mb-10 rounded-lg shadow-md text-white"
 		>
 			<label className="block mb-4">
 				Name
