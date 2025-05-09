@@ -2,7 +2,6 @@ import * as React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import { IGatsbyImageData } from "gatsby-plugin-image";
 import { motion } from "framer-motion";
-import ProjectCard from "./ProjectCard";
 import ProjectsSlider from "./ProjectsSlider";
 
 export type ProjectNode = {
