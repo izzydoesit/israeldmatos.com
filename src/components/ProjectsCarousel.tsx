@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ProjectCard from "./ProjectCard";
 
-const ProjectsSlider = ({ projects }) => {
+const ProjectsCarousel = ({ projects }) => {
 	const [index, setIndex] = useState(0);
 	const total = projects.length;
 
@@ -43,4 +43,4 @@ const ProjectsSlider = ({ projects }) => {
 	);
 };
 
-export default ProjectsSlider;
+export default ProjectsCarousel;

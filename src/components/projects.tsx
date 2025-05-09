@@ -2,7 +2,7 @@ import * as React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import { IGatsbyImageData } from "gatsby-plugin-image";
 import { motion } from "framer-motion";
-import ProjectsSlider from "./ProjectsSlider";
+import ProjectsCarousel from "./ProjectsCarousel";
 
 export type ProjectNode = {
 	id: string;
@@ -86,8 +86,8 @@ const Projects: React.FC = () => {
 				))}
 			</div> */}
 
-			{/* Slider Component */}
-			<ProjectsSlider projects={data.allMarkdownRemark.nodes} />
+			{/* Carousel Component */}
+			<ProjectsCarousel projects={data.allMarkdownRemark.nodes} />
 		</section>
 	);
 };
