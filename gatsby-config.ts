@@ -20,7 +20,28 @@ const config: GatsbyConfig = {
         path: `${__dirname}/src/content/projects/`,
       },
     },
-    "gatsby-transformer-remark",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "images",
+        path: "./src/images/",
+      },
+      __key: "images",
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 800,
+            },
+          },
+        ],
+      },
+    },
+    'gatsby-plugin-netlify',
     "gatsby-plugin-image",
     "gatsby-plugin-sitemap",
     {
@@ -31,14 +52,6 @@ const config: GatsbyConfig = {
     },
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "images",
-        path: "./src/images/",
-      },
-      __key: "images",
-    },
   ],
 };
 
