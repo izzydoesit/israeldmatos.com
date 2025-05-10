@@ -2,7 +2,10 @@ import React from "react";
 import { useForm, ValidationError } from "@formspree/react";
 
 const ContactForm: React.FC = () => {
-	const [state, handleSubmit] = useForm(process.env.GATSBY_FORMSPREE_ID!);
+	const formKey =
+		typeof window !== "undefined" ? process.env.GATSBY_FORMSPREE_ID : null;
+	if (!formKey) return null;
+	const [state, handleSubmit] = useForm(formKey!);
 
 	if (state.succeeded) {
 		return (
