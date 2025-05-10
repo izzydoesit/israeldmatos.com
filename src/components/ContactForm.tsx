@@ -3,14 +3,13 @@ import { useForm, ValidationError } from "@formspree/react";
 
 const ContactForm: React.FC = () => {
 	const [isClient, setIsClient] = useState(false);
+	const [state, handleSubmit] = useForm(process.env.GATSBY_FORMSPREE_ID!);
 
 	useEffect(() => {
 		setIsClient(true);
 	}, []);
 
 	if (!isClient) return null;
-
-	const [state, handleSubmit] = useForm(process.env.GATSBY_FORMSPREE_ID!);
 
 	if (state.succeeded) {
 		return (
