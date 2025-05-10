@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useForm, ValidationError } from "@formspree/react";
 
 const ContactForm: React.FC = () => {
-	const formKey =
-		typeof window !== "undefined" ? process.env.GATSBY_FORMSPREE_ID : null;
-	if (!formKey) return null;
-	const [state, handleSubmit] = useForm(formKey!);
+	const [isClient, setIsClient] = useState(false);
+
+	useEffect(() => {
+		setIsClient(true);
+	}, []);
+
+	if (!isClient) return null;
+
+	const [state, handleSubmit] = useForm(process.env.GATSBY_FORMSPREE_ID!);
 
 	if (state.succeeded) {
 		return (
