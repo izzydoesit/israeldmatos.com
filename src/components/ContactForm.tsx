@@ -3,21 +3,28 @@ import { useForm, ValidationError } from "@formspree/react";
 
 const ContactForm: React.FC = () => {
 	const [isClient, setIsClient] = useState(false);
+	const [formState, setFormState] = useState<any>(null);
+	const [handleSubmit, setHandleSubmit] = useState<any>(null);
 
 	useEffect(() => {
 		setIsClient(true);
+
+		const formspreeId = process.env.GATSBY_FORMSPREE_ID;
+		if (!formspreeId) {
+			console.error("Missing GATSBY_FORMSPREE_ID");
+			return;
+		}
+
+		const [state, submit] = useForm(formspreeId);
+		setFormState(state);
+		setHandleSubmit(() => submit);
 	}, []);
 
-	const formspreeId = process.env.GATSBY_FORMSPREE_ID;
-
-	if (!isClient || !formspreeId) {
-		return null;
+	if (!isClient || !formState || !handleSubmit) {
+		return null; // don't render until it's safe
 	}
 
-	console.log("FORMSPREE ID:", process.env.GATSBY_FORMSPREE_ID);
-	const [state, handleSubmit] = useForm(formspreeId);
-
-	if (state.succeeded) {
+	if (formState.succeeded) {
 		return (
 			<div className="max-w-xl mx-auto px-4 py-16 text-white text-center">
 				<h2 className="text-3xl font-bold mb-4">Message Sent 🎉</h2>
@@ -56,7 +63,7 @@ const ContactForm: React.FC = () => {
 				<ValidationError
 					prefix="Email"
 					field="email"
-					errors={state.errors}
+					errors={formState.errors}
 					className="text-red-500 text-sm mt-1"
 				/>
 			</label>
@@ -84,17 +91,17 @@ const ContactForm: React.FC = () => {
 				<ValidationError
 					prefix="Message"
 					field="message"
-					errors={state.errors}
+					errors={formState.errors}
 					className="text-red-500 text-sm mt-1"
 				/>
 			</label>
 
 			<button
 				type="submit"
-				disabled={state.submitting}
+				disabled={formState.submitting}
 				className="bg-pink-600 hover:bg-pink-800 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out disabled:opacity-50 disabled:cursor-not-allowed"
 			>
-				{state.submitting ? "Sending..." : "Send Message"}
+				{formState.submitting ? "Sending..." : "Send Message"}
 			</button>
 		</form>
 	);
