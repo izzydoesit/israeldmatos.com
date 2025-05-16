@@ -1,21 +1,21 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useForm, ValidationError } from "@formspree/react";
 
 const ContactForm: React.FC = () => {
-	const formspreeId = process.env.GATSBY_FORMSPREE_ID;
+	// const formspreeId = process.env.GATSBY_FORMSPREE_ID;
 
-	// ❗ Defensive check to prevent crash if env is missing
-	if (!formspreeId) {
-		console.error("Missing GATSBY_FORMSPREE_ID in environment.");
-		return (
-			<div className="text-red-400 text-center p-8">
-				Contact form is temporarily unavailable. Please try again later.
-			</div>
-		);
-	}
+	// // ❗ Defensive check to prevent crash if env is missing
+	// if (!formspreeId) {
+	// 	console.error("Missing GATSBY_FORMSPREE_ID in environment.");
+	// 	return (
+	// 		<div className="text-red-400 text-center p-8">
+	// 			Contact form is temporarily unavailable. Please try again later.
+	// 		</div>
+	// 	);
+	// }
 
 	// ✅ Hook must be called at the top level
-	const [state, handleSubmit] = useForm(formspreeId);
+	const [state, handleSubmit] = useForm("contactForm");
 
 	if (state.succeeded) {
 		return (
