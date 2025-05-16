@@ -1,6 +1,6 @@
 import React from "react";
 
 const Header: React.FC = () => {
-  return <div>Header</div>;
+  return <header>Header</header>;
 };
 export default Header;
