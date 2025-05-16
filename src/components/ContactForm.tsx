@@ -2,29 +2,22 @@ import React, { useState, useEffect } from "react";
 import { useForm, ValidationError } from "@formspree/react";
 
 const ContactForm: React.FC = () => {
-	const [isClient, setIsClient] = useState(false);
-	const [formState, setFormState] = useState<any>(null);
-	const [handleSubmit, setHandleSubmit] = useState<any>(null);
+	const formspreeId = process.env.GATSBY_FORMSPREE_ID;
 
-	useEffect(() => {
-		setIsClient(true);
-
-		const formspreeId = process.env.GATSBY_FORMSPREE_ID;
-		if (!formspreeId) {
-			console.error("Missing GATSBY_FORMSPREE_ID");
-			return;
-		}
-
-		const [state, submit] = useForm(formspreeId);
-		setFormState(state);
-		setHandleSubmit(() => submit);
-	}, []);
-
-	if (!isClient || !formState || !handleSubmit) {
-		return null; // don't render until it's safe
+	// ❗ Defensive check to prevent crash if env is missing
+	if (!formspreeId) {
+		console.error("Missing GATSBY_FORMSPREE_ID in environment.");
+		return (
+			<div className="text-red-400 text-center p-8">
+				Contact form is temporarily unavailable. Please try again later.
+			</div>
+		);
 	}
 
-	if (formState.succeeded) {
+	// ✅ Hook must be called at the top level
+	const [state, handleSubmit] = useForm(formspreeId);
+
+	if (state.succeeded) {
 		return (
 			<div className="max-w-xl mx-auto px-4 py-16 text-white text-center">
 				<h2 className="text-3xl font-bold mb-4">Message Sent 🎉</h2>
@@ -63,7 +56,7 @@ const ContactForm: React.FC = () => {
 				<ValidationError
 					prefix="Email"
 					field="email"
-					errors={formState.errors}
+					errors={state.errors}
 					className="text-red-500 text-sm mt-1"
 				/>
 			</label>
@@ -91,17 +84,17 @@ const ContactForm: React.FC = () => {
 				<ValidationError
 					prefix="Message"
 					field="message"
-					errors={formState.errors}
+					errors={state.errors}
 					className="text-red-500 text-sm mt-1"
 				/>
 			</label>
 
 			<button
 				type="submit"
-				disabled={formState.submitting}
+				disabled={state.submitting}
 				className="bg-pink-600 hover:bg-pink-800 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out disabled:opacity-50 disabled:cursor-not-allowed"
 			>
-				{formState.submitting ? "Sending..." : "Send Message"}
+				{state.submitting ? "Sending..." : "Send Message"}
 			</button>
 		</form>
 	);
