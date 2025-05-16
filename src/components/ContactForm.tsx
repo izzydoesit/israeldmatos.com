@@ -8,9 +8,14 @@ const ContactForm: React.FC = () => {
 		setIsClient(true);
 	}, []);
 
-	if (!isClient) return null;
+	const formspreeId = process.env.GATSBY_FORMSPREE_ID;
 
-	const [state, handleSubmit] = useForm(process.env.GATSBY_FORMSPREE_ID!);
+	if (!isClient || !formspreeId) {
+		return null;
+	}
+
+	console.log("FORMSPREE ID:", process.env.GATSBY_FORMSPREE_ID);
+	const [state, handleSubmit] = useForm(formspreeId);
 
 	if (state.succeeded) {
 		return (
