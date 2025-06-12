@@ -2,6 +2,8 @@
 
 __Portfolio Page__
 
+## Preview
+![Portfolio](./public/portfolio-website.png)
 
 ## Overview
 
